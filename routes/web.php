@@ -9,6 +9,7 @@ use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\BukuOnlineController;
+use App\Http\Controllers\Tambah_BukuController;
 
 
 
@@ -56,6 +57,8 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::delete('daftar-anggota/{id}', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
 
         //crud buku
+
+        Route::resource('tambah_buku', Tambah_BukuController::class);
 
 });
 
