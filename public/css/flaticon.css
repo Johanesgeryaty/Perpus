@@ -1,0 +1,207 @@
+@font-face {
+  font-family: icomoon;
+  src: url(../fonts/icomoonf50b.eot?yaeifu);
+  src: url(../fonts/icomoonf50b.eot?yaeifu#iefix) format("embedded-opentype"),
+    url(../fonts/icomoonf50b.ttf?yaeifu) format("truetype"),
+    url(../fonts/icomoonf50b.woff?yaeifu) format("woff"),
+    url(../fonts/icomoonf50b.svg?yaeifu#icomoon) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+.icon {
+  font-family: icomoon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ereaders-line-chart:before {
+  content: "\e90f";
+}
+.ereaders-portfolio:before {
+  content: "\e910";
+}
+.ereaders-earth-globe:before {
+  content: "\e911";
+}
+.ereaders-add2:before {
+  content: "\e912";
+}
+.ereaders-edit:before {
+  content: "\e913";
+}
+.ereaders-like:before {
+  content: "\e914";
+}
+.ereaders-document:before {
+  content: "\e915";
+}
+.ereaders-email:before {
+  content: "\e916";
+}
+.ereaders-book:before {
+  content: "\e917";
+}
+.ereaders-shopping-bag:before {
+  content: "\e918";
+}
+.ereaders-heart:before {
+  content: "\e919";
+}
+.ereaders-reload:before {
+  content: "\e91a";
+}
+.ereaders-phone-call:before {
+  content: "\e91b";
+}
+.ereaders-envelope:before {
+  content: "\e91c";
+}
+.ereaders-link:before {
+  content: "\e91d";
+}
+.ereaders-cancel:before {
+  content: "\e91e";
+}
+.ereaders-photo-camera:before {
+  content: "\e91f";
+}
+.ereaders-idea:before {
+  content: "\e920";
+}
+.ereaders-user:before {
+  content: "\e921";
+}
+.ereaders-placeholder:before {
+  content: "\e922";
+}
+.ereaders-loupe:before {
+  content: "\e923";
+}
+.ereaders-play-store:before {
+  content: "\e924";
+}
+.ereaders-full-size:before {
+  content: "\e926";
+}
+.ereaders-download-content:before {
+  content: "\e927";
+}
+.ereaders-list-interface-symbol:before {
+  content: "\e928";
+}
+.ereaders-apple-logo:before {
+  content: "\e929";
+}
+.ereaders-arrow-point-to-right:before {
+  content: "\e92a";
+}
+.ereaders-books-stack-of-three:before {
+  content: "\e92b";
+}
+.ereaders-3x3-grid:before {
+  content: "\e92c";
+}
+.ereaders-blocks-with-angled-cuts:before {
+  content: "\e92d";
+}
+.ereaders-resume-document:before {
+  content: "\e900";
+}
+.ereaders-paper:before {
+  content: "\e901";
+}
+.ereaders-coding:before {
+  content: "\e902";
+}
+.ereaders-24-hours:before {
+  content: "\e904";
+}
+.ereaders-company-workers:before {
+  content: "\e905";
+}
+.ereaders-graphic:before {
+  content: "\e906";
+}
+.ereaders-support:before {
+  content: "\e907";
+}
+.ereaders-pen:before {
+  content: "\e908";
+}
+.ereaders-search-1:before {
+  content: "\e909";
+}
+.ereaders-handshake:before {
+  content: "\e90a";
+}
+.ereaders-office2:before {
+  content: "\e90b";
+}
+.ereaders-check-square:before {
+  content: "\e90c";
+}
+.ereaders-arrows-4:before {
+  content: "\e90d";
+}
+.ereaders-arrows-3:before {
+  content: "\e90e";
+}
+.ereaders-right-arrow-1:before {
+  content: "\e925";
+}
+.ereaders-add:before {
+  content: "\e93a";
+}
+.ereaders-up-arrow-1:before {
+  content: "\e94c";
+}
+.ereaders-right-arrow:before {
+  content: "\e94d";
+}
+.ereaders-down-arrow:before {
+  content: "\e964";
+}
+.ereaders-signs22:before {
+  content: "\eb44";
+}
+.ereaders-squares2:before {
+  content: "\eb45";
+}
+.ereaders-map-location:before {
+  content: "\eb6e";
+}
+.ereaders-mark2:before {
+  content: "\eb73";
+}
+.ereaders-map3:before {
+  content: "\eb76";
+}
+.ereaders-tool4:before {
+  content: "\eb7d";
+}
+.ereaders-buildings2:before {
+  content: "\eb92";
+}
+.ereaders-arrows32:before {
+  content: "\eb60";
+}
+.ereaders-arrows22:before {
+  content: "\eb2d";
+}
+.ereaders-arrows4:before {
+  content: "\eaef";
+}
+.ereaders-office:before {
+  content: "\e903";
+}
+.ereaders-arrow-right2:before {
+  content: "\ea3c";
+}
+.ereaders-arrow-left2:before {
+  content: "\ea40";
+}

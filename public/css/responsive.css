@@ -1,0 +1,1000 @@
+@media (min-width: 768px) and (max-width: 990px) {
+  .menu.active {
+    width: 260px;
+  }
+  .menu,
+  .menu > ul ul {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  span.has-subnav,
+  a.menu-link {
+    display: block;
+  }
+  .sub-menu li a {
+    background-color: #fff;
+  }
+  .navbar {
+    padding: 0;
+    z-index: 999;
+    border-radius: 0;
+    position: absolute;
+    background-color: #fff;
+    border-top: none;
+    border-bottom: none;
+    left: 0;
+    top: 122px;
+    margin: 0;
+  }
+  a.menu-link {
+    text-align: left;
+    float: left;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 2.2;
+  }
+  a.menu-link span {
+    margin: 12px 30px 9px 0;
+  }
+  .navbar-nav {
+    margin: 0;
+    padding-top: 10px;
+    float: left;
+    text-align: left;
+  }
+  .navbar-nav > li > a:before {
+    display: none;
+  }
+  .navbar-nav .sub-menu {
+    margin: 0;
+    float: left;
+    width: 100%;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    top: 0;
+  }
+  .navbar-nav .sub-menu {
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    -ms-transform: translate(0px);
+    -o-transform: translate(0px);
+    transform: translate(0px);
+  }
+  .navbar-nav .sub-menu .sub-menu {
+    left: 0;
+  }
+  .navbar .navbar-collapse {
+    padding: 0;
+  }
+  .navbar-nav > li > a {
+    float: left;
+    width: 100%;
+    padding: 20px 20px 22px;
+    color: #555;
+    line-height: 14px;
+  }
+  .navbar-nav > li {
+    width: 100%;
+    float: left;
+    margin: 0;
+  }
+  .sub-menu .sub-menu {
+    left: 0;
+  }
+  .navbar-nav > li {
+    padding: 0;
+  }
+  .navbar-nav > li:first-child {
+    padding-left: 0;
+  }
+  .ereaders-main-content .col-md-4,
+  .ereaders-main-content .col-md-3 {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    width: 50%;
+  }
+  .ereaders-main-content .col-md-7,
+  .ereaders-main-content .col-md-5 {
+    width: 100%;
+    float: left;
+    margin-bottom: 0;
+  }
+  .col-md-12 {
+    float: left;
+    width: 100%;
+  }
+  .logo {
+    text-align: center;
+    padding: 0 0 27px;
+  }
+  .ereaders-work-learnfull {
+    background-image: none;
+  }
+  .ereaders-blog > ul > li,
+  .ereaders-books > ul > li,
+  .ereaders-event > ul > li,
+  .ereaders-shop > ul > li {
+    width: 50%;
+    float: none;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+  }
+  .ereaders-blog.ereaders-blog-large > ul > li {
+    width: 100%;
+  }
+  .ereaders-author-thumb,
+  .ereaders-banner-thumb,
+  .ereaders-banner-thumb-two,
+  .ereaders-about-thumb {
+    display: none;
+  }
+  .ereaders-service.ereaders-service-grid > ul > li {
+    float: left;
+  }
+  .ereaders-fancy-title p {
+    width: 64%;
+  }
+  .ereaders-main-content aside.col-md-4 {
+    width: 100%;
+  }
+  .ereaders-service-provide p,
+  .ereaders-author-text img {
+    float: left;
+  }
+  .ereaders-service.ereaders-service-list > ul > li {
+    float: left;
+    width: 50%;
+  }
+  .ereaders-service-provide h3 {
+    line-height: 3;
+  }
+  .ereaders-author-social {
+    width: auto;
+    margin: 40px 0 0 50px;
+  }
+  .ereaders-testimonial {
+    padding: 0 30px;
+  }
+  .ereaders-testimonial-wrap {
+    padding: 50px 40px 100px;
+  }
+  .ereaders-testimonial-slide .slick-arrow {
+    right: -92px;
+  }
+  .ereaders-app-text {
+    margin: 0 0 60px;
+  }
+  .ereaders-testimonial-slide .slick-arrow-left.slick-arrow {
+    left: -92px;
+  }
+  .ereaders-subheader-text p {
+    width: 68%;
+  }
+  .ereaders-error-wrap {
+    padding: 67px 0 90px;
+    background-image: none;
+  }
+  .ereaders-error-text,
+  .ereaders-footer-newslatter p {
+    width: 100%;
+  }
+  .ereaders-footer-newslatter {
+    width: 80%;
+  }
+  .ereaders-priceplan > ul > li {
+    width: 50%;
+  }
+  .ereaders-main-content .widget {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    width: 47%;
+    margin-left: 24px;
+  }
+  .ereaders-main-content .ereaders-books > ul > li {
+    width: 33.333%;
+  }
+  .ereaders-book-grid-text span {
+    float: left;
+    margin: 2px 0 11px;
+  }
+  .ereaders-main-content aside.col-md-3 {
+    width: 100%;
+  }
+  .ereaders-social-tag {
+    width: 60%;
+  }
+  .ereaders-blog-social {
+    width: 40%;
+  }
+  .ereaders-thumb-text h1 {
+    font-size: 21px;
+  }
+  .ereaders-book-wrap {
+    padding: 80px 30px;
+  }
+  .ereaders-book-wrap .col-md-5 {
+    float: left;
+    width: 40%;
+  }
+  .ereaders-book-wrap .col-md-7 {
+    float: left;
+    width: 60%;
+  }
+  .ereaders-detail-option li {
+    padding-left: 14px;
+  }
+  .star-rating {
+    width: 17%;
+  }
+  .ereaders-book-detail ul li {
+    padding-left: 15px;
+  }
+  .ereaders-contact-info-wrap p {
+    width: 75%;
+  }
+  .ereaders-contact-form h2 {
+    font-size: 21px;
+  }
+  .ereaders-contact-form {
+    padding: 24px 24px 0 30px;
+  }
+  .ereaders-event.ereaders-event-list > ul > li {
+    width: 100%;
+  }
+  .ereaders-event-list figure ~ .ereaders-event-list-text {
+    border-left: 1px solid #ececec;
+  }
+  .eraders-faqfull {
+    background-image: none;
+  }
+  .ereaders-faq-tabs {
+    width: 50%;
+    margin: 0 0 50px;
+  }
+  .ereaders-widget-title {
+    line-height: 1;
+  }
+  .ereaders-pricing-featured > ul > li {
+    width: 50%;
+  }
+  .eraders-search-wrap p {
+    width: 90%;
+  }
+  .eraders-search-wrap {
+    width: 60%;
+    padding: 75px 25px 54px;
+  }
+  .eraders-search-wrap h3 {
+    font-size: 38px;
+  }
+  .eraders-back-thumb {
+    width: 40%;
+  }
+  .ereaders-shop-thumb {
+    width: 70%;
+  }
+  .ereaders-shop-detail {
+    padding: 70px 30px;
+  }
+  .ereaders-shop.ereaders-shop-grid > ul > li {
+    width: 33.333%;
+  }
+  .ereaders-shop-grid-text .star-rating {
+    width: 29%;
+  }
+  .ereaders-shop.ereaders-shop-list > ul > li {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .menu.active {
+    width: 260px;
+  }
+  .menu,
+  .menu > ul ul {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  span.has-subnav,
+  a.menu-link {
+    display: block;
+  }
+  .sub-menu li a {
+    background-color: #fff;
+  }
+  .navbar {
+    padding: 0;
+    z-index: 999;
+    border-radius: 0;
+    position: absolute;
+    background-color: #fff;
+    border-top: none;
+    border-bottom: none;
+    left: 0;
+    top: 122px;
+    margin: 0;
+  }
+  a.menu-link {
+    text-align: left;
+    float: left;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 2.2;
+  }
+  a.menu-link span {
+    margin: 12px 30px 9px 0;
+  }
+  .navbar-nav {
+    margin: 0;
+    padding-top: 10px;
+    float: left;
+    text-align: left;
+  }
+  .navbar-nav > li > a:before {
+    display: none;
+  }
+  .navbar-nav .sub-menu {
+    margin: 0;
+    float: left;
+    width: 100%;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    top: 0;
+  }
+  .navbar-nav .sub-menu {
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    -ms-transform: translate(0px);
+    -o-transform: translate(0px);
+    transform: translate(0px);
+  }
+  .navbar-nav .sub-menu .sub-menu {
+    left: 0;
+  }
+  .navbar .navbar-collapse {
+    padding: 0;
+  }
+  .navbar-nav > li > a {
+    float: left;
+    width: 100%;
+    padding: 20px 20px 22px;
+    color: #555;
+    line-height: 14px;
+  }
+  .navbar-nav > li {
+    width: 100%;
+    float: left;
+    margin: 0;
+  }
+  .sub-menu .sub-menu {
+    left: 0;
+  }
+  .navbar-nav > li {
+    padding: 0;
+  }
+  .navbar-nav > li:first-child {
+    padding-left: 0;
+  }
+  .ereaders-main-content .col-md-4,
+  .ereaders-main-content .col-md-3 {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    width: 50%;
+  }
+  .ereaders-main-content .col-md-7,
+  .ereaders-main-content .col-md-5 {
+    width: 100%;
+    float: left;
+    margin-bottom: 0;
+  }
+  .col-md-12 {
+    float: left;
+    width: 100%;
+  }
+  .ereaders-main-content aside.col-md-3 {
+    width: 100%;
+  }
+  .ereaders-banner-caption {
+    display: none;
+  }
+  .logo {
+    text-align: center;
+    padding: 0 0 27px;
+  }
+  .ereaders-counter ul li {
+    width: 50%;
+  }
+  .ereaders-work-learnfull {
+    background-image: none;
+  }
+  .ereaders-author-text {
+    margin: 0 0 60px;
+  }
+  .ereaders-testimonial {
+    padding: 0;
+  }
+  .ereaders-testimonial-wrap {
+    padding: 50px 20px 100px;
+  }
+  .ereaders-testimonial-slide figure {
+    width: 215px;
+  }
+  .ereaders-testimonial-slide figure ~ .ereaders-testimonial-text {
+    margin: -8px 0 0 225px;
+    padding: 0;
+  }
+  .ereaders-app-text {
+    margin: 0 0 30px;
+  }
+  .ereaders-testimonial-slide .slick-arrow {
+    display: none !important;
+  }
+  .ereaders-footer-newslatter,
+  .ereaders-footer-newslatter p {
+    width: 100%;
+  }
+  .ereaders-copyright {
+    text-align: center;
+  }
+  .ereaders-copyright p {
+    float: none;
+    margin: 0 0 15px;
+  }
+  .footer-social-network {
+    display: inline-block;
+    float: none;
+  }
+  .ereaders-fancy-title p {
+    width: 73%;
+  }
+  .ereaders-service.ereaders-service-grid > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+  }
+  .ereaders-service-grid-text {
+    padding: 41px 16px 32px;
+  }
+  .ereaders-main-content aside.col-md-4 {
+    width: 100%;
+  }
+  .ereaders-service-provide p,
+  .ereaders-author-text img {
+    float: left;
+  }
+  .ereaders-service.ereaders-service-list > ul > li {
+    float: left;
+    width: 50%;
+  }
+  .ereaders-blog > ul > li,
+  .ereaders-books > ul > li,
+  .ereaders-event > ul > li,
+  .ereaders-shop > ul > li {
+    width: 50%;
+    float: none;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+  }
+  .ereaders-blog.ereaders-blog-large > ul > li {
+    width: 100%;
+  }
+  .ereaders-author-thumb {
+    display: none;
+  }
+  .ereaders-author-social {
+    width: auto;
+    margin: 40px 0 0 50px;
+  }
+  .ereaders-subheader-text p {
+    width: 80%;
+  }
+  .ereaders-error-wrap {
+    padding: 67px 0 90px;
+    background-image: none;
+  }
+  .ereaders-error-text {
+    width: 100%;
+  }
+  .ereaders-error-text p {
+    width: 60%;
+  }
+  .ereaders-priceplan > ul > li {
+    width: 50%;
+  }
+  .ereaders-priceplan-wrap h5 {
+    width: 175px;
+  }
+  .ereaders-priceplan-wrap {
+    padding: 0 19px 40px;
+  }
+  .ereaders-priceplan > ul > li.active .ereaders-priceplan-wrap {
+    padding: 0 19px 60px;
+  }
+  .ereaders-priceplan .ereaders-simple-btn {
+    padding: 6px 25px;
+  }
+  .ereaders-priceplan-heading h2 {
+    font-size: 76px;
+  }
+  .ereaders-about-education h6 {
+    line-height: 1.5;
+    margin-top: -7px;
+  }
+  .ereaders-main-content .widget {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    width: 47%;
+    margin-left: 17px;
+  }
+  .widget_author_info.widget_border {
+    padding: 40px 25px 35px;
+  }
+  .ereaders-social-tag {
+    margin: 0 0 10px;
+  }
+  .ereaders-post-tags {
+    text-align: center;
+  }
+  .ereaders-social-tag,
+  .ereaders-blog-social {
+    width: 100%;
+  }
+  .ereaders-social-tag a {
+    float: none;
+    display: inline-block;
+    margin: 0 11px 10px 0;
+  }
+  .ereaders-blog-social ul {
+    float: none;
+    display: inline-block;
+  }
+  .ereaders-thumb-option li {
+    margin: 0 25px 6px 0;
+  }
+  .widget_tags a {
+    margin: 0 13px 10px 0;
+  }
+  .ereaders-blog-subheader {
+    background-size: cover;
+  }
+  .ereaders-blog-grid-text h2 {
+    font-size: 15px;
+  }
+  .ereaders-blog-heading h2 {
+    line-height: 1.5;
+  }
+  .ereaders-book-wrap {
+    padding: 100px 30px;
+  }
+  .ereaders-book-detail ul li {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    width: 50%;
+    border-left: 1px solid #ececec;
+  }
+  .star-rating {
+    width: 15%;
+  }
+  .ereaders-book-detail ul li:nth-child(4n) {
+    border-bottom: 1px solid #ececec;
+  }
+  .ereaders-book-detail ul li {
+    padding: 13px 0 22px 20px;
+  }
+  .ereaders-book-grid-text span {
+    float: left;
+    margin: 2px 0 10px;
+  }
+  .ereaders-book-grid-text h2 {
+    width: 100%;
+  }
+  .ereaders-contact-info ul li::before,
+  .ereaders-contact-info-wrap span.second::before,
+  .ereaders-contact-info-wrap span.second::after,
+  .ereaders-contact-info-wrap span.second i::after {
+    content: none;
+  }
+  .ereaders-contact-info-wrap span small {
+    display: none;
+  }
+  .ereaders-contact-form,
+  .ereders-contact-map {
+    width: 100%;
+  }
+  .ereaders-contact-info-wrap p,
+  .ereaders-event-subheader .ereaders-thumb-text h1 {
+    width: 100%;
+  }
+  .ereaders-countdown .countdown-section {
+    width: 50%;
+    margin: 0 0 30px;
+  }
+  .ereaders-countdown .countdown-section:before {
+    width: 100px;
+    height: 1px;
+    top: auto;
+    bottom: -15px;
+    margin: 0 -50px 0 0;
+    right: 50%;
+  }
+  .ereaders-post-tags > .ereaders-simple-btn {
+    display: inline-block;
+    float: none;
+    margin: 0 0 20px;
+  }
+  .ereaders-countdown .countdown-section:last-child:before {
+    content: "";
+  }
+  .ereaders-event-list figure {
+    width: 100%;
+  }
+  .ereaders-event-list figure ~ .ereaders-event-list-text {
+    float: left;
+    margin: 0;
+    padding: 20px 10px 29px;
+    border-left: 1px solid #ececec;
+    border-top: none;
+  }
+  .ereaders-event-list-text .ereaders-thumb-option li:last-child {
+    margin-right: 0;
+  }
+  .ereaders-event-list-text .ereaders-thumb-option li::before {
+    content: none;
+  }
+  .eraders-faqfull {
+    background-image: none;
+  }
+  .ereaders-faq-tabs {
+    width: 50%;
+    margin: 0 0 50px;
+  }
+  .ereaders-widget-title {
+    line-height: 1;
+  }
+  .ereaders-pricing-featured > ul > li {
+    width: 50%;
+  }
+  .ereaders-featured-list {
+    padding: 0 17px;
+  }
+  .eraders-search-wrap p {
+    width: 100%;
+  }
+  .eraders-search-wrap {
+    width: 100%;
+    margin: 0 0 50px;
+    padding: 75px 10px 54px;
+  }
+  .eraders-back-thumb {
+    display: none;
+  }
+  .ereaders-shop-thumb-list,
+  .ereaders-shop-thumb {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+  .ereaders-shop-detail {
+    padding: 70px 30px;
+  }
+  .ereaders-shop-filter {
+    text-align: center;
+  }
+  .ereaders-shop-filter > span {
+    margin: 0 0 10px;
+  }
+  .ereaders-shop-filter > span,
+  .ereaders-shop-filter .nav-tabs,
+  .ereaders-shop-filter form {
+    margin-bottom: 10px;
+  }
+  .ereaders-shop-list figure {
+    width: 100%;
+  }
+  .ereaders-shop-list figure ~ .ereaders-shop-list-text {
+    float: left;
+    margin: 0;
+    padding: 20px 0 0;
+  }
+  .ereaders-testimonial-text p {
+    font-size: 21px;
+  }
+}
+@media (max-width: 480px) {
+  .ereaders-main-content .col-md-4,
+  .ereaders-main-content .col-md-3,
+  .ereaders-main-content .col-md-6 {
+    margin-right: 0;
+    width: 100%;
+  }
+  .ereaders-counter ul li,
+  .ereaders-fancy-title p,
+  .ereaders-footer-newslatter p,
+  .ereaders-subheader-text p,
+  .ereaders-error-text p {
+    width: 100%;
+  }
+  .ereaders-counter ul li::before {
+    content: none;
+  }
+  .ereaders-service-provide h3 {
+    font-size: 20px;
+  }
+  .ereaders-footer-newslatter form input[type="email"] {
+    padding-left: 10px;
+  }
+  .ereaders-service-grid-text {
+    padding: 41px 30px 32px;
+  }
+  .ereaders-service.ereaders-service-list > ul > li,
+  .ereaders-blog > ul > li,
+  .ereaders-books > ul > li,
+  .ereaders-event > ul > li,
+  .ereaders-shop > ul > li,
+  .ereaders-main-content .widget {
+    width: 100%;
+  }
+  .ereaders-main-content .widget {
+    margin-left: 0;
+  }
+  .ereaders-author-thumb {
+    display: block;
+  }
+  .ereaders-testimonial-slide figure,
+  .ereaders-priceplan > ul > li {
+    width: 100%;
+  }
+  .ereaders-author-social {
+    width: 100%;
+    margin: 0;
+  }
+  .ereaders-priceplan-wrap {
+    padding: 0 36px 40px;
+    margin: 0;
+  }
+  .ereaders-priceplan > ul > li.active .ereaders-priceplan-wrap {
+    padding: 0 36px 60px;
+  }
+  .ereaders-priceplan-wrap h5 {
+    width: 218px;
+  }
+  .ereaders-priceplan .ereaders-simple-btn {
+    padding: 6px 29px;
+  }
+  .ereaders-priceplan-heading h2 {
+    font-size: 80px;
+  }
+  .ereaders-priceplan > ul > li {
+    margin: 0 0 50px;
+  }
+  .widget_author_info.widget_border {
+    padding: 40px 20px 35px;
+  }
+  .ereaders-thumb-option li {
+    float: none;
+    display: inline-block;
+  }
+  blockquote {
+    padding: 49px 0 15px;
+  }
+  .ereaders-prev-post,
+  .ereaders-next-post,
+  .comment-respond form p {
+    width: 100%;
+  }
+  .ereaders-admin-post figure ~ .ereaders-admin-text {
+    float: left;
+    padding: 20px 0 0;
+  }
+  .comment-list li figure ~ .text-holder {
+    float: left;
+    padding: 7px 0 0;
+  }
+  .comment-list .children > li .thumb-list {
+    padding: 0 0 7px;
+  }
+  .ereaders-pagination > ul > li {
+    margin: 0 4px 10px 0;
+  }
+  .ereaders-blog-grid-text h2 {
+    font-size: 16px;
+  }
+  .star-rating,
+  .ereaders-shop-detail .star-rating {
+    width: 26%;
+  }
+  .ereaders-detail-option li {
+    width: 100%;
+    padding: 0;
+    border-right: none;
+  }
+  .ereaders-book-detail ul li {
+    width: 100%;
+    border-left: none;
+  }
+  .ereaders-book-detail ul li.border {
+    border-left: none;
+    border-right: none;
+  }
+  .ereaders-breadcrumb ul li {
+    padding: 0 15px;
+  }
+  .ereaders-book-reply .comment-list .children > li .thumb-list {
+    padding: 0 0 7px;
+  }
+  .ereaders-book-detail ul li:last-child {
+    border-bottom: none;
+  }
+  .ereaders-book-detail ul li {
+    padding: 13px 0 22px 30px;
+  }
+  .ereaders-book-detail ul li:nth-child(5n) {
+    border-bottom: 1px solid #ececec;
+  }
+  .ereaders-book-grid-text span {
+    float: right;
+    margin: 2px 0 0;
+  }
+  .ereaders-book-grid-text h2 {
+    width: auto;
+  }
+  .ereaders-countdown .countdown-section {
+    width: 100%;
+  }
+  .ereaders-contact-info ul li,
+  .ereaders-contact-form ul li,
+  .ereaders-faq-tabs {
+    width: 100%;
+  }
+  .ereaders-countdown .countdown-section:last-child:before {
+    content: none;
+  }
+  .ereaders-event-list-text .ereaders-thumb-option li {
+    margin: 0 10px 0 0;
+  }
+  .ereaders-faq-accordion .panel-title > a {
+    padding: 45px 25px 43px;
+  }
+  .ereaders-faq-accordion .panel-body {
+    padding: 45px 25px 28px;
+  }
+  .ereaders-faq-accordion .panel-title > a::before,
+  .ereaders-faq-accordion .panel-title > .collapsed::before {
+    right: 25px;
+  }
+  .ereaders-pricing-featured > ul > li {
+    width: 100%;
+  }
+  .ereaders-featured-list {
+    padding: 0 50px;
+  }
+  .ereaders-shop-filter > span,
+  .ereaders-shop-filter .nav-tabs,
+  .ereaders-shop-filter form {
+    float: none;
+    display: inline-block;
+  }
+  .ereaders-testimonial-slide figure ~ .ereaders-testimonial-text {
+    float: left;
+    margin: 0;
+    padding: 20px 0 0;
+  }
+  .ereaders-testimonial-text p {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 991px) and (max-width: 1054px) {
+  .ereaders-banner-thumb,
+  .ereaders-banner-thumb-two {
+    display: none;
+  }
+  .navbar {
+    padding-left: 0;
+  }
+  .navbar-nav > li {
+    margin: 0 5px;
+  }
+  .ereaders-work-learnfull {
+    background-position: top right -139%;
+  }
+  .ereaders-service-grid-text {
+    padding: 41px 21px 32px;
+  }
+  .ereaders-service-provide h3 {
+    font-size: 20px;
+  }
+  .ereaders-footer-newslatter p {
+    width: 92%;
+  }
+  .navbar-nav .sub-menu {
+    width: 173px;
+  }
+  .navbar-nav .sub-menu li a {
+    padding: 13px 10px;
+  }
+  .ereaders-error-wrap {
+    background-size: 100%;
+    padding: 60px 101px 60px 0;
+  }
+  .ereaders-error-text {
+    width: 557px;
+    padding: 30px 0 41px;
+  }
+  .ereaders-priceplan-wrap {
+    padding: 0 40px 40px;
+  }
+  .ereaders-priceplan > ul > li.active .ereaders-priceplan-wrap {
+    padding: 0 40px 60px;
+  }
+  .ereaders-book-grid-text span {
+    float: left;
+    margin: 2px 0 11px;
+  }
+  .widget_author_info.widget_border {
+    padding: 40px 22px 35px;
+  }
+  .ereaders-widget-title {
+    line-height: 1;
+  }
+  .widget_border {
+    padding: 30px 9px 29px;
+  }
+  .ereaders-related-blog-text h5 {
+    font-size: 17px;
+  }
+  .ereaders-blog > ul > li {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+  }
+  .ereaders-event-list figure ~ .ereaders-event-list-text {
+    border-left: 1px solid #ececec;
+  }
+  .eraders-faqfull {
+    background-image: none;
+  }
+  .ereaders-faq-tabs .nav-tabs {
+    padding: 50px 25px 30px;
+  }
+  .ereaders-featured-list {
+    padding: 0 55px;
+  }
+  .eraders-search-wrap p {
+    width: 90%;
+  }
+  .eraders-search-wrap {
+    width: 60%;
+    padding: 75px 25px 54px;
+  }
+  .eraders-search-wrap h3 {
+    font-size: 38px;
+  }
+  .eraders-back-thumb {
+    width: 40%;
+  }
+  .ereaders-shop-thumb {
+    width: 310px;
+  }
+  .ereaders-shop-grid-text .star-rating {
+    width: 29%;
+  }
+}
