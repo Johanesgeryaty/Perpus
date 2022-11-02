@@ -40,14 +40,15 @@ route::get('/login', [LoginController::class, 'index'])->name('login.index');
 route::post('/login', [LoginController::class, 'proces'])->name('login.proces');
 route::get('/logout', [LogoutController::class, 'perform'])->name('logout.perform');
 
-
+//admin
 Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( function() {
         route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         route::get('daftar-anggota', [DashboardController::class, 'daftaranggota'])->name('daftar-anggota');
         route::get('data-buku-online', [DashboardController::class, 'databukuonline'])->name('data-buku-online');
         route::get('data-buku-offline', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
-        //crud anggota
+        route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
 
+        //crud anggota
         route::get('daftar-anggota/index', [AnggotaController::class, 'index'])->name('anggota.index');
         route::get('daftar-anggota/create', [AnggotaController::class, 'create'])->name('anggota.tambah');
         route::post('daftar-anggota/create', [AnggotaController::class, 'store'])->name('anggota.buat');
@@ -56,8 +57,12 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::delete('daftar-anggota/{id}', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
 
         //crud buku
+<<<<<<< HEAD
         Route::resource('tambah_buku', Tambah_BukuController::class);
         
+=======
+
+>>>>>>> 61079e34fa5c993383ab536e71265aabf34dbcba
 });
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
