@@ -57,12 +57,9 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::delete('daftar-anggota/{id}', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
 
         //crud buku
-<<<<<<< HEAD
-        Route::resource('tambah_buku', Tambah_BukuController::class);
-        
-=======
 
->>>>>>> 61079e34fa5c993383ab536e71265aabf34dbcba
+        Route::resource('tambah_buku', Tambah_BukuController::class);
+
 });
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
