@@ -21,10 +21,10 @@ class DashboardController extends Controller
             return view('admin.data-buku-offline',['title' => 'data-buku-offline', 'active' => 'title']);
         }
 
-        // public function databukuonline()
-        // {
-        //     return view('admin.crud.bukuonline.index',['title' => 'data-buku-online', 'active' => 'title']);
-        // }
+        public function kotaksaran()
+        {
+            return view('admin.kotak-saran',['title' => 'kotak-saran', 'active' => 'title']);
+        }
 
 
 }
