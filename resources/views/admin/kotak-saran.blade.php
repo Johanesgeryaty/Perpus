@@ -1,52 +1,74 @@
+
 @extends('layouts.main')
-
 @section('content')
-    <div class="container">
-        <div class="center">
-            <div class="col-sm-6">
-                <div class="page-header-title">
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-        <p></p>
-        <!--  -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title text-center">Tambah Anggota</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput" class="form-label">Nama</label>
-                            <input type="text " class="form-control " id="formGroupExampleInput"
-                                placeholder="Masukan Nama">
-                        </div>
-                        <br>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput2" class="form-label">Nis</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Masukan Nis">
-                        </div>
-                        <br>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput2" class="form-label">Kelas</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Masukan Kelas">
-                        </div>
-                        <br>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Masukan Jurusan">
-                        </div>
-                        <br>
 
-                        <button type="button br-8" class="btn btn-primary btn-sm">Small button</button>
+        <div class="container">
+          <div class="center">
+            <div class="col-sm-14">
+              <div class="page-header-title">
+                <h4 class="pull-left page-title">Daftar Buku Offline</h4>
+                <ol class="breadcrumb pull-right">
+
+                  <li class="active"></li>
+                </ol>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Data Buku offline</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Jurusan</th>
+                                            <th>Tanggal</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $anggota = [
+                                            [
+                                                "No" => "1",
+                                                "Nama" => "1234567",
+                                                "Jurusan" => "ashis cahya maulana",
+                                                "Tanggal" => "11",
+                                            ],
+                                        ];
+
+                                        ?>
+                                        <tr>
+                                            <?php foreach ($anggota as $angg) : ?>
+                                                <td><?= $angg["No"]; ?></td>
+                                                <td><?= $angg["Nama"]; ?></td>
+                                                <td><?= $angg["Jurusan"]; ?></td>
+                                                <td><?= $angg["Tanggal"]; ?></td>
+                                                <td><a class="btn btn-success" href="index.php" role="button"><i class="bi bi-eye"></i></a></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+
+                                    </tbody>
+                                </table>
+                                <div class="button-selesai">
+                                <div class="" style="float: right;" margin="auto">
+                                    <div class="">
+                                        <a class="btn btn-primary" href="index.php" role="button">Selesai</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-@endsection
+        @endsection

@@ -34,62 +34,76 @@
 
 <body>
 
+    <form action="{{ route('admin.anggota.buat') }}" method="POST">
+        @csrf
         <div class="container">
-          <div class="center">
-            <div class="col-sm-6">
-              <div class="page-header-title">
-                <div class="clearfix"></div>
-              </div>
+            <div class="center">
+                <div class="col-sm-6">
+                    <div class="page-header-title">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <p></p>
-          <!--  -->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title text-center">Tambah Anggota</h3>
-                </div>
-                <div class="panel-body">
-                <div class="mb-3">
-                  <label for="formGroupExampleInput" class="form-label">Nama</label>
-                  <input type="text " class="form-control " id="formGroupExampleInput" placeholder="Masukan Nama">
-                </div>
-                <br>
-                <div class="mb-3">
-                  <label for="formGroupExampleInput2" class="form-label">Nis</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Masukan Nis">
-                </div>
-                <br>
-                <div class="mb-3">
-                  <label for="formGroupExampleInput2" class="form-label">Kelas</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Masukan Kelas">
-                </div>
-                <br>
-                <div class="mb-3">
-                  <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Masukan Jurusan">
-                </div>
-                <br>
-
-                <button type="button br-8" class="btn btn-primary btn-sm">Small button</button>
-</div>
-
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-    </div>
-    <!-- <footer class="footer"> 2016 - 2020 © Xadmino. </footer> -->
-
-  </div>
+            <p></p>
+            <!--  -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Edit Data Anggota</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Nama</label>
+                                <input type="text " class="form-control " name="name"
+                                    id="formGroupExampleInput" placeholder="Masukan Nama">
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Nis</label>
+                                <input type="number" class="form-control" name="nisn"
+                                    id="formGroupExampleInput2" placeholder="Masukan Nis">
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email"
+                                    id="formGroupExampleInput2" placeholder="Masukan Nis">
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Kelas</label>
+                                <input type="text" class="form-control" name="kelas"
+                                    id="formGroupExampleInput2" placeholder="Masukan Kelas">
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
+                                <input type="text" class="form-control" name="jurusan"
+                                    id="formGroupExampleInput2" placeholder="Masukan Jurusan ">
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Password</label>
+                                <input type="Password" class="form-control" name="Password"
+                                    id="formGroupExampleInput2" placeholder="Masukan Password ">
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <label for="role" class="form-label">Role</label>
+                                <select class="form-control" aria-label="Default select example" id="role"
+                                    name="role">
+                                    <option selected>
+                                        role
+                                    </option>
+                                    <option value="user">user</option>
+                                    <option value="admin">admin</option>
+                                </select>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-sm">Kirim</button>
+                            <a href="{{ route('admin.anggota.index') }}" class="btn btn-primary btn-sm">Kembali</a>
+    </form>
   <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
@@ -107,7 +121,7 @@
     <script src="{{ asset('assets/plugins/datatables/dataTables.responsive.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatables/responsive.bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/pages/dashborad.js') }}"></script>
-    <script src="{{ asset('assets/js/app.js') }}"></script>e
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 </body>
 <!-- Mirrored from themesdesign.in/xadmino/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Sep 2022 13:58:35 GMT -->
 
