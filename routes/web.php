@@ -69,4 +69,5 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
         route::get('dashboard', [DashboardUserController::class, 'index'])->name('dashboard');
+        
 });
