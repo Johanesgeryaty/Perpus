@@ -90,7 +90,7 @@
                             </div>
                             <br>
                             <div class="mb-3">
-                                <label for="role" class="form-label">Role</label>
+                                {{-- <label for="role" class="form-label">Role</label>
                                 <select class="form-control" aria-label="Default select example" id="role"
                                     name="role">
                                     <option selected>
@@ -98,7 +98,7 @@
                                     </option>
                                     <option value="user">user</option>
                                     <option value="admin">admin</option>
-                                </select>
+                                </select> --}}
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary btn-sm">Kirim</button>

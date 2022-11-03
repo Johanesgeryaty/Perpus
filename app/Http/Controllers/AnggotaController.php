@@ -44,7 +44,7 @@ class AnggotaController extends Controller
             'kelas' => $request->kelas,
             'jurusan' => $request->jurusan,
             'password' => Hash::make($request->password),
-            'role' => $request->role,
+            'role' => 'user' 
         ]);
         $user->save();
 
