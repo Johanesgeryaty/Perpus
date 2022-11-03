@@ -9,7 +9,7 @@ use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\BukuOnlineController;
-use App\Http\Controllers\Tambah_BukuController;
+
 
 
 
@@ -58,7 +58,12 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 
         //crud buku
 
-        Route::resource('tambah_buku', Tambah_BukuController::class);
+        Route::get('buku-online', [BukuOnlineController::class, 'index'])->name('bukuonline.index');
+        Route::get('buku-online/create', [BukuOnlineController::class, 'create'])->name('bukuonline.tambah');
+        Route::post('buku-online/create', [BukuOnlineController::class, 'store'])->name('bukuonline.store');
+        Route::get('buku-online/{id}/edit', [BukuOnlineController::class, 'edit'])->name('bukuonline.edit');
+        Route::post('buku-online/{id}', [BukuOnlineController::class, 'update'])->name('bukuonline.update');
+        Route::delete('buku-online/{id}', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
 
 });
 

@@ -10,11 +10,13 @@
 
     <div class="container mt-5">
         <h1 class="text center mb-5">Data Buku</h1>
+        <a href="{{ route('admin.bukuonline.tambah') }}"class="btn btn-primary mb-3">Tambah Buku</a>
         <div class="card">
             <div class="card-body">
                 <table class="table">
                     <thead>
                             <th>No</th>
+                            <th>Id</th>
                             <th>Judul Buku</th>
                             <th>Genre</th>
                             <th>Pengarang</th>
@@ -22,22 +24,29 @@
                             <th>Tahun Terbit</th>
                             <th>Jumlah Halaman</th>
                     </thead>
-                    @foreach ($buku_online as $buku_onlines)
                     <tbody>
+                      @foreach ($buku_online as $buku_onlines)
+                      <tr>
                         <th>{{ $loop->iteration }}</th>
+                        <td>{{ $buku_onlines->id }}</td>
                         <td>{{ $buku_onlines->judul_buku }}</td>
                         <td>{{ $buku_onlines->genre }}</td>
                         <td>{{ $buku_onlines->pengarang }}</td>
                         <td>{{ $buku_onlines->penerbit }}</td>
                         <td>{{ $buku_onlines->tahun_terbit }}</td>
-                        <td>{{ $buku_onlines->jumlah }}</td>
+                        <td>{{ $buku_onlines->jumlah_halaman }}</td>
                         <td>
-                            <a href="" class="btn btn-success btn-sm">Edit</a>
+                          <form action="{{ route('admin.bukuonline.hapus', $buku_onlines->id) }}" method="post">
+                            @csrf
+                            @method('delete') 
+                            <a href="{{ route('admin.bukuonline.edit', $buku_onlines->id) }}" class="btn btn-success btn-sm">Edit</a>
                             <button class="btn btn-danger btn-sm">Hapus</button>
-                        </td>
-                    </tbody>
+                          </form>
+                          </td>
+                        </tr>
+                        @endforeach
+                      </tbody>
                 </table>
-                    @endforeach
             </div>
         </div>
     </div>
