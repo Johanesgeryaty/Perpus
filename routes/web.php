@@ -66,5 +66,11 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
         route::get('dashboard', [DashboardUserController::class, 'index'])->name('dashboard');
+<<<<<<< HEAD
 
+=======
+        Route::get('form-user', function () {
+                return view('user.form-user');
+            });
+>>>>>>> f05810c39ee579ec7f606f7540b2a47f1b8ecc98
 });
