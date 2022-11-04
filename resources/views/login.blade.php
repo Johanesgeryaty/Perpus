@@ -16,16 +16,16 @@
                     <div class="card shadow-lg">
                         <div class="card-body p-5">
                             <h4 class="mt-3 text-center">Login</h4>
-                            @if(session('error'))
+                            @if(session('Error'))
                             <div class="alert alert-danger">
-                                <b>Opps!</b> {{session('error')}}
+                                <b>Opps!</b> {{session('Error')}}
                             </div>
                             @endif
-                            <form action="" class="mt-4" method="post">
+                            <form action="{{ route('login.post') }}" class="mt-4" method="post">
                             @csrf
                                 <div class="mb-3">
                                     <label for="nisn" class="form-label">Masukan NIS</label>
-                                    <input type="text" class="form-control" name="nisn" id="nisn">
+                                    <input type="number" class="form-control" name="nisn" id="nisn">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="form-label">Masukan Password</label>

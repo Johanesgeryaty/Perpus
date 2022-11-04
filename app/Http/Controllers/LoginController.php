@@ -15,11 +15,13 @@ class LoginController extends Controller
     public function proces(Request $request)
     {
         if(Auth::attempt(['nisn' => $request->nisn, 'password' => $request->password])) {
-            if(Auth::user()->role === 'user') {
+            if(Auth::user()->role == 'user') {
                 return redirect(route('user.dashboard'));
-            }else{
+            } else {
                 return redirect(route('admin.dashboard'));
             }
-        }return back()->with('Error', 'OOPS!!!');
+        }
+
+        return back();
     }
 }

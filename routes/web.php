@@ -30,14 +30,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-
-
 Auth::routes();
 
 route::get('/Waca', [HomeController::class, 'index  '])->name('index');
 route::get('/login', [LoginController::class, 'index'])->name('login.index');
-route::post('/login', [LoginController::class, 'proces'])->name('login.proces');
+route::post('/login', [LoginController::class, 'proces'])->name('login.post');
 route::get('/logout', [LogoutController::class, 'perform'])->name('logout.perform');
 
 //admin
@@ -69,5 +66,5 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
         route::get('dashboard', [DashboardUserController::class, 'index'])->name('dashboard');
-        
+
 });

@@ -33,11 +33,7 @@
                                 </span></a></li>
                         <li> <a href="{{ Route('admin.anggota.index') }}" class="{{ ($title === 'daftar-anggota    ') ? 'active':'' }} waves-effect"><i class="bi bi-person-square"></i>
                                 Data Anggota</a></li>
-<<<<<<< HEAD
-                        <li> <a href="x"{{ ($title === 'data-buku-online     ') ? 'active':'' }} waves-effect"><i class="bi bi-pencil-square"></i>
-=======
                         <li> <a href="{{ Route('admin.bukuonline.index') }}" class="{{ ($title === 'data-buku-online     ') ? 'active':'' }} waves-effect"><i class="bi bi-pencil-square"></i>
->>>>>>> e0d6cc144a55bb277b3c632e30ee94ae43c0cac4
                                 Data Buku Online</a></li>
                         <li> <a href="{{ Route('admin.data-buku-offline') }}" class="{{ ($title === 'data-buku-offline') ? 'active':'' }}" class="waves-effect"><i class="bi bi-pencil-square"></i>
                                 Data Buku Offline</a></li>
