@@ -16,6 +16,7 @@ class BukuOnlineController extends Controller
     {
         return view('admin.crud.buku.index', [
             'buku_online' =>  BukuOnline::all(),
+            'title' => 'Buku Online'
         ]);
     }
 
@@ -26,7 +27,9 @@ class BukuOnlineController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.buku.create');
+        return view('admin.crud.buku.create', [
+        'title' => 'Buku Online'
+        ]);
     }
 
     /**

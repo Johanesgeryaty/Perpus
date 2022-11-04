@@ -33,12 +33,11 @@
                                 </span></a></li>
                         <li> <a href="{{ Route('admin.anggota.index') }}" class="{{ ($title === 'daftar-anggota    ') ? 'active':'' }} waves-effect"><i class="bi bi-person-square"></i>
                                 Data Anggota</a></li>
-                        
                         <li> <a href="{{ Route('admin.bukuonline.index') }}" class="{{ ($title === 'data-buku-online     ') ? 'active':'' }} waves-effect"><i class="bi bi-pencil-square"></i>
                                 Data Buku Online</a></li>
                         <li> <a href="{{ Route('admin.data-buku-offline') }}" class="{{ ($title === 'data-buku-offline') ? 'active':'' }}" class="waves-effect"><i class="bi bi-pencil-square"></i>
                                 Data Buku Offline</a></li>
-                        <li> <a href="#"waves-effect"><i class="ti-ruler-pencil"></i>
+                        <li> <a href="#"><i class="ti-ruler-pencil waves-effect"></i>
                                 Transaksi Pinjam</a></li>
                         <li> <a href="{{ Route('admin.kotak-saran') }}" class="{{ ($title === 'kotak-saran') ? 'active':'' }}" class="waves-effect"><i class="bi bi-envelope"></i>
                                 Kotak Saran</a></li>

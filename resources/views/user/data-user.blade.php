@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Profil-user</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="{{asset('/cssuser/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{aseet('/cssuser/all.min.css')}}">
   </head>
   <body>
     <div class="container">

@@ -85,7 +85,7 @@
                             <br>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Password</label>
-                                <input type="Password" class="form-control" name="Password"
+                                <input type="password" class="form-control" name="password"
                                     id="formGroupExampleInput2" placeholder="Masukan Password ">
                             </div>
                             <br>
