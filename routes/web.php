@@ -66,8 +66,12 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
         route::get('dashboard', [DashboardUserController::class, 'index'])->name('dashboard');
-        Route::get('form-user', function () {
-                return view('user.form-user');
-            });
+        route::get('bukuonline', [DashboardUserController::class, 'bukuonline'])->name('bukuonline');
+        route::get('bukuoffline', [DashboardUserController::class, 'bukuoffline'])->name('bukuoffline');
+        route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
+        route::get('whislist', [DashboardUserController::class, 'saran'])->name('saran');
+        route::get('saran', [DashboardUserController::class, 'whislist'])->name('whislist');
+       
+        
 
 });

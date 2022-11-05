@@ -22,7 +22,7 @@
                     </div>
                     <div class="user-info">
                         <div class="dropdown"> <a href="profile.html" class="dropdown-toggle" data-toggle="dropdown"
-                                aria-expanded="false">Alvin Raymond Ompu Sunggu</a>
+                                aria-expanded="false">{{ Auth::user()->name }}</a>
                         </div>
                     </div>
                 </div>
