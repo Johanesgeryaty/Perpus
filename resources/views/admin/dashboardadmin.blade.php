@@ -20,7 +20,7 @@
                     <h4 class="panel-title">Jumlah Anggota</h4>
                 </div>
                 <div class="panel-body">
-                    <h3 class=""><b>3685</b></h3>
+                    <h3 class=""><b>{{ $user->count() }}</b></h3>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
                     <h4 class="panel-title">Jumlah Buku Offline</h4>
                 </div>
                 <div class="panel-body">
-                    <h3 class=""><b>25487</b></h3>
+                    <h3 class=""><b>{{ $bukuOffline }}</b></h3>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                     <h4 class="panel-title">Jumlah Buku Online</h4>
                 </div>
                 <div class="panel-body">
-                    <h3 class=""><b>7797</b></h3>
+                    <h3 class=""><b>{{ $bukuOnline }}</b></h3>
                 </div>
             </div>
         </div>
