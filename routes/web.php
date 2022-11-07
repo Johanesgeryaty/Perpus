@@ -30,6 +30,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::fallback(function () {
+      return('goblok');
+});
+
 Auth::routes();
 
 route::get('/Waca', [HomeController::class, 'index  '])->name('index');
