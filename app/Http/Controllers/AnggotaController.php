@@ -27,7 +27,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.anggota.create', ['title'=>'crud']);
+        return view('admin.crud.anggota.create', ['title'=>'daftar-anggota']);
     }
 
     /**
@@ -72,7 +72,7 @@ class AnggotaController extends Controller
     public function edit($id)
     {
         $users = User::find($id);
-        return view('admin.crud.anggota.edit',['title' => 'Edit-Anggota'], compact('users'));
+        return view('admin.crud.anggota.edit',['title' => 'daftar-anggota'], compact('users'));
     }
 
     /**

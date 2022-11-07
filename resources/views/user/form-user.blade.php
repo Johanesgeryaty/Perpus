@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-    <h3 class="text-center mt-5">Ganti Kata Sandi</h3>
+    <h3 class="text-center mt-5 text-white p-1" style="background-color: rgb(1, 49, 125); border-radius:5px;">Ganti Kata Sandi</h3>
     <form>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Kata Sandi Baru</label>
@@ -22,20 +22,12 @@
       </form>
     </div>
     <div class="container">
-        <h3 class="text-center mt-5">Biodata Anggota</h3>
+        <h3 class="text-center mt-5 text-white p-1" style="background-color:rgb(1, 49, 125);border-radius:5px;">Biodata Anggota</h3>
     <form>
-        <div class="mb-3">
-            <label for="namalengkap" class="form-label">Nama Lengkap</label>
-            <input type="text" class="form-control" id="namalengkap">
-          </div>
         <div class="mb-3">
           <label for="ttl" class="form-label">Tempat Tanggal Lahir</label>
           <input type="text" class="form-control" id="ttl">
         </div>
-        <div class="mb-3">
-            <label for="kelas" class="form-label">Kelas</label>
-            <input type="text" class="form-control" id="kelas">
-          </div>
         <div class="mb-3">
             <label for="Adress" class="form-label">Alamat</label>
             <input type="text" class="form-control" id="Adress">
