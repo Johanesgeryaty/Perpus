@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\BukuOffline;
 
 class BukuOfflineController extends Controller
 {
@@ -13,8 +14,9 @@ class BukuOfflineController extends Controller
      */
     public function index()
     {
-        return view('admin.crud.bukuoffline.index', [
-            'title' => 'bukuoffline',
+        return view ('admin.crud.bukuoffline.index',[
+            'bukuoffline' => BukuOffline::all(),
+            'title' => 'BukuOffline'
         ]);
     }
 
@@ -25,7 +27,9 @@ class BukuOfflineController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.crud.bukuoffline.create',[
+            'title' => 'BUkuOfline'
+        ]);
     }
 
     /**
@@ -36,7 +40,28 @@ class BukuOfflineController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'judul_buku'=> 'required|min:3 ',
+            'genre'=> 'required|min:3',
+            'pengarang' => 'required|min:3',
+            'penerbit' => 'required|min:3',
+            'tahun_terbit'=> 'required|min:4',
+            'jumlah_halaman' => 'required',
+            'stok_buku' => 'required'
+        ]);
+
+        $bukuoffline = new BukuOffline ();
+        $bukuoffline->judul_buku = $request->judul_buku;
+        $bukuoffline->genre = $request->genre;
+        $bukuoffline->pengarang = $request->pengarang;
+        $bukuoffline->penerbit = $request->penerbit;
+        $bukuoffline->tahun_terbit = $request->tahun_terbit;
+        $bukuoffline->jumlah_halaman = $request->jumlah_halaman;
+        $bukuoffline->stok_buku = $request->stok_buku;
+
+        $bukuoffline->save();
+
+        return redirect(route('admin.bukuoffline.index'))->with('success','data berhasil ditambah.');
     }
 
     /**
@@ -58,7 +83,9 @@ class BukuOfflineController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bukuoffline = BukuOffline::findOrFail($id);
+        return view ('admin.crud.bukuoffline.edit', 
+        compact('bukuoffline'),['title' => 'bukuoffline']);
     }
 
     /**
@@ -70,7 +97,28 @@ class BukuOfflineController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $bukuoffline = BukuOffline::findOrFail($id);
+
+        $request->validate([
+            'judul_buku'=> 'required|min:3 ',
+            'genre'=> 'required|min:3',
+            'pengarang' => 'required|min:3',
+            'penerbit' => 'required|min:3',
+            'tahun_terbit'=> 'required|min:4',
+            'jumlah_halaman' => 'required',
+            'stok_buku' => 'required'
+        ]);
+
+        $bukuoffline->judul_buku = $request->judul_buku;
+        $bukuoffline->genre = $request->genre;
+        $bukuoffline->pengarang = $request->pengarang;
+        $bukuoffline->penerbit = $request->penerbit;
+        $bukuoffline->tahun_terbit = $request->tahun_terbit;
+        $bukuoffline->jumlah_halaman = $request->jumlah_halaman; 
+        $bukuoffline->stok_buku = $request->stok_buku;
+        $bukuoffline->save();
+
+        return redirect(route('admin.bukuoffline.index'))->with('success','data berhasil diedit.');
     }
 
     /**
@@ -81,6 +129,9 @@ class BukuOfflineController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bukuoffline= BukuOffline::findOrFail($id);
+        $bukuoffline->delete();
+
+        return redirect(route('admin.bukuoffline.index'))->with('success','Data buku berhasil dihapus');
     }
 }

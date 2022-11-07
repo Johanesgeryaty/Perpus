@@ -51,7 +51,6 @@ class BukuOnlineController extends Controller
 
         ]);
 
-        $imagename = time().'.'.$request->image->extension();
 
 
         $bukuonline = new BukuOnline;

@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="mx-auto" style="width: 200px;">
-                    <a class="btn btn-primary" href="#" role="button">Tambah Buku</a>
+                    <a class="btn btn-primary" href="{{ route('admin.bukuoffline.create') }}" role="button">Tambah Buku</a>
                 </div>
                 <p></p>
           <!--  -->
@@ -32,50 +32,38 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Id</th>
                                             <th>Judul Buku</th>
-                                            <th>gennre</th>
+                                            <th>genre</th>
                                             <th>Pengarang</th>
                                             <th>Penerbit</th>
-                                            <th>Tahun</th>
-                                            <th>Lihat</th>
+                                            <th>Tahun Terbit</th>
+                                            <th>Jumlah Halaman</th>
+                                            <th>Stok Buku</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                        $anggota = [
-                                            [
-                                                "No" => "1",
-                                                "Judul Buku" => "1234567",
-                                                "Genre" => "ashis cahya maulana",
-                                                "Pengarang" => "11",
-                                                "Penerbit" => "rpl",
-                                                "Tahun"=> "2000",
-
-                                            ],
-                                        ];
-
-                                        ?>
-                                        <tr>
-                                            <?php foreach ($anggota as $angg) : ?>
-                                                <td><?= $angg["No"]; ?></td>
-                                                <td><?= $angg["Judul Buku"]; ?></td>
-                                                <td><?= $angg["Genre"]; ?></td>
-                                                <td><?= $angg["Pengarang"]; ?></td>
-                                                <td><?= $angg["Penerbit"]; ?></td>
-                                                <td><?= $angg["Tahun"]; ?></td>
-                                                <td><a class="btn btn-success" href="index.php" role="button"><i class="bi bi-eye"></i></a></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-
-                                    </tbody>
-                                </table>
-                                <div class="button-selesai">
-                                <div class="" style="float: right;" margin="auto">
-                                    <div class="">
-                                        <a class="btn btn-primary" href="index.php" role="button">Selesai</a>
-                                        </div>
-                                    </div>
-                                    </div>
+                                        @foreach ($bukuoffline as $bukuofflines)
+                                            <th>{{ $loop->iteration }}</th>
+                                            <td>{{ $bukuofflines->id }}</td>
+                                            <td>{{ $bukuofflines->judul_buku }}</td>
+                                            <td>{{ $bukuofflines->genre }}</td>
+                                            <td>{{ $bukuofflines->pengarang }}</td>
+                                            <td>{{ $bukuofflines->penerbit }}</td>
+                                            <td>{{ $bukuofflines->tahun_terbit }}</td>
+                                            <td>{{ $bukuofflines->jumlah_halaman }}</td>
+                                            <td>{{ $bukuofflines->stok_buku }}</td>
+                                            <td>
+                                                <form action="{{ route('admin.bukuoffline.hapus', $bukuofflines->id) }}" method="POST">
+                                                @csrf
+                                                @method('delete')
+                                                <a href="{{ route('admin.bukuoffline.edit', $bukuofflines->id) }}" class="btn btn-success btn-sm">Edit</a>
+                                                <button class="btn btn-danger btn-sm">Hapus</button>
+                                              </form>
+                                              </td>
+                                        </tbody>
+                                        @endforeach
+                                    </table>
                                 </div>
                             </div>
                         </div>

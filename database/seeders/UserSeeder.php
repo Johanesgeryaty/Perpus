@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
             'kelas' => '11',
             'jurusan' => 'RPL',
             'password' => bcrypt('1234567'),
-            'role' => 'user'
+            'role' => 'admin'
         ]);
     }
 }
