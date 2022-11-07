@@ -22,7 +22,7 @@
                     </div>
                     <div class="user-info">
                         <div class="dropdown"> <a href="profile.html" class="dropdown-toggle" data-toggle="dropdown"
-                                aria-expanded="false">Alvin Raymond Ompu Sunggu</a>
+                                aria-expanded="false">{{ Auth::user()->name }}</a>
                         </div>
                     </div>
                 </div>
@@ -31,11 +31,11 @@
                     <ul>
                         <li> <a href="{{ Route('admin.dashboard') }}" class="{{ ($title === 'dashboard') ? 'active':'' }} waves-effect"><i class="ti-home"></i><span> Dashboard
                                 </span></a></li>
-                        <li> <a href="{{ Route('admin.anggota.index') }}" class="{{ ($title === 'daftar-anggota    ') ? 'active':'' }} waves-effect"><i class="bi bi-person-square"></i>
+                        <li> <a href="{{ Route('admin.anggota.index') }}" class="{{ ($title === 'daftar-anggota') ? 'active':'' }} waves-effect"><i class="bi bi-person-square"></i>
                                 Data Anggota</a></li>
-                        <li> <a href="{{ Route('admin.bukuonline.index') }}" class="{{ ($title === 'data-buku-online     ') ? 'active':'' }} waves-effect"><i class="bi bi-pencil-square"></i>
+                        <li> <a href="{{ Route('admin.bukuonline.index') }}" class="{{ ($title === 'bukuonline') ? 'active':'' }} waves-effect"><i class="bi bi-pencil-square"></i>
                                 Data Buku Online</a></li>
-                        <li> <a href="{{ Route('admin.data-buku-offline') }}" class="{{ ($title === 'data-buku-offline') ? 'active':'' }}" class="waves-effect"><i class="bi bi-pencil-square"></i>
+                        <li> <a href="{{ Route('admin.bukuoffline.index') }}" class="{{ ($title === 'bukuoffline') ? 'active':'' }}" class="waves-effect"><i class="bi bi-pencil-square"></i>
                                 Data Buku Offline</a></li>
                         <li> <a href="#"><i class="ti-ruler-pencil waves-effect"></i>
                                 Transaksi Pinjam</a></li>

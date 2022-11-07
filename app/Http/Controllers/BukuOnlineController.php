@@ -16,7 +16,7 @@ class BukuOnlineController extends Controller
     {
         return view('admin.crud.buku.index', [
             'buku_online' =>  BukuOnline::all(),
-            'title' => 'Buku Online'
+            'title' => 'bukuonline'
         ]);
     }
 
@@ -28,7 +28,7 @@ class BukuOnlineController extends Controller
     public function create()
     {
         return view('admin.crud.buku.create', [
-        'title' => 'Buku Online'
+        'title' => 'bukuonline'
         ]);
     }
 
@@ -47,7 +47,12 @@ class BukuOnlineController extends Controller
             'penerbit' => 'required|min:3',
             'tahun_terbit' => 'required|min:4',
             'jumlah_halaman' => 'required',
+            
+
         ]);
+
+        $imagename = time().'.'.$request->image->extension();
+
 
         $bukuonline = new BukuOnline;
         $bukuonline->judul_buku = $request->judul_buku;
@@ -82,7 +87,8 @@ class BukuOnlineController extends Controller
     public function edit($id)
     {
         $buku_online = BukuOnline::findOrFail($id);
-        return view('admin.crud.buku.edit', compact('buku_online'));
+        return view('admin.crud.buku.edit',
+        compact('buku_online'),['title' => 'bukuonline']);
     }
 
     /**
@@ -101,6 +107,8 @@ class BukuOnlineController extends Controller
             'penerbit' => 'required|min:3',
             'tahun_terbit' => 'required|min:4',
             'jumlah_halaman' => 'required',
+            
+
         ]);
 
         $bukuonline = BukuOnline::findOrFail($id);
@@ -110,6 +118,7 @@ class BukuOnlineController extends Controller
         $bukuonline->penerbit = $request->penerbit;
         $bukuonline->tahun_terbit = $request->tahun_terbit;
         $bukuonline->jumlah_halaman = $request->jumlah_halaman;
+    
         $bukuonline->save();
 
         return redirect(route('admin.bukuonline.index'))->with('success', 'Data Berhasil Diedit.');

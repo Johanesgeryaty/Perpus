@@ -8,7 +8,8 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardUserController;
-use App\Http\Controllers\BukuOnlineController;
+use App\Http\Controllers\BukuOnlineController; 
+use App\Http\Controllers\BukuOfflineController;
 
 
 
@@ -46,7 +47,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         route::get('daftar-anggota', [DashboardController::class, 'daftaranggota'])->name('daftar-anggota');
         route::get('data-buku-online', [DashboardController::class, 'databukuonline'])->name('data-buku-online');
-        route::get('data-buku-offline', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
+        route::get('data-buku-offlinel  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
         route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
 
         //crud anggota
@@ -66,12 +67,20 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::post('buku-online/{id}', [BukuOnlineController::class, 'update'])->name('bukuonline.update');
         Route::delete('buku-online/{id}', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
 
+         //crud buku-offline
+         Route::get('bukuoffline', [BukuOfflineController::class, 'index'])->name('bukuoffline.index');
 });
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
         route::get('dashboard', [DashboardUserController::class, 'index'])->name('dashboard');
-        Route::get('form-user', function () {
+        route::get('bukuonline', [DashboardUserController::class, 'bukuonline'])->name('bukuonline');
+        route::get('bukuoffline', [DashboardUserController::class, 'bukuoffline'])->name('bukuoffline');
+        route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
+        route::get('whislist', [DashboardUserController::class, 'saran'])->name('saran');
+        route::get('saran', [DashboardUserController::class, 'whislist'])->name('whislist');
+        route::get('form', function () {
                 return view('user.form-user');
-            });
+        });
+        
 
 });
