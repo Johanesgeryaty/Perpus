@@ -1,62 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Form Data</title>
-    <link rel="stylesheet" href="{{asset('cssuser/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('cssuser/all.min.css')}}">
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        * {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
     <div class="container">
-    <h3 class="text-center mt-5 p-2" style="background-color: #55acee; border-radius: 50px;" >Ganti Kata Sandi</h3>
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Kata Sandi Baru</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword2" class="form-label">Konfirmasi Kata Sandi</label>
-          <input type="password" class="form-control" id="exampleInputPassword2">
+        <div class="card mt-3  text-bg-primary" style="width: auto;">
+            <div class="card-body">
+              <h3 class="card-title mt-3 fw-bold">Peraturan Pinjam Buku</h3>
+              <ul class="mt-4">
+                <h5>1. Dilarang memasukan data palsu</h5>
+                <h5>2. Mengembalikan dengan tepat waktu</h5>
+                <h5>3. Tidak menyebarkan file buku</h5>
+                <h5>4. Membayar <span class="fw-bold">Denda</span> Jika telat Mengembalikan</h5>
+                <h5>5. Jika buku hilang, peminjam wajib untuk <span class="fw-bold">Mengganti</span> buku yang dihilangkan</h5>
+            </ul>
+                <ul class="list-group">
+                    <li class="list">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+                        <label class="form-check-label stretched-link" for="firstCheckboxStretched">Saya menyetujui dan mengikuti peraturan yang berlaku</label>
+                     </li>
+                </ul>
+            </div>
+                <div class="container">
+                    <h3 class="card-title mt-3 fw-bold">Formulir Pinjam Buku</h3>
+                    <ul>
+                        <li>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </form>
-    </div>
-    <div class="container">
-        <h3 class="text-center mt-5 p-2" style="background-color: #55acee; border-radius: 50px;">Biodata Anggota</h3>
-    <form>
-        <div class="mb-3">
-            <label for="namalengkap" class="form-label">Nama Lengkap</label>
-            <input type="text" class="form-control" id="namalengkap">
-          </div>
-        <div class="mb-3">
-          <label for="ttl" class="form-label">Tempat Tanggal Lahir</label>
-          <input type="text" class="form-control" id="ttl">
-        </div>
-        <div class="mb-3">
-            <label for="kelas" class="form-label">Kelas</label>
-            <input type="text" class="form-control" id="kelas">
-          </div>
-        <div class="mb-3">
-            <label for="Adress" class="form-label">Alamat</label>
-            <input type="text" class="form-control" id="Adress">
-        </div>
-        <div class="mb-3">
-            <label for="User" class="form-label">No. Whatsapp Anggota (Aktif)</label>
-            <input type="text" class="form-control" id="User">
-        </div>
-        <div class="mb-3">
-            <label for="Parent" class="form-label">Nama Orang Tua</label>
-            <input type="text" class="form-control" id="Parent">
-        </div>
-        <div class="mb-3">
-            <label for="wa" class="form-label">No. Whatsapp Orang Tua</label>
-            <input type="text" class="form-control" id="wa">
-        </div>
-        <button type="submit" class="btn btn-primary float-end mb-5">Kirim</button>
-      </form>
-
-    </div>
-    <script src="/jsuser/bootstrap.min.js"></script>
-    <script src="/jsuser/all.min.js"></script>
-  </body>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
 </html>

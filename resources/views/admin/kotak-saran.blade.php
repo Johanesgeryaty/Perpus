@@ -6,7 +6,7 @@
           <div class="center">
             <div class="col-sm-14">
               <div class="page-header-title">
-                <h4 class="pull-left page-title">Daftar Buku Offline</h4>
+                <h4 class="pull-left page-title">Kotak Saran</h4>
                 <ol class="breadcrumb pull-right">
 
                   <li class="active"></li>
@@ -19,7 +19,7 @@
                     <div class="col-md-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Data Buku offline</h3>
+                                <h3 class="panel-title">Kotak Saran</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
@@ -29,8 +29,8 @@
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>Jurusan</th>
-                                            <th>Tanggal</th>
-                                            <th>Aksi</th>
+                                            <th>Tanggal Dikirim</th>
+                                            <th>Isi Saran</th>
                                         </tr>
                                     </thead>
                                     <tbody>

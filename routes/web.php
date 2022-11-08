@@ -32,7 +32,7 @@ Route::get('/', function () {
 });
 
 Route::fallback(function () {
-      return('goblok');
+      return('error bang');
 });
 
 Auth::routes();
@@ -81,11 +81,6 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('bukuonline', [DashboardUserController::class, 'bukuonline'])->name('bukuonline');
         route::get('bukuoffline', [DashboardUserController::class, 'bukuoffline'])->name('bukuoffline');
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
-        route::get('whislist', [DashboardUserController::class, 'saran'])->name('saran');
-        route::get('saran', [DashboardUserController::class, 'whislist'])->name('whislist');
-        route::get('form', function () {
-                return view('user.form-user');
-        });
-        
-
+        route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
+        route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
 });

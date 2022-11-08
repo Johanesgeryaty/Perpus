@@ -12,6 +12,10 @@
     <h3 class="text-center mt-5 text-white p-1" style="background-color: rgb(1, 49, 125); border-radius:5px;">Ganti Kata Sandi</h3>
     <form>
         <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password Yang Sekarang</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+        <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Kata Sandi Baru</label>
             <input type="password" class="form-control" id="exampleInputPassword1">
           </div>
@@ -20,32 +24,33 @@
           <input type="password" class="form-control" id="exampleInputPassword2">
         </div>
       </form>
+      <button type="submit" class="btn btn-primary float-end mb-5">Kirim</button>
     </div>
-    <div class="container">
+    {{-- <div class="container">
         <h3 class="text-center mt-5 text-white p-1" style="background-color:rgb(1, 49, 125);border-radius:5px;">Biodata Anggota</h3>
     <form>
         <div class="mb-3">
-          <label for="ttl" class="form-label">Tempat Tanggal Lahir</label>
-          <input type="text" class="form-control" id="ttl">
+          <label for="ttl" class="form-label">Tanggal Lahir</label>
+          <input type="text" class="form-control" id="ttl" placeholder="Contoh: 7 Maret 2006">
         </div>
         <div class="mb-3">
             <label for="Adress" class="form-label">Alamat</label>
-            <input type="text" class="form-control" id="Adress">
+            <input type="text" class="form-control" id="Adress" placeholder="Contoh: Perumahan Taman Raye Rajeg, Blok C5 No.12">
         </div>
         <div class="mb-3">
             <label for="User" class="form-label">No. Whatsapp Anggota (Aktif)</label>
-            <input type="text" class="form-control" id="User">
-        </div>
-        <div class="mb-3">
+            <input type="text" class="form-control" id="User" placeholder="Contoh: 0821.......">
+        </div> --}}
+        {{-- <div class="mb-3">
             <label for="Parent" class="form-label">Nama Orang Tua</label>
             <input type="text" class="form-control" id="Parent">
         </div>
         <div class="mb-3">
             <label for="wa" class="form-label">No. Whatsapp Orang Tua</label>
             <input type="text" class="form-control" id="wa">
-        </div>
-        <button type="submit" class="btn btn-primary float-end mb-5">Kirim</button>
-      </form>
+        </div> --}}
+        
+      {{-- </form> --}}
 
     </div>
     <script src="js/bootstrap.min.js"></script>

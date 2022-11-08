@@ -22,6 +22,9 @@ return new class extends Migration
             $table->string('email');
             $table->string('kelas')->nullable();
             $table->string('jurusan')->nullable();
+            $table->integer('no_hp')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('tanggal_lahir')->nullable();
             $table->string('password');
             $table->string('role')->default('user')->nullable();
             $table->rememberToken()->nullable();

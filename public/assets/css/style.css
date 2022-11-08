@@ -7,6 +7,71 @@
 @import url(https://fonts.googleapis.com/css?family=Prompt:400,600,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
 
+.ereaders-book-grid figure figcaption a.ereaders-heart,
+.ereaders-shop-grid figure figcaption a.ereaders-heart,
+.ereaders-shop-list figure figcaption a.ereaders-heart {
+  -webkit-transform: translateY(87px) rotate(150deg);
+     -moz-transform: translateY(87px) rotate(150deg);
+      -ms-transform: translateY(87px) rotate(150deg);
+       -o-transform: translateY(87px) rotate(150deg);
+          transform: translateY(87px) rotate(150deg);
+}
+
+.ereaders-book-grid figure figcaption a.ereaders-link,
+.ereaders-event-list figure figcaption a.ereaders-link,
+.ereaders-shop-grid figure figcaption a.ereaders-shopping-bag,
+.ereaders-shop-list figure figcaption a.ereaders-link {
+  -webkit-transform: translateX(-77px) rotate(-150deg);
+     -moz-transform: translateX(-77px) rotate(-150deg);
+      -ms-transform: translateX(-77px) rotate(-150deg);
+       -o-transform: translateX(-77px) rotate(-150deg);
+          transform: translateX(-77px) rotate(-150deg);
+}
+
+.ereaders-book-grid figure figcaption a.ereaders-reload,
+.ereaders-event-list figure figcaption a.ereaders-heart,
+.ereaders-shop-grid figure figcaption a.ereaders-reload,
+.ereaders-shop-list figure figcaption a.ereaders-reload {
+  -webkit-transform: translateX(77px) rotate(150deg);
+     -moz-transform: translateX(77px) rotate(150deg);
+      -ms-transform: translateX(77px) rotate(150deg);
+       -o-transform: translateX(77px) rotate(150deg);
+          transform: translateX(77px) rotate(150deg);
+}
+
+.ereaders-book-grid-text {
+    line-height: 1
+}
+
+.ereaders-book-grid-text h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 0 2px;
+    float: left;
+    letter-spacing: .9px
+}
+
+.ereaders-book-grid-text span {
+    font-size: 16px;
+    color: #000;
+    float: right;
+    font-weight: 700;
+    margin: 2px 0 0
+}
+
+.ereaders-book-grid-text small {
+    font-size: 12px;
+    margin: 0 0 16px;
+    letter-spacing: .7px
+}
+
+.ereaders-book-grid-text .ereaders-simple-btn {
+    padding: 7px 20px 9px;
+    font-weight: 500
+}
+
+
+
 body,
 html {
     background: #f5f5f5

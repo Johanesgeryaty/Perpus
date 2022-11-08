@@ -12,7 +12,7 @@
                           class="button-menu-mobile open-left waves-effect waves-light"> <i
                               class="ion-navicon"></i> </button> <span class="clearfix"></span></div>
               </div>
-              <a class="btn btn-danger" style="margin-top: 20px; float:right; border-radius: 5px;" href="#" role="button">Logout</a>
+              <a class="btn btn-danger" style="margin-top: 20px; float:right; border-radius: 5px;" href="{{ Route('logout.perform') }}" role="button">Logout</a>
           </div>
       </div>
   </div>

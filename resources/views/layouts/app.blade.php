@@ -15,6 +15,15 @@
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
+    {{-- <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet" />
+    <link href="{{ asset('/css/flaticon.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/css/slick-slider.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/css/fancybox.css') }}" rel="stylesheet" /> --}}
+    {{-- <link href="{{ asset('/css/style.css') }}" rel="stylesheet" /> --}}
+    {{-- <link href="{{ asset('/css/color.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/css/responsive.css') }}" rel="stylesheet" /> --}}
+
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -65,6 +74,7 @@
     <script src="{{ asset('assets/plugins/datatables/responsive.bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/pages/dashborad.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet" />
 </body>
 <!-- Mirrored from themesdesign.in/xadmino/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Sep 2022 13:58:35 GMT -->
 
