@@ -10,7 +10,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\BukuOnlineController; 
 use App\Http\Controllers\BukuOfflineController;
-
+use App\Http\Controllers\GantiPasswordController;
 
 
 
@@ -83,4 +83,6 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
+        route::get('gantipassword', [GantiPasswordController::class, 'gantipassword'])->name('gantipassword.action');
+        Route::post('updatepassword', [GantiPasswordController::class, 'updatepassword'])->name('updatepassword');
 });

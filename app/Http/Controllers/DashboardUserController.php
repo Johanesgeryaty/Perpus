@@ -38,6 +38,5 @@ class DashboardUserController extends Controller
         return view('user.whislist',['title' => 'whislist', 'active' => 'title']);
     }
 
-    
 
 }
