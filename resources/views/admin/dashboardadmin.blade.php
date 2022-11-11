@@ -66,42 +66,18 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        $anggota = [
-                        [
-                            "No" => "1",
-                            "Nis" => "1234567",
-                            "Nama" => "ashis cahya maulana",
-                            "Kelas" => "11",
-                            "Jurusan" => "rpl"
-                        ],
-                        [
-                            "No" => "1",
-                            "Nis" => "1234567",
-                            "Nama" => "ashis cahya maulana",
-                            "Kelas" => "11",
-                            "Jurusan" => "rpl"
-                        ],
-                        [
-                            "No" => "1",
-                            "Nis" => "1234567",
-                            "Nama" => "ashis cahya maulana",
-                            "Kelas" => "11",
-                            "Jurusan" => "rpl"
-                        ]
-                        ];
-
-                        ?>
                         <tr>
-                        <?php foreach ($anggota as $angg) : ?>
-                            <td><?= $angg["No"]; ?></td>
-                            <td><?= $angg["Nis"]; ?></td>
-                            <td><?= $angg["Nama"]; ?></td>
-                            <td><?= $angg["Kelas"]; ?></td>
-                            <td><?= $angg["Jurusan"]; ?></td>
+                            
+                            @foreach ($user as $users)
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $users->nisn }}</td>
+                            <td>{{ $users->name }}</td>
+                            <td>{{ $users->kelas }}</td>
+                            <td>{{ $users->jurusan }}</td>
+                            @endforeach
                             <td><a class="btn btn-success" href="index.html" role="button"><i class="bi bi-eye"></i></a></td>
                         </tr>
-                        <?php endforeach; ?>
+                        
 
                         </tbody>
                     </table>
