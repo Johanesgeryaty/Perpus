@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Exports\UserExport;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AnggotaController extends Controller
 {
@@ -58,7 +60,7 @@ class AnggotaController extends Controller
      * @param  \App\Models\Anggota  $anggota
      * @return \Illuminate\Http\Response
      */
-    public function show(Anggota $anggota)
+    public function show($anggota)
     {
         //
     }
@@ -108,4 +110,10 @@ class AnggotaController extends Controller
 
         return redirect(route('admin.anggota.index'));
     }
+
+    public function export() 
+    {
+        return Excel::download(new UserExport, 'anggota.xlsx');
+    }
+
 }
