@@ -15,6 +15,11 @@
     <div class="mx-auto" style="width: 200px;">
         <a class="btn btn-success" href="{{ route('admin.anggota.tambah') }}" role="button">Tambah Anggota</a>
     </div>
+    <div class="mb-3">
+      <button class="btn btn-primary" data-toggle="modal" data-target="#importData">Import Data</button>
+      <a href="{{ route('admin.anggota.export') }}" class="btn btn-success">Export Data</a>
+  </div>
+
     <p></p>
     <!--  -->
     <div class="row">
@@ -67,7 +72,30 @@
       </div>
 
     </div>
-
   </div>
+  <div class="modal fade" tabindex="-1" role="dialog" id="importData">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Import Data</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="{{ route('admin.anggota.import') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="file" name="file" id="file" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>
   @endsection
 

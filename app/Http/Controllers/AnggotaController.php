@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Exports\UserExport;
+use App\Imports\ImportUser;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Imports\UserImport;
 use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -113,7 +115,14 @@ class AnggotaController extends Controller
 
     public function export() 
     {
-        return Excel::download(new UserExport, 'anggota.xlsx');
+        return Excel::download(new UserExport, 'users.xlsx');
+    }
+
+    public function import(Request $request)
+    {
+        Excel::import(new UserImport, $request->file);
+
+        return redirect(route('admin.anggota.import'))->with('success', 'Berhasil import data user!');
     }
 
 }

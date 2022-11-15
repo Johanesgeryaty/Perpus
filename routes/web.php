@@ -55,6 +55,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
 
         //crud anggota
+        route::post('daftar-anggota/import',[AnggotaController::class, 'import'])->name('anggota.import');
         route::get('daftar-anggota/export', [AnggotaController::class, 'export'])->name('anggota.export');
         route::get('daftar-anggota/', [AnggotaController::class, 'index'])->name('anggota.index');
         route::get('daftar-anggota/create', [AnggotaController::class, 'create'])->name('anggota.tambah');
