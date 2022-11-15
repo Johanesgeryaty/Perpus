@@ -25,7 +25,7 @@ class GantiPasswordController extends Controller
 
 
         //cek password yang lama
-        if(!Hash::check($request->old_password, auth()->user()->password)){
+        if(!Hash::check($request->old_password,  auth()->user()->password)){
             return back()->with("error", "Password lama yang anda masukkan salah");
         }
 

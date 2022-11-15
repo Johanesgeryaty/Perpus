@@ -15,20 +15,20 @@
                                     placeholder="Masukkan Password Anda Yang Lama">
                             </div>
                             <div class="mb-5">
-                                <label for="newPasswordInput" class="form-label">Password Baru</label>
+                                <label for="newPasswordInput" class="form-label " style="padding-top:20px;" >Password Baru</label>
                                 <input name="new_password" type="password" class="form-control"
                                     placeholder="Masukkan Password Anda Yang Baru">
                             </div>
                             <div class="mb-5">
-                                <label for="confirmNewPasswordInput" class="form-label">Konfirmasi Password Baru</label>
+                                <label for="confirmNewPasswordInput" class="form-label" style="padding-top:20px;">Konfirmasi Password Baru</label>
                                 <input name="new_password_confirmation" type="password" class="form-control"
                                     placeholder="Verifikasi Password Anda Yang Baru">
                             </div>
 
                         </div>
-
-                        <div class="text-center">
-                            <button class="btn btn-success">Submit</button>
+                        <br>
+                        <div class="text-center " >
+                            <button class="btn btn-success " >Submit</button>
                         </div>
 
                     </form>

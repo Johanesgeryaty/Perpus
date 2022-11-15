@@ -47,8 +47,6 @@ class BukuOnlineController extends Controller
             'penerbit' => 'required|min:3',
             'tahun_terbit' => 'required|min:4',
             'jumlah_halaman' => 'required',
-            
-
         ]);
 
 

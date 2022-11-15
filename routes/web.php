@@ -12,7 +12,7 @@ use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\BukuOnlineController; 
 use App\Http\Controllers\BukuOfflineController;
 use App\Http\Controllers\GantiPasswordController;
-
+use App\Http\Controllers\SaranController;
 
 
 
@@ -30,6 +30,9 @@ use App\Http\Controllers\GantiPasswordController;
 
 Route::get('/', function () {
     return view('index');
+});
+Route::get('/contoh', function () {
+    return view('admin.crud.buku.form');
 });
 
 Route::fallback(function () {
@@ -53,7 +56,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 
         //crud anggota
         route::get('daftar-anggota/export', [AnggotaController::class, 'export'])->name('anggota.export');
-        route::get('daftar-anggota/index', [AnggotaController::class, 'index'])->name('anggota.index');
+        route::get('daftar-anggota/', [AnggotaController::class, 'index'])->name('anggota.index');
         route::get('daftar-anggota/create', [AnggotaController::class, 'create'])->name('anggota.tambah');
         route::post('daftar-anggota/create', [AnggotaController::class, 'store'])->name('anggota.buat');
         route::get('daftar-anggota/{id}/edit', [AnggotaController::class, 'edit'])->name('anggota.edit');
@@ -89,4 +92,7 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         //ganti password
         route::get('gantipassword', [GantiPasswordController::class, 'gantipassword'])->name('gantipassword.action');
         Route::post('updatepassword', [GantiPasswordController::class, 'updatepassword'])->name('updatepassword');
+        Route::get('editprofil', function () {
+                return view('user.editprofil');
+            });
 });

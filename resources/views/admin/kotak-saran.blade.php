@@ -57,13 +57,13 @@
 
                                     </tbody>
                                 </table>
-                                <div class="button-selesai">
+                                {{-- <div class="button-selesai">
                                 <div class="" style="float: right;" margin="auto">
                                     <div class="">
                                         <a class="btn btn-primary" href="index.php" role="button">Selesai</a>
                                         </div>
                                     </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>

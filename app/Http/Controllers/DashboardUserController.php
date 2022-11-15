@@ -31,11 +31,11 @@ class DashboardUserController extends Controller
     }
     public function saran()
     {
-        return view('user.saran',['title' => 'saran', 'active' => 'title']);
+        return view('user.saran',['title' => 'kotak-saran', 'active' => 'title']);
     }
     public function whislist()
     {
-        return view('user.whislist',['title' => 'whislist', 'active' => 'title']);
+        return view('user.whislist',['title' => 'whislist']);
     }
 
 

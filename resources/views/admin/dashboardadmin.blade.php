@@ -55,34 +55,32 @@
                 <div class="panel-body">
                     <div class="table-responsive">
                     <table class="table table-striped table-hover">
-                        <thead>
+                      <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Nis</th>
-                            <th>Nama</th>
-                            <th>Kelas</th>
-                            <th>Jurusan</th>
-                            <th>Lihat</th>
+                          <th class="text-center">No</th>
+                          <th class="text-center">Nisn</th>
+                          <th class="text-center">Nama</th>
+                          <th class="text-center">Kelas</th>
+                          <th class="text-center">Jurusan</th>
+                          <th class="text-center">Aksi</th>
                         </tr>
-                        </thead>
-                        <tbody>
+                      </thead>
+                      @foreach ($user as $users)
+                      <tbody>
                         <tr>
-                            
-                            @foreach ($user as $users)
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $users->nisn }}</td>
-                            <td>{{ $users->name }}</td>
-                            <td>{{ $users->kelas }}</td>
-                            <td>{{ $users->jurusan }}</td>
-                            @endforeach
-                            <td><a class="btn btn-success" href="index.html" role="button"><i class="bi bi-eye"></i></a></td>
+                            <td class="text-center">{{ $users->id }}</td>
+                            <td class="text-center">{{ $users->nisn }}</td>
+                            <td class="text-center">{{ $users->name }}</td>
+                            <td class="text-center">{{ $users->kelas }}</td>
+                            <td class="text-center">{{ $users->jurusan }}</td>
+                            <td class="text-center"><button class="btn btn-success">Lihat</button></td>
+                            </td>
                         </tr>
-                        
-
-                        </tbody>
+                      </tbody>
+                      @endforeach
                     </table>
-                    </div>
-                        </div>
+                      </div>  
+                      </div>
                     </div>
                     </div>
 
