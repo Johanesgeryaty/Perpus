@@ -122,7 +122,7 @@ class AnggotaController extends Controller
 
     public function import(Request $request)
     {
-        Excel::import(new UserImport, $request->file);
+        Excel::import(new UserImport, $request->file('file'));
 
         return redirect(route('admin.anggota.import'))->with('success', 'Berhasil import data user!');
     }
