@@ -74,12 +74,12 @@
                             <td>{{ $users->name }}</td>
                             <td>{{ $users->kelas }}</td>
                             <td>{{ $users->jurusan }}</td>
-                            @endforeach
-                            <td><a class="btn btn-success" href="index.html" role="button"><i class="bi bi-eye"></i></a></td>
+                            <td><a class="btn btn-success" href="{{ route('admin.anggota.show',$users->id) }}" role="button"><i class="bi bi-eye"></i></a></td>
                         </tr>
                         
-
-                        </tbody>
+                        
+                    </tbody>
+                    @endforeach
                     </table>
                     </div>
                         </div>

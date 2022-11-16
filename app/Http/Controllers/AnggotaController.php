@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Imports\UserImport;
 use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Facades\Excel;
+use id;
 
 class AnggotaController extends Controller
 {
@@ -62,9 +63,10 @@ class AnggotaController extends Controller
      * @param  \App\Models\Anggota  $anggota
      * @return \Illuminate\Http\Response
      */
-    public function show($anggota)
+    public function show($id)
     {
-        //
+        $users = User::find($id);
+        return view('admin.crud.anggota.show',['title'=> 'daftar-anggota'],compact('users'));
     }
 
     /**
