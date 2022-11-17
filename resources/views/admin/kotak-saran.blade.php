@@ -33,29 +33,15 @@
                                             <th>Isi Saran</th>
                                         </tr>
                                     </thead>
+                                    @foreach ( $kotak_saran as $kotak_sarans )
                                     <tbody>
-                                        <?php
-                                        $anggota = [
-                                            [
-                                                "No" => "1",
-                                                "Nama" => "1234567",
-                                                "Jurusan" => "ashis cahya maulana",
-                                                "Tanggal" => "11",
-                                            ],
-                                        ];
-
-                                        ?>
-                                        <tr>
-                                            <?php foreach ($anggota as $angg) : ?>
-                                                <td><?= $angg["No"]; ?></td>
-                                                <td><?= $angg["Nama"]; ?></td>
-                                                <td><?= $angg["Jurusan"]; ?></td>
-                                                <td><?= $angg["Tanggal"]; ?></td>
-                                                <td><a class="btn btn-success" href="index.php" role="button"><i class="bi bi-eye"></i></a></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-
+                                        <td class="text-center">{{ $loop->iteration }}</td>
+                                        <td class="text-center">{{ $kotak_sarans->user->name }}</td>
+                                        <td class="text-center">{{ $kotak_sarans->user->jurusan }}</td>
+                                        <td class="text-center">{{ $kotak_sarans->created_at }}</td>
+                                        <td class="text-center">{{ $kotak_sarans->isi_saran }}</td>
                                     </tbody>
+                                    @endforeach
                                 </table>
                                 <div class="button-selesai">
                                 <div class="" style="float: right;" margin="auto">

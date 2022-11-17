@@ -87,6 +87,7 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
+        route::put('saran/store', [DashboardUserController::class, 'store'])->name('saran.store');
 
         //ganti password
         route::get('gantipassword', [GantiPasswordController::class, 'gantipassword'])->name('gantipassword.action');
