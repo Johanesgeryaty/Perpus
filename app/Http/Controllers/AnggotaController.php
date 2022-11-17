@@ -124,7 +124,7 @@ class AnggotaController extends Controller
     {
         Excel::import(new UserImport, $request->file('file'));
 
-        return redirect(route('admin.anggota.import'))->with('success', 'Berhasil import data user!');
+        return redirect(route('admin.anggota.index'))->with('success', 'Berhasil import data user!');
     }
 
 }

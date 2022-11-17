@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use id;
 use App\Models\User;
 use App\Models\BukuOnline;
+use App\Models\KotakSaran;
 use App\Models\BukuOffline;
 use Illuminate\Http\Request;
 
@@ -29,7 +31,8 @@ class DashboardController extends Controller
 
         public function kotaksaran()
         {
-            return view('admin.kotak-saran',['title' => 'kotak-saran', 'active' => 'title']);
+            $kotak_saran= KotakSaran::all();
+            return view('admin.kotak-saran',['title' => 'kotak-saran', 'active' => 'title'],compact('kotak_saran'));
         }
 
 
