@@ -16,7 +16,7 @@
         <a class="btn btn-success" href="{{ route('admin.anggota.tambah') }}" role="button">Tambah Anggota</a>
     </div>
     <div class="mb-3" style="text-align: end">
-      <a href="{{ route('admin.anggota.import') }}" class="btn btn-primary" data-toggle="mo" data-target="#importData">Import Data</a>
+      <button class="btn btn-primary" data-toggle="modal" data-target="#importData">Import Data</button>
       <a href="{{ route('admin.anggota.export') }}" class="btn btn-success">Export Data</a>
   </div>
 

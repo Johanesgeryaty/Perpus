@@ -73,7 +73,7 @@
                             <td>{{ $users->name }}</td>
                             <td>{{ $users->kelas }}</td>
                             <td>{{ $users->jurusan }}</td>
-                            <td><a class="btn btn-success" href="{{ route('admin.anggota.show',$users->id) }}" role="button"><i class="bi bi-eye"></i></a></td>  
+                            <td><span wire::click="show({{ $users->id }})" class="btn btn-primary"><i class="bi bi-eye"></i></span></td>  
                         </tr>
                         @endforeach
                            
@@ -90,5 +90,58 @@
 
         </div>
 
+    </div>
+    <div class="modal fade show" tabindex="-1" role="dialog" id="show">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title text-center">Data Siswa</h3>
+              
+            </div>
+            <div class="row">
+                <div class="">
+                    <div class="form-group">
+                        <strong>Name:</strong>
+                        {{ $users->name }}
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <strong>Nisn:</strong>
+                        {{ $users->nisn }}
+                    </div>
+                <div class="">
+                    <div class="form-group">
+                        <strong>Email:</strong>
+                        {{ $users->email }}
+                    </div>
+                <div class="">
+                    <div class="form-group">
+                        <strong>Kelas:</strong>
+                        {{ $users->kelas }}
+                    </div>
+                <div class="">
+                    <div class="form-group">
+                        <strong>Jurusan:</strong>
+                        {{ $users->jurusan }}
+                    </div>
+                <div class="">
+                    <div class="form-group">
+                        <strong>NO. HP:</strong>
+                        {{ $users->no_hp }}
+                    </div>
+                <div class="">
+                    <div class="form-group justify-content-center">
+                        <strong>Alamat:</strong>
+                        {{ $users->alamat }}
+                    </div>
+                </div>
+            </div>
+                <div class="modal-footer bg-whitesmoke br">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+          </div>
+        </div>
     </div>
     @endsection
