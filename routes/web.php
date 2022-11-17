@@ -1,4 +1,3 @@
-
 <?php
 
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +11,7 @@ use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\BukuOnlineController; 
 use App\Http\Controllers\BukuOfflineController;
 use App\Http\Controllers\GantiPasswordController;
-use App\Http\Controllers\SaranController;
+
 
 
 
@@ -30,9 +29,6 @@ use App\Http\Controllers\SaranController;
 
 Route::get('/', function () {
     return view('index');
-});
-Route::get('/contoh', function () {
-    return view('admin.crud.buku.form');
 });
 
 Route::fallback(function () {
@@ -53,15 +49,11 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('data-buku-online', [DashboardController::class, 'databukuonline'])->name('data-buku-online');
         route::get('data-buku-offlinel  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
         route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
-        route::get('transaksi', function() {
-            return view('admin.transaksi');
-});
-
 
         //crud anggota
         route::post('daftar-anggota/import',[AnggotaController::class, 'import'])->name('anggota.import');
         route::get('daftar-anggota/export', [AnggotaController::class, 'export'])->name('anggota.export');
-        route::get('daftar-anggota/', [AnggotaController::class, 'index'])->name('anggota.index');
+        route::get('daftar-anggota/index', [AnggotaController::class, 'index'])->name('anggota.index');
         route::get('daftar-anggota/create', [AnggotaController::class, 'create'])->name('anggota.tambah');
         route::post('daftar-anggota/create', [AnggotaController::class, 'store'])->name('anggota.buat');
         route::get('daftar-anggota/{id}/edit', [AnggotaController::class, 'edit'])->name('anggota.edit');
@@ -94,14 +86,13 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
+        route::put('saran/store', [DashboardUserController::class, 'store'])->name('saran.store');
 
         //ganti password
         route::get('gantipassword', [GantiPasswordController::class, 'gantipassword'])->name('gantipassword.action');
         Route::post('updatepassword', [GantiPasswordController::class, 'updatepassword'])->name('updatepassword');
-        Route::get('editprofil', function () {
-                return view('user.editprofil');
-            });
-
-        //kotak saran
-        route::get('saran', [SaranController::class, 'index'])->name('saran');
+       
+});
+Route::get('editprofil', function () {
+    return view('user.editprofil');
 });

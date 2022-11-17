@@ -6,7 +6,7 @@
                       height="60"></a></div>
       </div>
       <div class="navbar navbar-default" role="navigation">
-          <div class="container" style="background-color:blue;">
+          <div class="container" style="background-color:#03a9f4;">
               <div class="">
                   <div class="pull-left"> <button type="button"
                           class="button-menu-mobile open-left waves-effect waves-light"> <i

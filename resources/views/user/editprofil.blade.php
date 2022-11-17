@@ -10,12 +10,12 @@
   <body>
     <div class="container">
         <h3 class="text-center mt-5">Edit Profil</h3>
-    <form method="post" action="/user/editprofil/{{ $post->slug }}">
+    <form method="post" action="/user/editprofil">
       @method('put')
       @csrf
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" required autofocus value="{{ old('title', $post->title) }}">
+          <input type="email" class="form-control" id="email" required autofocus value="{{ old('title') }}">
         </div>
         <div class="mb-3">
             <label for="kelas" class="form-label">No. Whatsapp</label>

@@ -39,14 +39,13 @@ class DashboardUserController extends Controller
         return view('user.whislist',['title' => 'whislist']);
     }
 
-<<<<<<< HEAD
     public function edit(Post $post)
     {
        return view('user.editprofil', [
            'post' => $post,
        ]);
     }
-=======
+
     public function store(Request $request)
     {
         $request->validate([
@@ -66,6 +65,4 @@ class DashboardUserController extends Controller
 
     }
 
-
->>>>>>> 02d58a82413b85435ee0dd774e321e1c68e45299
 }

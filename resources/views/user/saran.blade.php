@@ -1,15 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
-
-
-<form action="{{ route('user.saran') }}" method="POST">
-    <label for="sarans">Saran:</label>
-    <input type="text" name="sarans">
-    <button>Kirim</button>
-</form>
-=======
     <form action="{{ route('user.saran.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -27,7 +18,7 @@
                 <div class="col-md-12">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <h3 class="panel-title text-center">Edit Data Anggota</h3>
+                            <h3 class="panel-title text-center">Saran</h3>
                         </div>
                         <div class="panel-body">
                             <div class="mb-3">
@@ -43,6 +34,5 @@
                             <br>
                             <button type="submit" class="btn btn-primary btn-sm">Kirim</button>
     </form>
->>>>>>> 02d58a82413b85435ee0dd774e321e1c68e45299
 
 @endsection

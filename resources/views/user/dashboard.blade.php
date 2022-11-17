@@ -33,6 +33,6 @@
            @else 
            {{ Auth::User()->alamat }}
          @endif</div>   
-        <a class="btn btn-primary" style="margin-top: 20px; float:right; border-radius: 5px;" href="" role="button">Edit Profil</a>
+        <a class="btn btn-primary" style="margin-top: 20px; float:right; border-radius: 5px;" href="/editprofil" role="button">Edit Profil</a>
       </div>
 @endsection
