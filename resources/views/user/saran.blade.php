@@ -6,13 +6,10 @@
         @method('PUT')
         <div class="container">
             <div class="center">
-                <div class="col-sm-6">
                     <div class="page-header-title">
                         <div class="clearfix"></div>
-                    </div>
                 </div>
             </div>
-            <p></p>
             <!--  -->
             <div class="row">
                 <div class="col-md-12">

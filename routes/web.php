@@ -11,6 +11,7 @@ use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\BukuOnlineController; 
 use App\Http\Controllers\BukuOfflineController;
 use App\Http\Controllers\GantiPasswordController;
+use App\Http\Controllers\EditProfilController;
 
 
 
@@ -87,12 +88,14 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
         route::put('saran/store', [DashboardUserController::class, 'store'])->name('saran.store');
+        
+        //editprofil
+        Route::get('editprofil/{id}', [EditProfilController::class, 'editprofil'])->name('editprofil');
+        Route::post('editprofil/{id}', [EditProfilController::class, 'updateprofil'])->name('updateprofil');
+
 
         //ganti password
         route::get('gantipassword', [GantiPasswordController::class, 'gantipassword'])->name('gantipassword.action');
         Route::post('updatepassword', [GantiPasswordController::class, 'updatepassword'])->name('updatepassword');
        
-});
-Route::get('editprofil', function () {
-    return view('user.editprofil');
 });
