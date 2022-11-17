@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mt-5">
         <h1 class="text center mb-5">Edit Buku</h1>
-        <a href="{{ route('admin.bukuonline.index') }}"class="btn btn-primary mb-3">Data Buku</a>
+        <a href="{{ route('admin.bukuonline.index') }}"class="btn btn-primary mb-3" style="float:right;">Data Buku</a>
         <div class="card">
             <div class="card-body">
               <form action="{{ route('admin.bukuonline.update', $buku_online->id) }}" method="POST">

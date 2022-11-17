@@ -6,7 +6,7 @@
   
     <div class="container mt-5">
         <h1 class="text center mb-5">Tambah Buku</h1>
-        <a href="{{ route('admin.bukuonline.index') }}"class="btn btn-primary mb-3">Data Buku</a>
+        <a href="{{ route('admin.bukuonline.index') }}"class="btn btn-primary mb-3">Data Buku</a> 
         <div class="card">
             <div class="card-body">
               <form action="{{ route('admin.bukuonline.store') }}" method="POST" enctype="multipart/form-data">
