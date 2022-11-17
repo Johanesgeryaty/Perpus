@@ -35,7 +35,7 @@
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Email</label>
                                 <input type="email" class="form-control" name="email"
-                                    id="formGroupExampleInput2" placeholder="Masukan Nis">
+                                    id="formGroupExampleInput2" placeholder="Masukan Email">
                             </div>
                             <br>
                             <div class="mb-3">

@@ -12,10 +12,10 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto" style="width: 200px;">
+    <div class="mx-auto col-md-6" style="width: 200px;">
         <a class="btn btn-success" href="{{ route('admin.anggota.tambah') }}" role="button">Tambah Anggota</a>
     </div>
-    <div class="mb-3">
+    <div class="mb-3" style="text-align: end">
       <button class="btn btn-primary" data-toggle="modal" data-target="#importData">Import Data</button>
       <a href="{{ route('admin.anggota.export') }}" class="btn btn-success">Export Data</a>
   </div>

@@ -53,6 +53,10 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('data-buku-online', [DashboardController::class, 'databukuonline'])->name('data-buku-online');
         route::get('data-buku-offlinel  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
         route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
+        route::get('transaksi', function() {
+            return view('admin.transaksi');
+});
+
 
         //crud anggota
         route::post('daftar-anggota/import',[AnggotaController::class, 'import'])->name('anggota.import');
@@ -88,12 +92,14 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('bukuoffline', [DashboardUserController::class, 'bukuoffline'])->name('bukuoffline');
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
-        route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
-
+       
         //ganti password
         route::get('gantipassword', [GantiPasswordController::class, 'gantipassword'])->name('gantipassword.action');
         Route::post('updatepassword', [GantiPasswordController::class, 'updatepassword'])->name('updatepassword');
         Route::get('editprofil', function () {
                 return view('user.editprofil');
             });
+
+        //kotak saran
+        route::get('saran', [SaranController::class, 'index'])->name('saran');
 });
