@@ -39,13 +39,6 @@ class DashboardUserController extends Controller
         return view('user.whislist',['title' => 'whislist']);
     }
 
-    public function edit(Post $post)
-    {
-       return view('user.editprofil', [
-           'post' => $post,
-       ]);
-    }
-
     public function store(Request $request)
     {
         $request->validate([
