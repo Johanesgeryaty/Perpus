@@ -66,6 +66,7 @@ class AnggotaController extends Controller
     public function show($id)
     {
         $users = User::find($id);
+        return view('admin.crud.anggota.show',['title' => 'daftar-anggota'], compact('users'));
 
     }
 
