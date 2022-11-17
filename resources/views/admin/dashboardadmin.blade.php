@@ -57,27 +57,29 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th class="text-center">No</th>
-                          <th class="text-center">Nisn</th>
-                          <th class="text-center">Nama</th>
-                          <th class="text-center">Kelas</th>
-                          <th class="text-center">Jurusan</th>
-                          <th class="text-center">Aksi</th>
+                          <th>No</th>
+                          <th>Nisn</th>
+                          <th>Nama</th>
+                          <th>Kelas</th>
+                          <th>Jurusan</th>
+                          <th>Aksi</th>
                         </tr>
                       </thead>
-                      @foreach ($user as $users)
                       <tbody>
+                        @foreach ($user as $users)
                         <tr>
-                            <td class="text-center">{{ $users->id }}</td>
-                            <td class="text-center">{{ $users->nisn }}</td>
-                            <td class="text-center">{{ $users->name }}</td>
-                            <td class="text-center">{{ $users->kelas }}</td>
-                            <td class="text-center">{{ $users->jurusan }}</td>
-                            <td class="text-center"><button class="btn btn-success">Lihat</button></td>
-                            </td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $users->nisn }}</td>
+                            <td>{{ $users->name }}</td>
+                            <td>{{ $users->kelas }}</td>
+                            <td>{{ $users->jurusan }}</td>
+                            <td><a class="btn btn-success" href="{{ route('admin.anggota.show',$users->id) }}" role="button"><i class="bi bi-eye"></i></a></td>  
                         </tr>
-                      </tbody>
-                      @endforeach
+                        @endforeach
+                           
+                        
+
+                        </tbody>
                     </table>
                       </div>  
                       </div>
@@ -90,5 +92,3 @@
 
     </div>
     @endsection
-
-

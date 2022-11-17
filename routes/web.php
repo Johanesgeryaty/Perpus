@@ -67,6 +67,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('daftar-anggota/{id}/edit', [AnggotaController::class, 'edit'])->name('anggota.edit');
         route::put('daftar-anggota/{id}', [AnggotaController::class, 'update'])->name('anggota.update');
         route::delete('daftar-anggota/{id}', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
+        route::get('daftar-anggota/{id}/show', [AnggotaController::class, 'show'])->name('anggota.show');
 
         //crud buku
 
