@@ -40,6 +40,13 @@
                                         <td class="text-center">{{ $kotak_sarans->user->jurusan }}</td>
                                         <td class="text-center">{{ $kotak_sarans->created_at }}</td>
                                         <td class="text-center">{{ $kotak_sarans->isi_saran }}</td>
+                                        <td class="text-center">
+                                        <form action="{{ route('admin.kotak-saran.hapus', $kotak_sarans->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">hapus</button>
+                                        </form>
+                                        </td>
                                     </tbody>
                                     @endforeach
                                 </table>
