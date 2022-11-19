@@ -39,23 +39,4 @@ class DashboardUserController extends Controller
         return view('user.whislist',['title' => 'whislist']);
     }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'gambar_buku' => 'image|mimes:png,jpg,jpeg',
-            'isi_saran' => 'required'
-        ]);
-
-        $data = [
-            'user_id' => Auth::user()->id,
-            'isi_saran' => $request->isi_saran, 
-            'gambar' => $request->gambar_buku 
-        ];
-        
-        KotakSaran::create($data);
-
-        return redirect(route('user.dashboard'));
-
-    }
-
 }

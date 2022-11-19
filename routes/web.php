@@ -12,9 +12,7 @@ use App\Http\Controllers\BukuOnlineController;
 use App\Http\Controllers\BukuOfflineController;
 use App\Http\Controllers\GantiPasswordController;
 use App\Http\Controllers\EditProfilController;
-
-
-
+use App\Http\Controllers\KotakSaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +48,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('data-buku-online', [DashboardController::class, 'databukuonline'])->name('data-buku-online');
         route::get('data-buku-offlinel  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
         route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
+        route::delete('kotak-saran/{id}', [KotakSaranController::class, 'destroy'])->name('kotak-saran.hapus');
 
         //crud anggota
         route::post('daftar-anggota/import',[AnggotaController::class, 'import'])->name('anggota.import');
@@ -89,7 +88,7 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
-        route::put('saran/store', [DashboardUserController::class, 'store'])->name('saran.store');
+        route::put('saran/store', [KotakSaranController::class, 'store'])->name('saran.store');
         
         //editprofil
         Route::get('editprofil/{id}', [EditProfilController::class, 'editprofil'])->name('editprofil');
