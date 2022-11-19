@@ -48,6 +48,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('data-buku-online', [DashboardController::class, 'databukuonline'])->name('data-buku-online');
         route::get('data-buku-offlinel  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
         route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
+        route::get('transaksi', [DashboardController::class, 'transaksi'])->name('transaksi');
         route::delete('kotak-saran/{id}', [KotakSaranController::class, 'destroy'])->name('kotak-saran.hapus');
 
         //crud anggota
@@ -61,7 +62,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::delete('daftar-anggota/{id}', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
         route::get('daftar-anggota/{id}/show', [AnggotaController::class, 'show'])->name('anggota.show');
 
-        route::get('daftar-anggota/search',[Anggotacontroller::class,'search']);
+        route::get('daftar-anggota/search',[Anggotacontroller::class,'search'])->name('anggota.search');
 
         //crud buku
 

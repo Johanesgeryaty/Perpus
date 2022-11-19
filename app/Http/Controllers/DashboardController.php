@@ -13,7 +13,7 @@ class DashboardController extends Controller
 {
         public function index()
         {
-            $user = User::where('role','user')->get ();
+            $user = User::where('role','user')->get();
             $bukuOffline = BukuOffline::count();
             $bukuOnline = BukuOnline::count();
             return view('admin.dashboardadmin',['title' => 'dashboard', 'active' => 'title'], compact('user','bukuOffline', 'bukuOnline'));
@@ -33,6 +33,11 @@ class DashboardController extends Controller
         {
             $kotak_saran= KotakSaran::all();
             return view('admin.kotak-saran',['title' => 'kotak-saran', 'active' => 'title'],compact('kotak_saran'));
+        }
+
+        public function transaksi()
+        {
+                return view('admin.transaksi',['title' => 'transaksi', 'active' => 'title']);
         }
 
 

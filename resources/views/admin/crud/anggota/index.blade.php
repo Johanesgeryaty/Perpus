@@ -21,7 +21,7 @@
   </div>
     <br>
     <div>
-      <form action="daftar-angota/search" method="GET">
+      <form action="{{ route('admin.anggota.search') }}" method="GET">
       <input type="search" name="search" class="input" placeholder="Type here...">
     </form>
     </div>

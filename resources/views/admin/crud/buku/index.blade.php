@@ -108,7 +108,6 @@
               <table class="table table-striped table-hover">
                   <thead>
                             <th>No</th>
-                            <th>Id</th>
                             <th>Judul Buku</th>
                             <th>Genre</th>
                             <th>Pengarang</th>
@@ -120,7 +119,6 @@
                       @foreach ($buku_online as $buku_onlines)
                       <tr>
                         <th>{{ $loop->iteration }}</th>
-                        <td>{{ $buku_onlines->id }}</td>
                         <td>{{ $buku_onlines->judul_buku }}</td>
                         <td>{{ $buku_onlines->genre }}</td>
                         <td>{{ $buku_onlines->pengarang }}</td>

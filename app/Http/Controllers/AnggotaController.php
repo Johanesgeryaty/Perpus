@@ -21,19 +21,19 @@ class AnggotaController extends Controller
      */
     public function index(Request $request)
     {
-
-        if($request->has('search')){
-            $users = User::where('name','LIKE','%' .$request->search.'%')->get() ;
-        }else{
-            $users = User::all('role','user');
-        }
-
-        return view('admin.anggota.index');
-        
-
-        
+        $users = User::where('role', 'user')->get();
         return view('admin.crud.anggota.index',['title' => 'daftar-anggota', 'active' => 'title'], compact('users'));
     }
+
+    public function search(Request $request)
+    {
+        if($request->has('search')){
+            $users = User::where('name','LIKE','%' .$request->search.'%')->get();
+        } else{
+            $users = User::where('role', 'user')->get();
+    }
+    return view('admin.crud.anggota.index',['title' => 'daftar-anggota', 'active' => 'title'], compact('users'));
+}
 
     /**
      * Show the form for creating a new resource.
