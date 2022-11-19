@@ -6,8 +6,9 @@
         <a href="{{ route('admin.bukuoffline.index') }}"class="btn btn-primary mb-3">Data Buku</a>
         <div class="card">
             <div class="card-body">
-              <form action="{{ route('admin.bukuoffline.update', $bukuoffline->id) }}" method="POST">
+              <form action="{{ route('admin.bukuoffline.update', $bukuoffline->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                <input type="hidden" value="{{ $bukuoffline->cover_buku }}" name="oldImage">
                 <div class="mb-3">
                   <label for="judulbuku" class="form-label">Judul Buku</label>
                   <input type="text" class="form-control" id="judulbuku" name="judul_buku" 
@@ -42,6 +43,10 @@
                   <label for="stokbuku" class="form-label">Stok Buku</label>
                   <input type="number" class="form-control" id="stokbuku"name="stok_buku"
                   value="{{ $bukuoffline->stok_buku }}">
+                </div>
+                <div class="mb-3">
+                  <label for="stokbuku" class="form-label">Cover Buku</label>
+                  <input type="number" class="form-control" id="cover_buku"name="cover_buku">
                 </div>
                 <button type="submit" class="btn btn-primary" style="margin-top: 10px ;float:right;">Edit</button>
               </form>

@@ -9,7 +9,7 @@
         <a href="{{ route('admin.bukuoffline.index') }}"class="btn btn-primary mb-3">Data Buku</a>
         <div class="card">
             <div class="card-body">
-              <form action="{{ route('admin.bukuoffline.create') }}" method="POST">
+              <form action="{{ route('admin.bukuoffline.create') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                   <label for="judulbuku" class="form-label">Judul Buku</label>
@@ -34,6 +34,10 @@
                 <div class="mb-3">
                   <label for="jumlahhalaman" class="form-label">Jumlah Halaman</label>
                   <input type="text" class="form-control" id="jumlahhalaman"name="jumlah_halaman">
+                </div>
+                <div class="mb-3">
+                  <label for="cover_buku">Cover Buku</label>
+                  <input type="file" class="form-control" id="cover_buku" name="cover_buku" accept="image/*"/>
                 </div>
                 <div class="mb-3">
                   <label for="jumlahhalaman" class="form-label">Stok Buku</label>

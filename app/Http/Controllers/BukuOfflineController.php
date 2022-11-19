@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\BukuOffline;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class BukuOfflineController extends Controller
 {
@@ -47,9 +48,12 @@ class BukuOfflineController extends Controller
             'penerbit' => 'required|min:3',
             'tahun_terbit'=> 'required|min:4',
             'jumlah_halaman' => 'required',
-            'stok_buku' => 'required'
+            'stok_buku' => 'required',
+            'cover_buku' => 'required|image|mimes:jpeg,png,jpg'
+            
         ]);
-
+        $imageName = time().'.'.$request->cover_buku->extension();
+        $request->cover_buku->move(public_path('images'), $imageName);
         $bukuoffline = new BukuOffline ();
         $bukuoffline->judul_buku = $request->judul_buku;
         $bukuoffline->genre = $request->genre;
@@ -58,6 +62,7 @@ class BukuOfflineController extends Controller
         $bukuoffline->tahun_terbit = $request->tahun_terbit;
         $bukuoffline->jumlah_halaman = $request->jumlah_halaman;
         $bukuoffline->stok_buku = $request->stok_buku;
+        $bukuoffline->cover_buku = $imageName;
 
         $bukuoffline->save();
 
@@ -109,6 +114,22 @@ class BukuOfflineController extends Controller
             'stok_buku' => 'required'
         ]);
 
+        if($request->hasFile('cover_buku')) {
+            // untuk menghapus gambar lama
+                if($request->oldImage) {
+                    File::delete(public_path("images/".$bukuoffline->cover_buku));
+                }
+            // end
+
+            $request->validate([
+                'cover_buku' => 'required|file|image|mimes:jpeg,jpg,png',
+            ]);
+
+            $imageName = time().'.'.$request->cover_buku->extension();
+            $request->cover_buku->move(public_path('images'), $imageName);
+            $bukuoffline->cover_buku = $imageName;
+        }
+
         $bukuoffline->judul_buku = $request->judul_buku;
         $bukuoffline->genre = $request->genre;
         $bukuoffline->pengarang = $request->pengarang;
@@ -130,6 +151,7 @@ class BukuOfflineController extends Controller
     public function destroy($id)
     {
         $bukuoffline= BukuOffline::findOrFail($id);
+        unlink("images/".$bukuoffline->cover_buku);
         $bukuoffline->delete();
 
         return redirect(route('admin.bukuoffline.index'))->with('success','Data buku berhasil dihapus');

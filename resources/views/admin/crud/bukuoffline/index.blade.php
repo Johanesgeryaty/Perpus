@@ -40,6 +40,7 @@
                                             <th>Tahun Terbit</th>
                                             <th>Jumlah Halaman</th>
                                             <th>Stok Buku</th>
+                                            <th>Cover Buku</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -53,6 +54,7 @@
                                             <td>{{ $bukuofflines->tahun_terbit }}</td>
                                             <td>{{ $bukuofflines->jumlah_halaman }}</td>
                                             <td>{{ $bukuofflines->stok_buku }}</td>
+                                            <td><img src="{{ asset('images/'.$bukuofflines->cover_buku) }}" alt=""></td>
                                             <td>
                                                 <form action="{{ route('admin.bukuoffline.hapus', $bukuofflines->id) }}" method="POST">
                                                 @csrf
