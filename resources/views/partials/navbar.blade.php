@@ -40,8 +40,8 @@
                           History Pinjam</a></li>
                   <li > <a style="background-color: #242323;" href="{{ Route('user.saran') }}" class="{{ ($title === 'kotak-saran') ? 'active':'' }}" class="waves-effect"><i class="bi bi-envelope"></i>
                           Saran</a></li>
-                  <li> <a style="background-color: #242323;" href="{{ Route('user.whislist') }}" class="{{ ($title === 'whislist') ? 'active':'' }}" class="waves-effect"><i class="bi bi-bookmark"></i>
-                          Whislist</a></li>
+                  {{-- <li> <a style="background-color: #242323;" href="{{ Route('user.whislist') }}" class="{{ ($title === 'whislist') ? 'active':'' }}" class="waves-effect"><i class="bi bi-bookmark"></i>
+                          Whislist</a></li> --}}
                   {{-- <li> <a style="background-color: #242323;" href="{{ Route('logout.perform') }}" class="{{ ($title === 'data-buku-offline     ') ? 'active':'' }}" class="waves-effect"><i class="bi bi-envelope"></i>
                           Logout</a></li> --}}
               </ul>

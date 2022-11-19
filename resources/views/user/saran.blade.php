@@ -18,11 +18,11 @@
                             <h3 class="panel-title text-center">Saran</h3>
                         </div>
                         <div class="panel-body">
-                            <div class="mb-3">
+                            {{-- <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Buku</label>
                                 <input type="file" class="form-control " name="gambar_buku" value=""
                                     id="formGroupExampleInput" placeholder="Masukan Nama">
-                            </div>
+                            </div> --}}
                             <br>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Saran</label>

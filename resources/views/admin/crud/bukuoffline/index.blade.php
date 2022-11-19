@@ -32,29 +32,24 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Id</th>
                                             <th>Judul Buku</th>
-                                            <th>genre</th>
                                             <th>Pengarang</th>
                                             <th>Penerbit</th>
-                                            <th>Tahun Terbit</th>
-                                            <th>Jumlah Halaman</th>
+                                            <th>Tahun Terbit</th>   
                                             <th>Stok Buku</th>
-                                            <th>Cover Buku</th>
+                                            <td>Lihat</td>
+                                            <td>Aksi</td>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($bukuoffline as $bukuofflines)
                                             <th>{{ $loop->iteration }}</th>
-                                            <td>{{ $bukuofflines->id }}</td>
                                             <td>{{ $bukuofflines->judul_buku }}</td>
-                                            <td>{{ $bukuofflines->genre }}</td>
                                             <td>{{ $bukuofflines->pengarang }}</td>
                                             <td>{{ $bukuofflines->penerbit }}</td>
                                             <td>{{ $bukuofflines->tahun_terbit }}</td>
-                                            <td>{{ $bukuofflines->jumlah_halaman }}</td>
                                             <td>{{ $bukuofflines->stok_buku }}</td>
-                                            <td><img src="{{ asset('images/'.$bukuofflines->cover_buku) }}" alt=""></td>
+                                            <td><a href="" class="btn btn-primary btn-sm">Lihat</a></td>
                                             <td>
                                                 <form action="{{ route('admin.bukuoffline.hapus', $bukuofflines->id) }}" method="POST">
                                                 @csrf
