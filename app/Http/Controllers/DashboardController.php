@@ -35,6 +35,11 @@ class DashboardController extends Controller
             return view('admin.kotak-saran',['title' => 'kotak-saran', 'active' => 'title'],compact('kotak_saran'));
         }
 
+        public function transaksi()
+        {
+            return view('admin.transaksi.index',['title' => 'transaksi', 'active' => 'title']);
+        }
+
 
 
 }

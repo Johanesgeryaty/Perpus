@@ -39,20 +39,14 @@
                       <li class="active"><a href="/">Beranda</a></li>
                       <li>
                         <a href="#buku_populer">Buku Populer</a
-                        ><span class="has-subnav"><i class="fa fa-angle-down"></i
-                        ></span>
+                        >
                       </li>
                       <li>
-                        <a href="#kotak_saran">Kotak Saran</a
-                        ><span class="has-subnav"
-                          ><i class="fa fa-angle-down"></i
-                        ></span>
+                        <a href="#kotak_saran">Kotak Saran</a>
                       </li>
                       <li>
                         <a href="tata-tertib.html">Tata Tertib</a
-                        ><span class="has-subnav"
-                          ><i class="fa fa-angle-down"></i
-                      ></span>
+                        >
                     </li>
                   </ul>
                 </nav>

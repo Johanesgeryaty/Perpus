@@ -46,7 +46,8 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         route::get('daftar-anggota', [DashboardController::class, 'daftaranggota'])->name('daftar-anggota');
         route::get('data-buku-online', [DashboardController::class, 'databukuonline'])->name('data-buku-online');
-        route::get('data-buku-offlinel  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
+        route::get('data-buku-offline  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
+        route::get('transaksi', [DashboardController::class, 'transaksi'])->name('transaksi');
         route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
         route::delete('kotak-saran/{id}', [KotakSaranController::class, 'destroy'])->name('kotak-saran.hapus');
 

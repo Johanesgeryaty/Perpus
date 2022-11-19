@@ -37,10 +37,10 @@
                     <ul>
                         <li>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option selected>Jangka Waktu</option>
+                                <option value="1">1 Hari</option>
+                                <option value="2">2 Hari</option>
+                                <option value="3">3 Hari</option>
                             </select>
                         </li>
                     </ul>
