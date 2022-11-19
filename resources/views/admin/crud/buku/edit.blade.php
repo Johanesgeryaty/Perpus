@@ -6,8 +6,9 @@
         <a href="{{ route('admin.bukuonline.index') }}"class="btn btn-primary mb-3" style="float:right;">Data Buku</a>
         <div class="card">
             <div class="card-body">
-              <form action="{{ route('admin.bukuonline.update', $buku_online->id) }}" method="POST">
+              <form action="{{ route('admin.bukuonline.update', $buku_online->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                <input type="hidden" value="{{ $buku_online->cover_buku }}" name="oldImage">
                 <div class="mb-3">
                   <label for="judulbuku" class="form-label">Judul Buku</label>
                   <input type="text" class="form-control" id="judulbuku" name="judul_buku" 
@@ -36,6 +37,10 @@
                 <div class="mb-3">
                   <label for="jumlahhalaman" class="form-label">Jumlah Halaman</label>
                   <input type="text" class="form-control" id="jumlahhalaman"name="jumlah_halaman" value="{{ $buku_online->jumlah_halaman }}">
+                </div>
+                <div class="mb-3">
+                  <label for="jumlahhalaman" class="form-label">Cover Buku</label>
+                  <input type="file" class="form-control" id="cover_buku"name="cover_buku">
                 </div>
                 <button type="submit" class="btn btn-primary" style="margin-top: 10px ;float:right;">Edit</button>
               </form>

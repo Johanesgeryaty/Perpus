@@ -37,7 +37,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="cover_buku">Cover Buku</label>
-                  <input type="file" class="form-control" id="cover_buku" name="cover_buku" />
+                  <input type="file" class="form-control" id="cover_buku" name="cover_buku"  accept="image/*"/>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary float-end">Simpan</button>

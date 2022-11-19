@@ -115,6 +115,7 @@
                             <th>penerbit</th>
                             <th>Tahun Terbit</th>
                             <th>Jumlah Halaman</th>
+                            <th>Cover Buku</th>
                     </thead>
                     <tbody>
                       @foreach ($buku_online as $buku_onlines)
@@ -127,6 +128,7 @@
                         <td>{{ $buku_onlines->penerbit }}</td>
                         <td>{{ $buku_onlines->tahun_terbit }}</td>
                         <td>{{ $buku_onlines->jumlah_halaman }}</td>
+                        <td><img src="{{ asset('images/'.$buku_onlines->cover_buku) }}" alt=""></td>
                         <td>
                           <form action="{{ route('admin.bukuonline.hapus', $buku_onlines->id) }}" method="post">
                             @csrf

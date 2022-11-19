@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('pengarang');
             $table->string('penerbit');
             $table->date('tahun_terbit');
-            $table->string('cover_buku')->nullable();
+            $table->string('cover_buku');
             $table->integer('jumlah_halaman');
             $table->integer('stok_buku');
             $table->rememberToken()->nullable();
