@@ -19,6 +19,12 @@
       <button class="btn btn-primary" data-toggle="modal" data-target="#importData">Import Data</button>
       <a href="{{ route('admin.anggota.export') }}" class="btn btn-success">Export Data</a>
   </div>
+    <br>
+    <div>
+      <form action="{{ route('admin.anggota.search') }}" method="GET">
+      <input type="search" name="search" class="input" placeholder="Type here...">
+    </form>
+    </div>
 
     <p></p>
     <!--  -->
@@ -45,7 +51,7 @@
               @foreach ($users as $user)
               <tbody>
                 <tr>
-                    <td class="text-center">{{ $user->id }}</td>
+                    <td class="text-center">{{ $loop->iteration}}</td>
                     <td class="text-center">{{ $user->nisn }}</td>
                     <td class="text-center">{{ $user->name }}</td>
                     <td class="text-center">{{ $user->kelas }}</td>

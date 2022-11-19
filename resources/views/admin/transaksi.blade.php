@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 
@@ -13,29 +13,28 @@
                         <tr>
                             <th>No</th>
                             <th>Judul Buku</th>
-                            <th>genre</th>
                             <th>Pengarang</th>
                             <th>Penerbit</th>
                             <th>Tahun Terbit</th>
                             <th>Tanggal Pinjam </th>
                             <th>Status</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
                         <td>Dilan 1990</td>
-                        <td>Romance</td>
                         <td>Pidi Baiq</td>
                         <td>Erlangga Jaya</td>
                         <td>2018</td>
                         <td>1 November 2022</td>
                         <td> <span style="color: rgb(0, 190, 28)">Selesai</span> </td>
+                        <td class="justify-content-left"><Button class="btn btn-success">Konfir</Button></td>
                       </tr>
                       <tr>
                         <td>2</td>
                         <td>Dilan 1991</td>
-                        <td>Romance</td>
                         <td>Pidi Baiq</td>
                         <td>Erlangga Jaya</td>
                         <td>2018</td>

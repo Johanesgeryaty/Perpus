@@ -37,8 +37,13 @@
                                 Data Buku Online</a></li>
                         <li> <a href="{{ Route('admin.bukuoffline.index') }}" class="{{ ($title === 'bukuoffline') ? 'active':'' }}" class="waves-effect"><i class="bi bi-pencil-square"></i>
                                 Data Buku Offline</a></li>
+<<<<<<< HEAD
                         <li> <a href="{{ Route('admin.transaksi.index') }}" class="{{ ($title === 'transaksi') ? 'active':'' }} waves-effect"><i class="bi bi-pencil-square"></i>
                                 Transaksi</a></li>
+=======
+                        <li> <a href="{{ route('admin.transaksi') }}" class="{{ ($title === 'transaksi') ? 'active':'' }}" ><i class="ti-ruler-pencil waves-effect"></i>
+                                Transaksi Pinjam</a></li>
+>>>>>>> 0dc48be63d5ec982e6a7e4e90f0f7c82e0c52fab
                         <li> <a href="{{ Route('admin.kotak-saran') }}" class="{{ ($title === 'kotak-saran') ? 'active':'' }}" class="waves-effect"><i class="bi bi-envelope"></i>
                                 Kotak Saran</a></li>
                         <li> <a href="{{ Route('logout.perform') }}" class="{{ ($title === 'data-buku-offline     ') ? 'active':'' }}" class="waves-effect"><i class="bi bi-envelope"></i>

@@ -108,27 +108,25 @@
               <table class="table table-striped table-hover">
                   <thead>
                             <th>No</th>
-                            <th>Id</th>
                             <th>Judul Buku</th>
                             <th>Genre</th>
                             <th>Pengarang</th>
                             <th>penerbit</th>
                             <th>Tahun Terbit</th>
                             <th>Jumlah Halaman</th>
-                            <th>Cover Buku</th>
+                            <th>Detail  </th>
                     </thead>
                     <tbody>
                       @foreach ($buku_online as $buku_onlines)
                       <tr>
                         <th>{{ $loop->iteration }}</th>
-                        <td>{{ $buku_onlines->id }}</td>
                         <td>{{ $buku_onlines->judul_buku }}</td>
                         <td>{{ $buku_onlines->genre }}</td>
                         <td>{{ $buku_onlines->pengarang }}</td>
                         <td>{{ $buku_onlines->penerbit }}</td>
                         <td>{{ $buku_onlines->tahun_terbit }}</td>
                         <td>{{ $buku_onlines->jumlah_halaman }}</td>
-                        <td><img src="{{ asset('images/'.$buku_onlines->cover_buku) }}" alt=""></td>
+                        <td><a href="" class="btn btn-primary btn-sm">Lihat</a></td>
                         <td>
                           <form action="{{ route('admin.bukuonline.hapus', $buku_onlines->id) }}" method="post">
                             @csrf

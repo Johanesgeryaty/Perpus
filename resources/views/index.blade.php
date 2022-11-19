@@ -242,7 +242,7 @@
                                   <a
                                     href="book-detail.html"
                                     class="ereaders-simple-btn ereaders-bgcolor"
-                                    >Detail</a
+                                    >Detail Buku</a
                                   >
                                 </div>
                               </li>

@@ -19,11 +19,21 @@ class AnggotaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $users = User::where('role', 'user')->get();
         return view('admin.crud.anggota.index',['title' => 'daftar-anggota', 'active' => 'title'], compact('users'));
     }
+
+    public function search(Request $request)
+    {
+        if($request->has('search')){
+            $users = User::where('name','LIKE','%' .$request->search.'%')->get();
+        } else{
+            $users = User::where('role', 'user')->get();
+    }
+    return view('admin.crud.anggota.index',['title' => 'daftar-anggota', 'active' => 'title'], compact('users'));
+}
 
     /**
      * Show the form for creating a new resource.
@@ -127,5 +137,15 @@ class AnggotaController extends Controller
 
         return redirect(route('admin.anggota.index'))->with('success', 'Berhasil import data user!');
     }
+
+    // public function search(Request $request) {
+    //     if($request->has('search')){
+    //             $users = User::where('name','LIKE','%' .$request->search.'%')->first();
+    //         }else{
+    //             $users = User::where('role','user') ;
+    //         }
+
+    //         return view('admin.anggota.index');
+    // }
 
 }
