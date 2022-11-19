@@ -62,6 +62,8 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::delete('daftar-anggota/{id}', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
         route::get('daftar-anggota/{id}/show', [AnggotaController::class, 'show'])->name('anggota.show');
 
+        route::get('daftar-anggota/search',[Anggotacontroller::class,'search']);
+
         //crud buku
 
         Route::get('buku-online', [BukuOnlineController::class, 'index'])->name('bukuonline.index');

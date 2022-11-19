@@ -19,6 +19,12 @@
       <button class="btn btn-primary" data-toggle="modal" data-target="#importData">Import Data</button>
       <a href="{{ route('admin.anggota.export') }}" class="btn btn-success">Export Data</a>
   </div>
+    <br>
+    <div>
+      <form action="daftar-angota/search" method="GET">
+      <input type="search" name="search" class="input" placeholder="Type here...">
+    </form>
+    </div>
 
     <p></p>
     <!--  -->
