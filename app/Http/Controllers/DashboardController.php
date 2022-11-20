@@ -13,7 +13,7 @@ class DashboardController extends Controller
 {
         public function index()
         {
-            $user = User::where('role','user')->get ();
+            $user = User::where('role','user')->get();
             $bukuOffline = BukuOffline::count();
             $bukuOnline = BukuOnline::count();
             return view('admin.dashboardadmin',['title' => 'dashboard', 'active' => 'title'], compact('user','bukuOffline', 'bukuOnline'));
@@ -39,6 +39,7 @@ class DashboardController extends Controller
         {
             $users = User::where('role','user')->get();
             return view('admin.crud.transaksi.index',['title' => 'transaksi', 'active' => 'title'],compact('users'));
+           
         }
 
 

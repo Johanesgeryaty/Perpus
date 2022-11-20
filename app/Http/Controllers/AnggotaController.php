@@ -136,17 +136,4 @@ class AnggotaController extends Controller
         return redirect(route('admin.anggota.index'))->with('success', 'Berhasil import data user!');
     }
 
-    // public function search(Request $request){
-    //     if ($request->has('search')) {
-    //         $users  = User::where('nama','LIKE','%' .$request->search.'%')->get();
-    //     }
-    //     else{
-    //         $users = User::where('role','user')->get();
-    //     }
-
-    //     return view('admin.crud.anggota.index',['title' => 'daftar-anggota',], compact('users'));
-    // }
-
-
-
 }

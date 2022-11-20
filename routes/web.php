@@ -27,7 +27,7 @@ use App\Http\Controllers\KotakSaranController;
 
 
 Route::get('/', function () {
-    return view('index2');
+    return view('index');
 });
 
 Route::fallback(function () {
@@ -46,8 +46,10 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         route::get('daftar-anggota', [DashboardController::class, 'daftaranggota'])->name('daftar-anggota');
         route::get('data-buku-online', [DashboardController::class, 'databukuonline'])->name('data-buku-online');
-        route::get('data-buku-offlinel  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
+        route::get('data-buku-offline  ', [DashboardController::class, 'databukuoffline'])->name('data-buku-offline');
+        route::get('transaksi', [DashboardController::class, 'transaksi'])->name('transaksi');
         route::get('kotak-saran', [DashboardController::class, 'kotaksaran'])->name('kotak-saran');
+        route::get('transaksi', [DashboardController::class, 'transaksi'])->name('transaksi');
         route::delete('kotak-saran/{id}', [KotakSaranController::class, 'destroy'])->name('kotak-saran.hapus');
 
         //crud anggota
@@ -64,6 +66,8 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 
         // route::GET('daftar-anggota/search', [AnggotaController::class, 'search']);
 
+        route::get('daftar-anggota/search',[Anggotacontroller::class,'search'])->name('anggota.search');
+
         //crud buku
 
         Route::get('buku-online', [BukuOnlineController::class, 'index'])->name('bukuonline.index');
@@ -71,6 +75,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::post('buku-online/create', [BukuOnlineController::class, 'store'])->name('bukuonline.store');
         Route::get('buku-online/{id}/edit', [BukuOnlineController::class, 'edit'])->name('bukuonline.edit');
         Route::post('buku-online/{id}', [BukuOnlineController::class, 'update'])->name('bukuonline.update');
+        Route::post('buku-online/{id}', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
 
 
          //crud buku-offline

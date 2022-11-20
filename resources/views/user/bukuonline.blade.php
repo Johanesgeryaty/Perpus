@@ -1,35 +1,22 @@
 @extends('layouts.app')
 
+
 @section('content')
-<li class="col-md-3" style="list-style: none; text-align:center;" >
+
+  @foreach ($bukuonline as $buku)
+<li class="col-md-3" style="list-style: none; text-align:center;"  >
     <div class="container" >
-      <div class="">
+      <div class="card" >
           <figure>
-            <a href="#"
-              ><img src="/extra-images/book-grid-img7.jpg" alt=""
-            /></a>
+            <a href="/detailbuku">
+              <img src="/images/{{ $buku->cover_buku }}" alt="bukuoffline" style="width: 150px;height:210px">
+            </a>
+            <h3 style="margin: 1px ;">{{ $buku->judul_buku }}</h3>
           </figure>
-          <h3 style="margin: 1px ;">Tes Buku</h3>
-          <span>
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt" style="margin-bottom: 3%;" ></i>   
-          </span> <br>
-          <button href="#" class="btn btn-primary ">Detail Buku</button>
+          {{-- <button href="#" class="btn btn-primary" style="margin-bottom:20px;">Detail Buku</button> --}}
+          <button href="" class="button btn-sm mb-2"><span>Detail Buku </span></button>
       </div>
-  </div>
-  </li>
-  
-  <li class="col-md-3" style="list-style: none; text-align:center;" >
-    <div class="container" >
-          <figure>
-            <a href="#"
-              ><img src="/extra-images/book-grid-img7.jpg" alt=""
-            /></a>
-          </figure>
-          <h3 style="margin: 1px ;">Tes Buku</h3>
-          <span>
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt" style="margin-bottom: 3%;" ></i>   
-          </span> <br>
-          <button href="#" class="btn btn-primary ">Detail Buku</button>
     </div>
   </li>
+  @endforeach
 @endsection

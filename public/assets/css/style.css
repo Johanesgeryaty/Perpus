@@ -7,6 +7,27 @@
 @import url(https://fonts.googleapis.com/css?family=Prompt:400,600,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
 
+.input {
+    border: 1px;
+    border-style: double ;
+    border-color: #18bae2;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #ebe9e9;
+    box-shadow: 20px 20px 60px #c5c5c5,
+           -20px -20px 60px #ffffff;
+    transition: 0.3s;
+   }
+   
+   .input:focus {
+    outline-color: #ebe9e9;
+    background: #ebe9e9;
+    box-shadow: inset 20px 20px 60px #ffffff,
+           inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+   }
+
 .ereaders-book-grid figure figcaption a.ereaders-heart,
 .ereaders-shop-grid figure figcaption a.ereaders-heart,
 .ereaders-shop-list figure figcaption a.ereaders-heart {

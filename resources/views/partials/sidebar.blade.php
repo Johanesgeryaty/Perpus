@@ -61,5 +61,26 @@
                 </ul>
             </div>
             <div class="clearfix"></div>
+                <!-- navbar awal -->
+                <div id="sidebar-menu">
+                    <ul>
+                        <li> <a href="{{ Route('admin.dashboard') }}" class="{{ ($title === 'dashboard') ? 'active':'' }} waves-effect"><i class="ti-home"></i><span> Dashboard
+                                </span></a></li>
+                        <li> <a href="{{ Route('admin.anggota.index') }}" class="{{ ($title === 'daftar-anggota') ? 'active':'' }} waves-effect"><i class="bi bi-person-square"></i>
+                                Data Anggota</a></li>
+                        <li> <a href="{{ Route('admin.bukuonline.index') }}" class="{{ ($title === 'bukuonline') ? 'active':'' }} waves-effect"><i class="bi bi-pencil-square"></i>
+                                Data Buku Online</a></li>
+                        <li> <a href="{{ Route('admin.bukuoffline.index') }}" class="{{ ($title === 'bukuoffline') ? 'active':'' }}" class="waves-effect"><i class="bi bi-pencil-square"></i>
+                                Data Buku Offline</a></li>
+                        <li> <a href="{{ Route('admin.transaksi.index') }}" class="{{ ($title === 'transaksi') ? 'active':'' }} waves-effect"><i class="bi bi-pencil-square"></i>
+                                Transaksi</a></li>
+                        <li> <a href="{{ route('admin.transaksi') }}" class="{{ ($title === 'transaksi') ? 'active':'' }}" ><i class="ti-ruler-pencil waves-effect"></i>
+                                Transaksi Pinjam</a></li>
+                        <li> <a href="{{ Route('admin.kotak-saran') }}" class="{{ ($title === 'kotak-saran') ? 'active':'' }}" class="waves-effect"><i class="bi bi-envelope"></i>
+                                Kotak Saran</a></li>
+                        <li> <a href="{{ Route('logout.perform') }}" class="{{ ($title === 'data-buku-offline     ') ? 'active':'' }}" class="waves-effect"><i class="bi bi-envelope"></i>
+                                Logout</a></li>
+                    </ul>
+                </div>  <div class="clearfix"></div>
         </div>
     </div>
