@@ -36,6 +36,10 @@
                   <input type="text" class="form-control" id="jumlahhalaman"name="jumlah_halaman">
                 </div>
                 <div class="mb-3">
+                  <label for="deskripsi" class="form-label">deskripsi</label>
+                  <input type="text" class="form-control" id="deskripsi"name="deskripsi">
+                </div>
+                <div class="mb-3">
                   <label for="cover_buku">Cover Buku</label>
                   <input type="file" class="form-control" id="cover_buku" name="cover_buku"  accept="image/*"/>
                 </div>

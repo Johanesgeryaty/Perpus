@@ -49,7 +49,7 @@
                                             <td>{{ $bukuofflines->penerbit }}</td>
                                             <td>{{ $bukuofflines->tahun_terbit }}</td>
                                             <td>{{ $bukuofflines->stok_buku }}</td>
-                                            <td><a href="" class="btn btn-primary btn-sm">Lihat</a></td>
+                                            <td><a href="{{ route('admin.bukuoffline.show',$bukuofflines->id) }}" class="btn btn-primary btn-sm">Lihat</a></td>
                                             <td>
                                                 <form action="{{ route('admin.bukuoffline.hapus', $bukuofflines->id) }}" method="POST">
                                                 @csrf

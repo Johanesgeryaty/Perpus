@@ -76,6 +76,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::get('buku-online/{id}/edit', [BukuOnlineController::class, 'edit'])->name('bukuonline.edit');
         Route::post('buku-online/{id}', [BukuOnlineController::class, 'update'])->name('bukuonline.update');
         Route::post('buku-online/{id}', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
+        Route::get('buku-online/{id}/show', [BukuOnlineController::class, 'show'])->name('bukuonline.show');
 
 
          //crud buku-offline
@@ -85,6 +86,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::get('buku-offline/{id}/edit', [BukuOfflineController::class, 'edit'])->name('bukuoffline.edit');
         Route::post('buku-offline/{id}', [BukuOfflineController::class, 'update'])->name('bukuoffline.update');
         Route::delete('buku-offline/{id}', [BukuOfflineController::class, 'destroy'])->name('bukuoffline.hapus');
+        Route::get('buku-offline/{id}/show', [BukuOfflineController::class, 'show'])->name('bukuoffline.show');
 });
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
