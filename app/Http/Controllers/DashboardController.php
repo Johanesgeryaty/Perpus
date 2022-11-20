@@ -35,6 +35,12 @@ class DashboardController extends Controller
             return view('admin.kotak-saran',['title' => 'kotak-saran', 'active' => 'title'],compact('kotak_saran'));
         }
 
+        public function transaksi()
+        {
+            $users = User::where('role','user')->get();
+            return view('admin.crud.transaksi.index',['title' => 'transaksi', 'active' => 'title'],compact('users'));
+        }
+
 
 
 }

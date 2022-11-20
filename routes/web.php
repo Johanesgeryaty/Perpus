@@ -8,7 +8,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardUserController;
-use App\Http\Controllers\BukuOnlineController; 
+use App\Http\Controllers\BukuOnlineController;
 use App\Http\Controllers\BukuOfflineController;
 use App\Http\Controllers\GantiPasswordController;
 use App\Http\Controllers\EditProfilController;
@@ -27,7 +27,7 @@ use App\Http\Controllers\KotakSaranController;
 
 
 Route::get('/', function () {
-    return view('index');
+    return view('index2');
 });
 
 Route::fallback(function () {
@@ -60,6 +60,9 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::put('daftar-anggota/{id}', [AnggotaController::class, 'update'])->name('anggota.update');
         route::delete('daftar-anggota/{id}', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
         route::get('daftar-anggota/{id}/show', [AnggotaController::class, 'show'])->name('anggota.show');
+        route::get('transaksi/index', [DashboardController::class, 'transaksi'])->name('transaksi.index');
+
+        // route::GET('daftar-anggota/search', [AnggotaController::class, 'search']);
 
         //crud buku
 
@@ -68,10 +71,10 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::post('buku-online/create', [BukuOnlineController::class, 'store'])->name('bukuonline.store');
         Route::get('buku-online/{id}/edit', [BukuOnlineController::class, 'edit'])->name('bukuonline.edit');
         Route::post('buku-online/{id}', [BukuOnlineController::class, 'update'])->name('bukuonline.update');
-        Route::delete('buku-online/{id}', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
+
 
          //crud buku-offline
-        Route::get('buku-offline', [BukuOfflineController::class, 'index'])->name('bukuoffline.index'); 
+        Route::get('buku-offline', [BukuOfflineController::class, 'index'])->name('bukuoffline.index');
         Route::get('buku-offline/create', [BukuOfflineController::class,'create'])->name('bukuoffline.create');
         Route::post('buku-offline/create', [BukuOfflineController::class, 'store'])->name('bukuoffline.store');
         Route::get('buku-offline/{id}/edit', [BukuOfflineController::class, 'edit'])->name('bukuoffline.edit');
@@ -87,7 +90,7 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
         route::put('saran/store', [KotakSaranController::class, 'store'])->name('saran.store');
-        
+
         //editprofil
         Route::get('editprofil/{id}', [EditProfilController::class, 'editprofil'])->name('editprofil');
         Route::post('editprofil/{id}', [EditProfilController::class, 'updateprofil'])->name('updateprofil');
@@ -96,5 +99,5 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         //ganti password
         route::get('gantipassword', [GantiPasswordController::class, 'gantipassword'])->name('gantipassword.action');
         Route::post('updatepassword', [GantiPasswordController::class, 'updatepassword'])->name('updatepassword');
-       
+
 });

@@ -51,6 +51,45 @@
     letter-spacing: .9px
 }
 
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 190px;
+    position: relative;
+  }
+
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(255, 255, 255);
+  }
+
+  .inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #ffffff00;
+  }
+
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(7, 7, 7);
+  }
+
 .ereaders-book-grid-text span {
     font-size: 16px;
     color: #000;
@@ -108,7 +147,7 @@ html {
 .thumb-img,
 .waves-effect {
     overflow: hidden
-    
+
 }
 
 body {
@@ -370,6 +409,52 @@ a:hover {
 
 .text-dark {
     color: #2a323c !important
+}
+h5{
+
+}
+
+.gambar img{
+   margin-top: 20px;
+   margin-bottom: 10px;
+   width: 100%;
+   max-width: 300px;
+   justify-content: center;
+   height: auto
+}
+ .gambar a{
+    margin-bottom: 10px;
+    width: 100%;
+   max-width: 300px;
+   height: auto
+ }
+
+.text .judul-buku{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    font-size:35px;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+li {
+    list-style: none;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.des{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 15px;
+
+}
+
+.des p{
+    float: left;
+    margin-right: 3px;
+    margin-bottom: 30vh;
 }
 
 .form-control {
@@ -1711,8 +1796,9 @@ a:hover {
 .panel-heading {
     border-radius: 0;
     border: none !important;
-    padding: 10px 20px
-    
+    background-color:#03afff;
+    margin-top: 10px;
+
 }
 
 .panel-default>.panel-heading {

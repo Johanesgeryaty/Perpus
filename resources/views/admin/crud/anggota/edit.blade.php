@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    
+
 
     <form action="{{ route('admin.anggota.update', $users->id) }}" method="POST">
         @csrf
@@ -55,6 +55,11 @@
                             <br>
                             <button type="submit" class="btn btn-primary btn-sm">Kirim</button>
                             <a href="{{ route('admin.anggota.index') }}" class="btn btn-primary btn-sm">Kembali</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 
     @endsection
