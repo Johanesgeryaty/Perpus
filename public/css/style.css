@@ -14,6 +14,8 @@ body {
     font-size: 15px
 }
 
+
+
 body h1,
 body h2,
 body h3,
@@ -71,9 +73,15 @@ p {
     letter-spacing: .7px
 }
 
+
+
 a {
     color: #2e2e2e;
-    text-decoration: none
+    text-decoration: none;
+}
+
+a.btn-primary{
+    margin-bottom: 10px;
 }
 
 a:hover,
@@ -91,9 +99,21 @@ figure {
     position: relative
 }
 
+.logo img{
+    height: auto;
+    max-width: 100%;
+    width: 300px;
+}
+
 img {
     height: auto;
-    max-width: 100%
+    max-width: 100%;
+    width: 100%;
+}
+.card img{
+    height: auto;
+    max-width: 100%;
+    width: 150;
 }
 
 strong {
@@ -526,7 +546,7 @@ span.has-subnav {
     right: 0;
     top: 0;
     margin: -115px 0 0;
-   
+
 }
 
 @media(min-width:1250px) and (max-width:1500px) {

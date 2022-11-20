@@ -12,7 +12,7 @@ use App\Models\BukuOnline;
 class DashboardUserController extends Controller
 {
     public function index() {
-        return view('user.dashboard', [
+        return view('user.dashboard.dashboard', [
             'title' => 'dashboard',
             'active' => 'title'
         ]);
@@ -24,7 +24,7 @@ class DashboardUserController extends Controller
         if ($bukuonline->isEmpty()) {
             return view('user.bukukosong',['title' => 'bukuonline', 'active' => 'title']);
         } else{
-            return view('user.bukuonline',['title' => 'bukuonline', 'active' => 'title'], compact('bukuonline'));
+            return view('user.bukuonline.bukuonline',['title' => 'bukuonline', 'active' => 'title'], compact('bukuonline'));
         }
 
 
@@ -36,17 +36,17 @@ class DashboardUserController extends Controller
         if ($bukuoffline->isEmpty()) {
             return view('user.bukukosong',['title' => 'bukuoffline', 'active' => 'title']);
         } else{
-            return view('user.bukuoffline',['title' => 'bukuoffline', 'active' => 'title'], compact('bukuoffline'));
+            return view('user.bukuoffline.bukuoffline',['title' => 'bukuoffline', 'active' => 'title'], compact('bukuoffline'));
         }
     }
 
     public function historypinjam()
     {
-        return view('user.historypinjam',['title' => 'historypinjam', 'active' => 'title']);
+        return view('user.transaksi.historypinjam',['title' => 'historypinjam', 'active' => 'title']);
     }
     public function saran()
     {
-        return view('user.saran',['title' => 'kotak-saran', 'active' => 'title']);
+        return view('user.dashboard.saran',['title' => 'kotak-saran', 'active' => 'title']);
     }
     public function whislist()
     {

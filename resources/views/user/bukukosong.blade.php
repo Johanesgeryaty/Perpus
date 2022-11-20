@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
 
-<h3>Maaf, Buku Sedang Tidak Tersedia</h3>
+<img src="{{asset('images/bukukosong.gif')}}" alt=""  style="width:50%; display:block; margin:auto;">
 
 @endsection

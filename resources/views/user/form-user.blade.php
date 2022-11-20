@@ -26,32 +26,6 @@
       </form>
       <button type="submit" class="btn btn-primary float-end mb-5">Kirim</button>
     </div>
-    {{-- <div class="container">
-        <h3 class="text-center mt-5 text-white p-1" style="background-color:rgb(1, 49, 125);border-radius:5px;">Biodata Anggota</h3>
-    <form>
-        <div class="mb-3">
-          <label for="ttl" class="form-label">Tanggal Lahir</label>
-          <input type="text" class="form-control" id="ttl" placeholder="Contoh: 7 Maret 2006">
-        </div>
-        <div class="mb-3">
-            <label for="Adress" class="form-label">Alamat</label>
-            <input type="text" class="form-control" id="Adress" placeholder="Contoh: Perumahan Taman Raye Rajeg, Blok C5 No.12">
-        </div>
-        <div class="mb-3">
-            <label for="User" class="form-label">No. Whatsapp Anggota (Aktif)</label>
-            <input type="text" class="form-control" id="User" placeholder="Contoh: 0821.......">
-        </div> --}}
-        {{-- <div class="mb-3">
-            <label for="Parent" class="form-label">Nama Orang Tua</label>
-            <input type="text" class="form-control" id="Parent">
-        </div>
-        <div class="mb-3">
-            <label for="wa" class="form-label">No. Whatsapp Orang Tua</label>
-            <input type="text" class="form-control" id="wa">
-        </div> --}}
-        
-      {{-- </form> --}}
-
     </div>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/all.min.js"></script>
