@@ -35,12 +35,12 @@
                                     </thead>
                                     @foreach ( $kotak_saran as $kotak_sarans )
                                     <tbody>
-                                        <td class="text-center">{{ $loop->iteration }}</td>
-                                        <td class="text-center">{{ $kotak_sarans->user->name }}</td>
-                                        <td class="text-center">{{ $kotak_sarans->user->jurusan }}</td>
-                                        <td class="text-center">{{ $kotak_sarans->created_at }}</td>
-                                        <td class="text-center">{{ $kotak_sarans->isi_saran }}</td>
-                                        <td class="text-center">
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $kotak_sarans->user->name }}</td>
+                                        <td>{{ $kotak_sarans->user->jurusan }}</td>
+                                        <td>{{ $kotak_sarans->created_at }}</td>
+                                        <td>{{ $kotak_sarans->isi_saran }}</td>
+                                        <td>
                                         <form action="{{ route('admin.kotak-saran.hapus', $kotak_sarans->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')

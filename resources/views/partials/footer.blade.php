@@ -6,10 +6,32 @@
               <div class="col-md-12">
                 <div class="ereaders-footer-newslatter">
                   <h2 id="kotak_saran">Kotak Saran</h2>
-                  <div class="form-floating">
-                    <textarea class="form-control" placeholder="Masukkan Teks" id="floatingTextarea2" style="height: 100px"></textarea> <br>
-                    <button type="button" class="btn btn-primary" style="float:right">Kirim</button>
-                  </div> <br>
+                  <form action="{{ route('user.saran.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                        <!--  -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-primary">
+                                    <div class="panel-body">
+                                        {{-- <div class="mb-3">
+                                            <label for="formGroupExampleInput" class="form-label">Buku</label>
+                                            <input type="file" class="form-control " name="gambar_buku" value=""
+                                                id="formGroupExampleInput" placeholder="Masukan Nama">
+                                        </div> --}}
+                                        <br>
+                                        <div class="mb-3">
+                                            <textarea name="isi_saran" class="form-control" id="" cols="30" rows="10"></textarea>
+                                        </div>
+                                        <br>
+                                        <button type="submit" class="btn btn-primary btn-sm">Kirim</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
                   <a href="index-2.html" class="ereaders-footer-logo"
                     ><img src="images/footer-logo.png" alt=""
                   /></a>
