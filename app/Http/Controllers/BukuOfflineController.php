@@ -49,6 +49,7 @@ class BukuOfflineController extends Controller
             'tahun_terbit'=> 'required|min:4',
             'jumlah_halaman' => 'required',
             'stok_buku' => 'required',
+            'deskripsi' => 'required',
             'cover_buku' => 'required|image|mimes:jpeg,png,jpg'
             
         ]);
@@ -62,6 +63,7 @@ class BukuOfflineController extends Controller
         $bukuoffline->tahun_terbit = $request->tahun_terbit;
         $bukuoffline->jumlah_halaman = $request->jumlah_halaman;
         $bukuoffline->stok_buku = $request->stok_buku;
+        $bukuoffline->deskripsi = $request->deskripsi;
         $bukuoffline->cover_buku = $imageName;
 
         $bukuoffline->save();
@@ -77,7 +79,8 @@ class BukuOfflineController extends Controller
      */
     public function show($id)
     {
-        //
+        $bukuoffline= BukuOffline::find($id);
+        return view('admin.crud.bukuoffline.show',['title'=>'bukuoffline'], compact('bukuoffline'));
     }
 
     /**

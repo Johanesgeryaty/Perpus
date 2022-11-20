@@ -126,7 +126,7 @@
                         <td>{{ $buku_onlines->penerbit }}</td>
                         <td>{{ $buku_onlines->tahun_terbit }}</td>
                         <td>{{ $buku_onlines->jumlah_halaman }}</td>
-                        <td><a href="" class="btn btn-primary btn-sm">Lihat</a></td>
+                        <td><a href="{{ route('admin.bukuonline.show',$buku_onlines->id) }}" class="btn btn-primary btn-sm">Lihat</a></td>
                         <td>
                           <form action="{{ route('admin.bukuonline.hapus', $buku_onlines->id) }}" method="post">
                             @csrf

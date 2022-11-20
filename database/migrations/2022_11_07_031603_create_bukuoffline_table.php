@@ -23,6 +23,7 @@ return new class extends Migration
             $table->date('tahun_terbit');
             $table->string('cover_buku');
             $table->integer('jumlah_halaman');
+            $table->text('deskripsi');
             $table->integer('stok_buku');
             $table->rememberToken()->nullable();
             $table->timestamp('created_at')->nullable();

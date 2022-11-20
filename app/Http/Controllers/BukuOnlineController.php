@@ -48,6 +48,7 @@ class BukuOnlineController extends Controller
             'penerbit' => 'required|min:3',
             'tahun_terbit' => 'required|min:4',
             'jumlah_halaman' => 'required',
+            'deskripsi' => 'required',
             'cover_buku' => 'required|image|mimes:jpeg,png,jpg'
         ]);
 
@@ -60,6 +61,7 @@ class BukuOnlineController extends Controller
         $bukuonline->penerbit = $request->penerbit;
         $bukuonline->tahun_terbit = $request->tahun_terbit;
         $bukuonline->jumlah_halaman = $request->jumlah_halaman;
+        $bukuonline->deskripsi = $request->deskripsi;
         $bukuonline->cover_buku = $imageName;
         $bukuonline->save();
 
@@ -75,7 +77,8 @@ class BukuOnlineController extends Controller
      */
     public function show($id)
     {
-        //
+        $bukuonline= BukuOnline::find($id);
+        return view('admin.crud.buku.show',['title'=>'bukuonline'],compact('bukuonline'));
     }
 
     /**

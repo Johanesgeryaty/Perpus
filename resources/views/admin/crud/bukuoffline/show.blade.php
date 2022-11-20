@@ -53,25 +53,25 @@
                         <div class="row">
                             <div class="col-1 col-sm-8 col-md-2  ">
                     <div class="gambar">
-                        <img class="img-" src="/images/{{ $bukuonline->cover_buku }}" alt="">
+                        <img class="img-" src="/images/{{ $bukuoffline->cover_buku }}" alt="">
                         {{-- <a href="" class="btn btn-primary col-md-8 text-center"> Pinjam Buku</a> --}}
                     </div>
                 </div>
 
                     <div class="col-11 col-sm-8 col-md-10">
                     <div class="text">
-                        <div class="judul-buku">{{ $bukuonline->judul_buku }}</div>
+                        <div class="judul-buku">{{ $bukuoffline->judul_buku }}</div>
                         <li>
-                            Genre:{{ $bukuonline->genre }}
+                            Genre:{{ $bukuoffline->genre }}
                         </li>
                         <li>
-                            Pengarang:{{ $bukuonline->pengarang }}
+                            Pengarang:{{ $bukuoffline->pengarang }}
                         </li>
                         <li>
-                            Penerbit:{{ $bukuonline->penerbit }}
+                            Penerbit:{{ $bukuoffline->penerbit }}
                         </li>
                         <li>
-                            Tahun terbit:{{ $bukuonline->tahun_terbit }}
+                            Tahun terbit:{{ $bukuoffline->tahun_terbit }}
                         </li>
                     </div>
                     <br>
@@ -79,11 +79,11 @@
                         <h3 class="panel-title text-center" style="color: white" >Deskripsi Buku</h3>
                     </div> --}}
 
-                    <h5 >{{ $bukuonline->deskripsi }}</h5>
+                    <h5 >{{ $bukuoffline->deskripsi }}</h5>
                 </div>
                 </div>
             </div>
-            <a href="{{ route('admin.bukuonline.index') }}" class="btn btn-primary" style="margin: 5px;"><i class="bi bi-box-arrow-left"></i> Kembali</a>
+            <a href="{{ route('admin.bukuoffline.index') }}" class="btn btn-primary" style="margin: 5px;"><i class="bi bi-box-arrow-left"></i> Kembali</a>
             <a href="" class="btn btn-success" style="margin: 5px;"> Pinjam Buku</a>
         </div>
 
