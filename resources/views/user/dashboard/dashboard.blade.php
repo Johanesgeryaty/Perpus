@@ -28,7 +28,8 @@
           {{ Auth::User()->tanggal_lahir }}
         @endif</div>
         <label  style="padding-top: 10px;">Alamat</label>
-        <div style="background-color: #e3e3e3; border-radius:10px ; text-align: center; width:100%; padding:10px;">@if (Auth::User()->alamat == null)
+        <div style="background-color: #e3e3e3
+        ; border-radius:10px ; text-align: center; width:100%; padding:10px;">@if (Auth::User()->alamat == null)
           <strong class=""> Data Ini Belum Diisi, Harap Lengkapi Data!</strong>
            @else
            {{ Auth::User()->alamat }}
