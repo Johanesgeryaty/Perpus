@@ -40,18 +40,6 @@
                             <th>Detail  </th>
                     </thead>
                     <tbody>
-                        @if ($buku_online->isEmpty())
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><strong>Buku Masih Kosong</strong></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr></tr>
                         @foreach ($buku_online as $buku_onlines)
                         <tr>
                           <th>{{ $loop->iteration }}</th>
@@ -72,7 +60,6 @@
                             </td>
                           </tr>
                           @endforeach
-                        @endif
 
                       </tbody>
                 </table>

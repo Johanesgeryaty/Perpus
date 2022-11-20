@@ -10,6 +10,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\BukuOnlineController;
 use App\Http\Controllers\BukuOfflineController;
+use App\Http\Controllers\BukuOfflineUserController;
+use App\Http\Controllers\BukuOnlineUserController;
 use App\Http\Controllers\GantiPasswordController;
 use App\Http\Controllers\EditProfilController;
 use App\Http\Controllers\KotakSaranController;
@@ -75,7 +77,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::post('buku-online/create', [BukuOnlineController::class, 'store'])->name('bukuonline.store');
         Route::get('buku-online/{id}/edit', [BukuOnlineController::class, 'edit'])->name('bukuonline.edit');
         Route::post('buku-online/{id}', [BukuOnlineController::class, 'update'])->name('bukuonline.update');
-        Route::post('buku-online/{id}', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
+        Route::delete('buku-online/{id}', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
         Route::get('buku-online/{id}/show', [BukuOnlineController::class, 'show'])->name('bukuonline.show');
 
 
@@ -91,8 +93,10 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
         route::get('dashboard', [DashboardUserController::class, 'index'])->name('dashboard');
-        route::get('bukuonline', [DashboardUserController::class, 'bukuonline'])->name('bukuonline');
-        route::get('bukuoffline', [DashboardUserController::class, 'bukuoffline'])->name('bukuoffline');
+        route::get('bukuonline', [BukuOnlineUserController::class, 'index'])->name('bukuonline');
+        route::get('bukuonline/{id}/show', [BukuOnlineUserController::class, 'show'])->name('bukuonline.show');
+        route::get('bukuoffline/{id}/show', [BukuOfflineUserController::class, 'show'])->name('bukuoffline.show');
+        route::get('bukuoffline', [BukuOnlineUserController::class, 'index'])->name('bukuoffline');
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');

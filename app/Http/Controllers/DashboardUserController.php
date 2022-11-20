@@ -18,27 +18,6 @@ class DashboardUserController extends Controller
         ]);
     }
 
-    public function bukuonline()
-    {
-        $bukuonline = BukuOnline::all();
-        if ($bukuonline->isEmpty()) {
-            return view('user.bukukosong',['title' => 'bukuonline', 'active' => 'title']);
-        } else{
-            return view('user.bukuonline.bukuonline',['title' => 'bukuonline', 'active' => 'title'], compact('bukuonline'));
-        }
-
-
-    }
-
-    public function bukuoffline()
-    {
-        $bukuoffline = bukuoffline::all();
-        if ($bukuoffline->isEmpty()) {
-            return view('user.bukukosong',['title' => 'bukuoffline', 'active' => 'title']);
-        } else{
-            return view('user.bukuoffline.bukuoffline',['title' => 'bukuoffline', 'active' => 'title'], compact('bukuoffline'));
-        }
-    }
 
     public function historypinjam()
     {
