@@ -87,6 +87,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::post('buku-offline/{id}', [BukuOfflineController::class, 'update'])->name('bukuoffline.update');
         Route::delete('buku-offline/{id}', [BukuOfflineController::class, 'destroy'])->name('bukuoffline.hapus');
         Route::get('buku-offline/{id}/show', [BukuOfflineController::class, 'show'])->name('bukuoffline.show');
+        Route::get('buku-offline/tampilan', [BukuOfflineController::class, 'tampilan'])->name('bukuoffline.tampilan');
 });
 
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {

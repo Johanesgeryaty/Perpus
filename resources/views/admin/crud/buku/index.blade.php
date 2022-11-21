@@ -4,7 +4,7 @@
 
   <div class="container">
       <div class="center">
-        <div class="col-sm-14">
+        <div class="col-sm-12">
           <div class="page-header-title">
             <h4 class="pull-left page-title">Buku Online</h4>
             <ol class="breadcrumb pull-right">

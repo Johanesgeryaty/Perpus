@@ -4,7 +4,7 @@
 
         <div class="container">
           <div class="center">
-            <div class="col-sm-14">
+            <div class="col-sm-12">
               <div class="page-header-title">
                 <h4 class="pull-left page-title">Daftar Buku Offline</h4>
                 <ol class="breadcrumb pull-right">
@@ -35,7 +35,7 @@
                                             <th>Judul Buku</th>
                                             <th>Pengarang</th>
                                             <th>Penerbit</th>
-                                            <th>Tahun Terbit</th>   
+                                            <th>Tahun Terbit</th>
                                             <th>Stok Buku</th>
                                             <td>Lihat</td>
                                             <td>Aksi</td>

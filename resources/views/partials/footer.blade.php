@@ -14,11 +14,6 @@
                             <div class="col-lg-12">
                                 <div class="panel panel-primary">
                                     <div class="panel-body">
-                                        {{-- <div class="mb-3">
-                                            <label for="formGroupExampleInput" class="form-label">Buku</label>
-                                            <input type="file" class="form-control " name="gambar_buku" value=""
-                                                id="formGroupExampleInput" placeholder="Masukan Nama">
-                                        </div> --}}
                                         <br>
                                         <div class="mb-3">
                                             <textarea name="isi_saran" class="form-control" id="" cols="30" rows="10"></textarea>
@@ -46,26 +41,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                                <i class="fa fa-copyright"></i> 2022, All Right Reserved - by
-                                <a href="index-2.html">wacateam</a>
+                                <i class="fa fa-copyright"></i> 2022, All Right Reserved - by Alvin Raymond
                             </p>
-                            <ul class="footer-social-network">
-                                <li>
-                                    <a href="https://en-gb.facebook.com/login/" class="fab fa-facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/uas/login" class="fab fa-linkedin"></a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/login?lang=en" class="fab fa-twitter"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.pinterest.com/login/" class="fab fa-pinterest-p"></a>
-                                </li>
-                                <li>
-                                    <a href="https://en-gb.facebook.com/login/" class="fab fa-google-plus"></a>
-                                </li>
-                            </ul>
+
                         </div>
                     </div>
                 </div>

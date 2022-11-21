@@ -13,8 +13,9 @@
                 </div>
             </div>
         </div>
-        <!-- bekah terhapus -->
-        <div class="col-sm-6 col-md-4">
+
+
+        <div class="jlh col-md-4">
             <div class="panel panel-primary text-center">
                 <div class="panel-heading">
                     <h4 class="panel-title">Jumlah Anggota</h4>
@@ -24,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="jlh col-md-4">
             <div class="panel panel-primary text-center">
                 <div class="panel-heading">
                     <h4 class="panel-title">Jumlah Buku Offline</h4>
@@ -34,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="jlh col-md-4">
             <div class="panel panel-primary text-center">
                 <div class="panel-heading">
                     <h4 class="panel-title">Jumlah Buku Online</h4>
@@ -73,15 +74,15 @@
                             <td>{{ $users->name }}</td>
                             <td>{{ $users->kelas }}</td>
                             <td>{{ $users->jurusan }}</td>
-                            <td><a href="{{ route('admin.anggota.show', $users->id) }}"class="btn btn-warning">lihat</a></td>  
+                            <td><a href="{{ route('admin.anggota.show', $users->id) }}"class="btn btn-warning">lihat</a></td>
                         </tr>
                         @endforeach
-                           
-                        
+
+
 
                         </tbody>
                     </table>
-                      </div>  
+                      </div>
                       </div>
                     </div>
                     </div>
@@ -91,5 +92,5 @@
         </div>
 
     </div>
-    
+
     @endsection

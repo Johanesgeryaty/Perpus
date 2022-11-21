@@ -51,7 +51,7 @@ class BukuOfflineController extends Controller
             'stok_buku' => 'required',
             'deskripsi' => 'required',
             'cover_buku' => 'required|image|mimes:jpeg,png,jpg'
-            
+
         ]);
         $imageName = time().'.'.$request->cover_buku->extension();
         $request->cover_buku->move(public_path('images'), $imageName);
@@ -92,7 +92,7 @@ class BukuOfflineController extends Controller
     public function edit($id)
     {
         $bukuoffline = BukuOffline::findOrFail($id);
-        return view ('admin.crud.bukuoffline.edit', 
+        return view ('admin.crud.bukuoffline.edit',
         compact('bukuoffline'),['title' => 'bukuoffline']);
     }
 
@@ -138,7 +138,7 @@ class BukuOfflineController extends Controller
         $bukuoffline->pengarang = $request->pengarang;
         $bukuoffline->penerbit = $request->penerbit;
         $bukuoffline->tahun_terbit = $request->tahun_terbit;
-        $bukuoffline->jumlah_halaman = $request->jumlah_halaman; 
+        $bukuoffline->jumlah_halaman = $request->jumlah_halaman;
         $bukuoffline->stok_buku = $request->stok_buku;
         $bukuoffline->save();
 
@@ -159,4 +159,5 @@ class BukuOfflineController extends Controller
 
         return redirect(route('admin.bukuoffline.index'))->with('success','Data buku berhasil dihapus');
     }
+    
 }

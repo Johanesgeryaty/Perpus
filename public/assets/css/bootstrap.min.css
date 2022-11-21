@@ -1996,8 +1996,7 @@ pre code {
 }
 
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+
     margin-right: auto;
     margin-left: auto
 }
@@ -2062,7 +2061,6 @@ pre code {
 .col-md-3,
 .col-md-4,
 .col-md-5,
-.col-md-6,
 .col-md-7,
 .col-md-8,
 .col-md-9,
