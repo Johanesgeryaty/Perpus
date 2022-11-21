@@ -112,6 +112,7 @@ class BukuOnlineController extends Controller
             'penerbit' => 'required|min:3',
             'tahun_terbit' => 'required|min:4',
             'jumlah_halaman' => 'required',
+            'deskripsi' => 'required',
             
 
         ]);
@@ -138,6 +139,7 @@ class BukuOnlineController extends Controller
         $bukuonline->penerbit = $request->penerbit;
         $bukuonline->tahun_terbit = $request->tahun_terbit;
         $bukuonline->jumlah_halaman = $request->jumlah_halaman;
+        $bukuonline->deskripsi = $request->deskripsi;
     
         $bukuonline->save();
 

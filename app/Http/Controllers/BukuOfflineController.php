@@ -114,7 +114,8 @@ class BukuOfflineController extends Controller
             'penerbit' => 'required|min:3',
             'tahun_terbit'=> 'required|min:4',
             'jumlah_halaman' => 'required',
-            'stok_buku' => 'required'
+            'stok_buku' => 'required',
+            'deskripsi' => 'required',
         ]);
 
         if($request->hasFile('cover_buku')) {
@@ -139,6 +140,7 @@ class BukuOfflineController extends Controller
         $bukuoffline->penerbit = $request->penerbit;
         $bukuoffline->tahun_terbit = $request->tahun_terbit;
         $bukuoffline->jumlah_halaman = $request->jumlah_halaman; 
+        $bukuoffline->deskripsi = $request->deskripsi; 
         $bukuoffline->stok_buku = $request->stok_buku;
         $bukuoffline->save();
 
