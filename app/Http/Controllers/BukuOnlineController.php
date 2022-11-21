@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BukuOnline;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
@@ -28,9 +29,10 @@ class BukuOnlineController extends Controller
      */
     public function create()
     {
+        $genre=Genre::all();
         return view('admin.crud.buku.create', [
         'title' => 'bukuonline'
-        ]);
+        ],compact('genre'));
     }
 
     /**
@@ -43,7 +45,7 @@ class BukuOnlineController extends Controller
     {
         $request->validate([
             'judul_buku' => 'required|min:3 ',
-            'genre' => 'required|min:3',
+            'genre' => 'required',
             'pengarang' => 'required|min:3',
             'penerbit' => 'required|min:3',
             'tahun_terbit' => 'required|min:4',
@@ -56,7 +58,7 @@ class BukuOnlineController extends Controller
         $request->cover_buku->move(public_path('images'), $imageName);
         $bukuonline = new BukuOnline;
         $bukuonline->judul_buku = $request->judul_buku;
-        $bukuonline->genre = $request->genre;
+        $bukuonline->genre_id= $request->genre;
         $bukuonline->pengarang = $request->pengarang;
         $bukuonline->penerbit = $request->penerbit;
         $bukuonline->tahun_terbit = $request->tahun_terbit;
@@ -112,6 +114,7 @@ class BukuOnlineController extends Controller
             'penerbit' => 'required|min:3',
             'tahun_terbit' => 'required|min:4',
             'jumlah_halaman' => 'required',
+            'deskripsi' => 'required',
             
 
         ]);
@@ -138,6 +141,7 @@ class BukuOnlineController extends Controller
         $bukuonline->penerbit = $request->penerbit;
         $bukuonline->tahun_terbit = $request->tahun_terbit;
         $bukuonline->jumlah_halaman = $request->jumlah_halaman;
+        $bukuonline->deskripsi = $request->deskripsi;
     
         $bukuonline->save();
 

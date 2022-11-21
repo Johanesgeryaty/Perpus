@@ -14,18 +14,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bukuoffline', function (Blueprint $table) {
+        Schema::create('genres', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_buku');
-            $table->foreignId('genre_id',)->nullable()->index('fk_bukuoffline_to_genre');
-            $table->string('pengarang');
-            $table->string('penerbit');
-            $table->string('tahun_terbit');
-            $table->string('cover_buku');
-            $table->integer('jumlah_halaman');
-            $table->text('deskripsi');
-            $table->integer('stok_buku');
-            $table->rememberToken()->nullable();
+            $table->string('name');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable()->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
@@ -38,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bukuofflines');
+        Schema::dropIfExists('genres');
     }
 };

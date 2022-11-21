@@ -16,8 +16,12 @@
                   <input type="text" class="form-control" id="judulbuku" name="judul_buku">
                 </div>
                 <div class="mb-3">
-                  <label for="genre" class="form-label">Genre</label>
-                  <input type="text" class="form-control" id="genre" name="genre">
+                  <label for="genre">Genre</label>
+                  <select id="genre" name="genre">
+                    @foreach ($genre as $item)
+                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                    @endforeach
+                  </select>
                 </div>
                 <div class="mb-3">
                   <label for="pengarang" class="form-label">Pengarang</label>
@@ -29,7 +33,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="tahunterbit" class="form-label">Tahun Terbit</label>
-                  <input type="date" class="form-control" id="tahunterbit"name='tahun_terbit'>
+                  <input type="text" class="form-control" id="tahunterbit"name='tahun_terbit'>
                 </div>
                 <div class="mb-3">
                   <label for="jumlahhalaman" class="form-label">Jumlah Halaman</label>
@@ -42,7 +46,7 @@
               </div>
               <div class="mb-3">
                 <label for="deskripsi" class="form-label">deskripsi</label>
-                <input type="text" class="form-control" id="deskripsi"name="deskripsi">
+                <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" class="ckeditor form-control"></textarea>
               </div>
                 <div class="mb-3">
                   <label for="jumlahhalaman" class="form-label">Stok Buku</label>

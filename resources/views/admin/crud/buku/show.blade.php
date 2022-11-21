@@ -62,7 +62,7 @@
                     <div class="text">
                         <div class="judul-buku">{{ $bukuonline->judul_buku }}</div>
                         <li>
-                            Genre:{{ $bukuonline->genre }}
+                            Genre:{{ $bukuonline->genre->name}}
                         </li>
                         <li>
                             Pengarang:{{ $bukuonline->pengarang }}
@@ -79,12 +79,11 @@
                         <h3 class="panel-title text-center" style="color: white" >Deskripsi Buku</h3>
                     </div> --}}
 
-                    <h5 >{{ $bukuonline->deskripsi }}</h5>
+                    <h5 >{!! $bukuonline->deskripsi !!}</h5>
                 </div>
                 </div>
             </div>
             <a href="{{ route('admin.bukuonline.index') }}" class="btn btn-primary" style="margin: 5px;"><i class="bi bi-box-arrow-left"></i> Kembali</a>
-            <a href="" class="btn btn-success" style="margin: 5px;"> Pinjam Buku</a>
         </div>
 
     </div>

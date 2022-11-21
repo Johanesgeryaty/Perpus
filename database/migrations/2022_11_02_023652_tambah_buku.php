@@ -17,10 +17,10 @@ return new class extends Migration
         Schema::create('buku_online', function (Blueprint $table) {
             $table->id();
             $table->string('judul_buku');
-            $table->string('genre');
+            $table->foreignId('genre_id',)->nullable()->index('fk_buku_online_to_genre');
             $table->string('pengarang');
             $table->string('penerbit');
-            $table->date('tahun_terbit');
+            $table->string('tahun_terbit');
             $table->string('cover_buku');
             $table->integer('jumlah_halaman');
             $table->text('deskripsi');

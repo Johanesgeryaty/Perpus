@@ -45,8 +45,12 @@
                   value="{{ $bukuoffline->stok_buku }}">
                 </div>
                 <div class="mb-3">
-                  <label for="stokbuku" class="form-label">Cover Buku</label>
-                  <input type="number" class="form-control" id="cover_buku"name="cover_buku">
+                  <label for="deskripsi" class="form-label">deskripsi</label>
+                  <input type="text" class="form-control" id="deskripsi"name="deskripsi" value="{{ $bukuoffline->deskripsi }}">
+                </div>
+                <div class="mb-3">
+                  <label for="cover_buku" class="form-label">Cover Buku</label>
+                  <input type="file" class="form-control" id="cover_buku"name="cover_buku">
                 </div>
                 <button type="submit" class="btn btn-primary" style="margin-top: 10px ;float:right;">Edit</button>
               </form>
