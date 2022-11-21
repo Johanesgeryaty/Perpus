@@ -65,7 +65,8 @@
                                                 @method('DELETE')
                                                 <a href="{{ route('admin.anggota.edit', $user->id) }}"
                                                     class="btn btn-warning">edit</a>
-                                                <button type="submit" class="btn btn-danger">hapus</button>
+                                                    <a href="#" class="btn btn-danger btn-sm delete"
+                                                    data-id="{{ $user->id }}">Hapus</a>
                                             </form>
                                         </td>
                                     </tr>

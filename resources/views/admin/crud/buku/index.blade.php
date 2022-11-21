@@ -57,7 +57,7 @@
                                                     <a href="{{ route('admin.bukuonline.edit', $buku_onlines->id) }}"
                                                         class="btn btn-success btn-sm">Edit</a>
                                                     <a href="#" class="btn btn-danger btn-sm delete"
-                                                        data-id="{{ $buku_onlines->id }}">delete</a>
+                                                        data-id="{{ $buku_onlines->id }}">Hapus</a>
                                                 </form>
                                             </td>
                                         </tr>
@@ -75,8 +75,8 @@
                         var bukuId = $(this).attr('data-id');
                         console.log(bukuId);
                         swal({
-                                title: "Are you sure?",
-                                text: "Once deleted, you will not be able to recover this imaginary file!",
+                                title: "Apakah Kamu yakin ingin menghapus data ini?",
+                                text: "Data yang sudah dihapus tidak bisa dikembalikan lagi!",
                                 icon: "warning",
                                 buttons: true,
                                 dangerMode: true,
@@ -88,7 +88,7 @@
                                         icon: "success",
                                     });
                                 } else {
-                                    swal("Your imaginary file is safe!");
+                                    swal("Hapus data dibatalkan");
                                 }
                             });
                     });

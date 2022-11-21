@@ -250,6 +250,12 @@ a:hover {
     padding-right: 15px
 }
 
+.deskripsi.tulisan{
+    width: 200px;
+  height: 65px;
+  overflow: visible;
+}
+
 .footer {
     background-color: #f9f9f9;
     border-top: 1px solid rgba(0, 0, 0, .05);

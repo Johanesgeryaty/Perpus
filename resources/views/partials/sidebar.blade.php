@@ -49,7 +49,7 @@
                     <li> <a href="{{ Route('admin.transaksi.index') }}"
                              class="{{ $title === 'transaksi' ? 'active' : '' }} waves-effect"><i
                                 class="bi bi-person-square"></i>
-                             transaksi</a></li>
+                             Transaksi</a></li>
                     <li> <a href="{{ Route('admin.kotak-saran') }}"
                             class="{{ $title === 'kotak-saran' ? 'active' : '' }}" class="waves-effect"><i
                                 class="bi bi-envelope"></i>
