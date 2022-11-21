@@ -97,7 +97,7 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('bukuonline', [BukuOnlineUserController::class, 'index'])->name('bukuonline');
         route::get('bukuonline/{id}/show', [BukuOnlineUserController::class, 'show'])->name('bukuonline.show');
         route::get('bukuoffline/{id}/show', [BukuOfflineUserController::class, 'show'])->name('bukuoffline.show');
-        route::get('bukuoffline', [BukuOnlineUserController::class, 'index'])->name('bukuoffline');
+        route::get('bukuoffline', [BukuOfflineUserController::class, 'index'])->name('bukuoffline');
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
