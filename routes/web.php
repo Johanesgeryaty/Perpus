@@ -62,7 +62,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::post('daftar-anggota/create', [AnggotaController::class, 'store'])->name('anggota.buat');
         route::get('daftar-anggota/{id}/edit', [AnggotaController::class, 'edit'])->name('anggota.edit');
         route::put('daftar-anggota/{id}', [AnggotaController::class, 'update'])->name('anggota.update');
-        route::delete('daftar-anggota/{id}', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
+        route::get('daftar-anggota/{id}/delete', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
         route::get('daftar-anggota/{id}/show', [AnggotaController::class, 'show'])->name('anggota.show');
         route::get('transaksi/index', [DashboardController::class, 'transaksi'])->name('transaksi.index');
 
@@ -87,7 +87,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::post('buku-offline/create', [BukuOfflineController::class, 'store'])->name('bukuoffline.store');
         Route::get('buku-offline/{id}/edit', [BukuOfflineController::class, 'edit'])->name('bukuoffline.edit');
         Route::post('buku-offline/{id}', [BukuOfflineController::class, 'update'])->name('bukuoffline.update');
-        Route::delete('buku-offline/{id}', [BukuOfflineController::class, 'destroy'])->name('bukuoffline.hapus');
+        Route::get('buku-offline/{id}/delete', [BukuOfflineController::class, 'destroy'])->name('bukuoffline.hapus');
         Route::get('buku-offline/{id}/show', [BukuOfflineController::class, 'show'])->name('bukuoffline.show');
         Route::get('buku-offline/tampilan', [BukuOfflineController::class, 'tampilan'])->name('bukuoffline.tampilan');
 });

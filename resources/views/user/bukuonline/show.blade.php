@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <title>Tampilan Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content="Admin Dashboard" name="description" />
@@ -9,8 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <link href="{{ asset('assets/plugins/datatables/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/datatables/responsive.bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/datatables/responsive.bootstrap.min.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap.min.css') }}" rel="stylesheet"
+        type="text/css" />
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
@@ -29,7 +32,10 @@
         ga('send', 'pageview');
     </script>
     <!-- icon bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+        integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="container">
@@ -42,7 +48,6 @@
             </div>
         </div>
         <p></p>
-        <!--  -->
         <div class="row">
             <div class="col-sm-12 col-md-12">
                 <div class="panel panel-primary">
@@ -52,45 +57,41 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-1 col-sm-8 col-md-2  ">
-                    <div class="gambar">
-                        <img class="img-" src="/images/{{ $bukuonline->cover_buku }}" alt="">
-                        {{-- <a href="" class="btn btn-primary col-md-8 text-center"> Pinjam Buku</a> --}}
-                    </div>
-                </div>
+                                <div class="gambar">
+                                    <img class="img-" src="/images/{{ $bukuonline->cover_buku }}" alt="">
+                                </div>
+                            </div>
 
-                    <div class="col-11 col-sm-8 col-md-10">
-                    <div class="text">
-                        <div class="judul-buku">{{ $bukuonline->judul_buku }}</div>
-                        <li>
-                            Genre:{{ $bukuonline->genre }}
-                        </li>
-                        <li>
-                            Pengarang:{{ $bukuonline->pengarang }}
-                        </li>
-                        <li>
-                            Penerbit:{{ $bukuonline->penerbit }}
-                        </li>
-                        <li>
-                            Tahun terbit:{{ $bukuonline->tahun_terbit }}
-                        </li>
+                            <div class="col-11 col-sm-8 col-md-10">
+                                <div class="text">
+                                    <div class="judul-buku">{{ $bukuonline->judul_buku }}</div>
+                                    <li>
+                                        Genre:{{ $bukuonline->genre->name }}
+                                    </li>
+                                    <li>
+                                        Pengarang:{{ $bukuonline->pengarang }}
+                                    </li>
+                                    <li>
+                                        Penerbit:{{ $bukuonline->penerbit }}
+                                    </li>
+                                    <li>
+                                        Tahun terbit:{{ $bukuonline->tahun_terbit }}
+                                    </li>
+                                    <div class="container">
+                                        <h5>{!! $bukuonline->deskripsi !!}</h5>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
                     </div>
-                    <br>
-                    {{-- <div class="panel-heading">
-                        <h3 class="panel-title text-center" style="color: white" >Deskripsi Buku</h3>
-                    </div> --}}
-
-                    <h5 >{!! $bukuonline->deskripsi !!}</h5>
-                </div>
+                    <a href="{{ route('user.bukuonline') }}" class="btn btn-primary" style="margin: 5px;"><i
+                            class="bi bi-box-arrow-left"></i> Kembali</a>
+                    <a href="" class="btn btn-success" style="margin: 5px;"> Pinjam Buku</a>
                 </div>
             </div>
-            <a href="{{ route('user.bukuonline') }}" class="btn btn-primary" style="margin: 5px;"><i class="bi bi-box-arrow-left"></i> Kembali</a>
-            <a href="" class="btn btn-success" style="margin: 5px;"> Pinjam Buku</a>
         </div>
-
-    </div>
-
-    </div>
-    <!-- <footer class="footer"> 2016 - 2020 © Xadmino. </footer> -->
+        <!-- <footer class="footer"> 2016 - 2020 © Xadmino. </footer> -->
 
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>

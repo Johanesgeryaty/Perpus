@@ -2,8 +2,8 @@
   @extends('layouts.main')
 
   @section('content')
-    
-  
+
+
     <div class="container mt-5">
         <h1 class="text center mb-5">Tambah Buku</h1>
         <a href="{{ route('admin.bukuoffline.index') }}"class="btn btn-primary mb-3">Data Buku</a>
@@ -59,6 +59,6 @@
         </div>
     </div>
 
-    @endsection   
+    @endsection
 
-    
+

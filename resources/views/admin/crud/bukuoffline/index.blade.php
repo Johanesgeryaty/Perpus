@@ -55,7 +55,8 @@
                                                 @csrf
                                                 @method('delete')
                                                 <a href="{{ route('admin.bukuoffline.edit', $bukuofflines->id) }}" class="btn btn-success btn-sm">Edit</a>
-                                                <button class="btn btn-danger btn-sm">Hapus</button>
+                                                <a href="#" class="btn btn-danger delete"
+                                                data-id="{{ $bukuId->id }}">delete</a>
                                               </form>
                                               </td>
                                         </tbody>
@@ -69,3 +70,29 @@
             </div>
         </div>
         @endsection
+
+        @push('script')
+    <script>
+        $('.delete').click(function() {
+            var bukuId = $(this).attr('data-id');
+            console.log(bukuId);
+            swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location = '/admin/buku-offline/' + bukuId + '/delete'
+                        swal("Poof! Your imaginary file has been deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your imaginary file is safe!");
+                    }
+                });
+        });
+    </script>
+@endpush
