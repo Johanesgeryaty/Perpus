@@ -38,42 +38,40 @@
                         </form>
                     </div>
 
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-hover">
-                                <thead>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">No</th>
+                                    <th class="text-center">Nisn</th>
+                                    <th class="text-center">Nama</th>
+                                    <th class="text-center">Kelas</th>
+                                    <th class="text-center">Jurusan</th>
+                                    <th class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            @foreach ($users as $user)
+                                <tbody>
                                     <tr>
-                                        <th class="text-center">No</th>
-                                        <th class="text-center">Nisn</th>
-                                        <th class="text-center">Nama</th>
-                                        <th class="text-center">Kelas</th>
-                                        <th class="text-center">Jurusan</th>
-                                        <th class="text-center">Aksi</th>
+                                        <td class="text-center">{{ $user->id }}</td>
+                                        <td class="text-center">{{ $user->nisn }}</td>
+                                        <td class="text-center">{{ $user->name }}</td>
+                                        <td class="text-center">{{ $user->kelas }}</td>
+                                        <td class="text-center">{{ $user->jurusan }}</td>
+                                        <td class="text-center">
+                                            <form action="{{ route('admin.anggota.hapus', $user->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <a href="{{ route('admin.anggota.edit', $user->id) }}"
+                                                    class="btn btn-warning">edit</a>
+                                                <button type="submit" class="btn btn-danger">hapus</button>
+                                            </form>
+                                        </td>
                                     </tr>
-                                </thead>
-                                @foreach ($users as $user)
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">{{ $user->id }}</td>
-                                            <td class="text-center">{{ $user->nisn }}</td>
-                                            <td class="text-center">{{ $user->name }}</td>
-                                            <td class="text-center">{{ $user->kelas }}</td>
-                                            <td class="text-center">{{ $user->jurusan }}</td>
-                                            <td class="text-center">
-                                                <form action="{{ route('admin.anggota.hapus', $user->id) }}" method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <a href="{{ route('admin.anggota.edit', $user->id) }}"
-                                                        class="btn btn-warning">edit</a>
-                                                    <a href="#" class="btn btn-danger delete"
-                                                        data-id="{{ $user->id }}">delete</a>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                @endforeach
-                            </table>
-                        </div>
+                                </tbody>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
             </div>

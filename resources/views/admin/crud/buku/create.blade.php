@@ -6,9 +6,9 @@
     <div class="center">
         <div class="col-sm-15">
             <div class="page-header-title">
-                <h4 class="pull-left page-title"> Tambah Buku</h4>
+                <h4 class="pull-left page-title"> Tambah Buku Online</h4>
                 <ol class="breadcrumb pull-right">
-                    <li class="active">Tambah Buku</li>
+                    <li class="active">Tambah Buku Online</li>
                 </ol>
                 <div class="clearfix"></div>
             </div>

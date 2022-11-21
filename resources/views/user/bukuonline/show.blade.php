@@ -62,6 +62,7 @@
                                 </div>
                             </div>
 
+
                             <div class="col-11 col-sm-8 col-md-10">
                                 <div class="text">
                                     <div class="judul-buku">{{ $bukuonline->judul_buku }}</div>
@@ -84,6 +85,7 @@
                                 <br>
                             </div>
                         </div>
+
                     </div>
                     <a href="{{ route('user.bukuonline') }}" class="btn btn-primary" style="margin: 5px;"><i
                             class="bi bi-box-arrow-left"></i> Kembali</a>

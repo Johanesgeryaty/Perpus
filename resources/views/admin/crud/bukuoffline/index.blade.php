@@ -55,8 +55,8 @@
                                                 @csrf
                                                 @method('delete')
                                                 <a href="{{ route('admin.bukuoffline.edit', $bukuofflines->id) }}" class="btn btn-success btn-sm">Edit</a>
-                                                <a href="#" class="btn btn-danger delete"
-                                                data-id="{{ $bukuId->id }}">delete</a>
+                                                <a href="#" class="btn btn-danger btn-sm delete"
+                                                data-id="{{ $bukuofflines->id }}">delete</a>
                                               </form>
                                               </td>
                                         </tbody>
