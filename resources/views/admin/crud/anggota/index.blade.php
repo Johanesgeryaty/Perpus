@@ -31,10 +31,12 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <form action="{{ route('admin.anggota.index') }}" method="GET">
-                            <div class="inputGroup">
-                                <input type="search" required="" autocomplete="off" name="search">
-                                <label for="name">Name</label>
-                            </div>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">search</button>
+                                  </span>
+                                <input type="search" name="search" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+                              </div>
                         </form>
                     </div>
 
@@ -54,7 +56,7 @@
                             @foreach ($users as $user)
                                 <tbody>
                                     <tr>
-                                        <td class="text-center">{{ $user->id }}</td>
+                                        <td class="text-center">{{ $loop->iteration }}</td>
                                         <td class="text-center">{{ $user->nisn }}</td>
                                         <td class="text-center">{{ $user->name }}</td>
                                         <td class="text-center">{{ $user->kelas }}</td>
@@ -63,10 +65,13 @@
                                             <form action="{{ route('admin.anggota.hapus', $user->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
+                                            <a href="{{ route('admin.anggota.show', $user->id) }}"
+                                                class="btn btn-warning btn-sm">show</a>
                                                 <a href="{{ route('admin.anggota.edit', $user->id) }}"
-                                                    class="btn btn-warning">edit</a>
+                                                    class="btn btn-success btn-sm">edit</a>
                                                     <a href="#" class="btn btn-danger btn-sm delete"
                                                     data-id="{{ $user->id }}">Hapus</a>
+
                                             </form>
                                         </td>
                                     </tr>

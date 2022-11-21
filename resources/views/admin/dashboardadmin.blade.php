@@ -51,7 +51,14 @@
         <div class="col-md-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Data Anggota</h3>
+                    <form action="{{ route('admin.anggota.index') }}" method="GET">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">search</button>
+                              </span>
+                            <input type="search" name="search" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+                          </div>
+                    </form>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
@@ -74,7 +81,7 @@
                             <td>{{ $users->name }}</td>
                             <td>{{ $users->kelas }}</td>
                             <td>{{ $users->jurusan }}</td>
-                            <td><a href="{{ route('admin.anggota.show', $users->id) }}"class="btn btn-warning">lihat</a></td>
+                            <td><a href="{{ route('admin.anggota.show', $users->id) }}"class="btn btn-warning btn-sm">lihat</a></td>
                         </tr>
                         @endforeach
 
