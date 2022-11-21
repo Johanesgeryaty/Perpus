@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Genre;
 use App\Models\BukuOffline;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -28,9 +29,10 @@ class BukuOfflineController extends Controller
      */
     public function create()
     {
+        $genre= Genre::all();
         return view ('admin.crud.bukuoffline.create',[
             'title' => 'BUkuOfline'
-        ]);
+        ],compact('genre'));
     }
 
     /**
@@ -43,7 +45,7 @@ class BukuOfflineController extends Controller
     {
         $request->validate([
             'judul_buku'=> 'required|min:3 ',
-            'genre'=> 'required|min:3',
+            'genre'=> 'required',
             'pengarang' => 'required|min:3',
             'penerbit' => 'required|min:3',
             'tahun_terbit'=> 'required|min:4',
@@ -57,7 +59,7 @@ class BukuOfflineController extends Controller
         $request->cover_buku->move(public_path('images'), $imageName);
         $bukuoffline = new BukuOffline ();
         $bukuoffline->judul_buku = $request->judul_buku;
-        $bukuoffline->genre = $request->genre;
+        $bukuoffline->genre_id= $request->genre;
         $bukuoffline->pengarang = $request->pengarang;
         $bukuoffline->penerbit = $request->penerbit;
         $bukuoffline->tahun_terbit = $request->tahun_terbit;

@@ -62,7 +62,7 @@
                     <div class="text">
                         <div class="judul-buku">{{ $bukuonline->judul_buku }}</div>
                         <li>
-                            Genre:{{ $bukuonline->genre }}
+                            Genre:{{ $bukuonline->genre->name}}
                         </li>
                         <li>
                             Pengarang:{{ $bukuonline->pengarang }}

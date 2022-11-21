@@ -18,10 +18,9 @@
                 <div class="mb-3">
                   <label for="genre">Genre</label>
                   <select id="genre" name="genre">
-                    <option value="romace">Romance</option>
-                    <option value="comedi">Comedi</option>
-                    <option value="religius">Religius</option>
-                    <option value="pendidikan">Pendidikan</option>
+                    @foreach ($genre as $item)
+                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                    @endforeach
                   </select>
                 </div>
                 <div class="mb-3">
