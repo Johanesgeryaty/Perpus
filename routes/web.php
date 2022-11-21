@@ -77,7 +77,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         Route::post('buku-online/create', [BukuOnlineController::class, 'store'])->name('bukuonline.store');
         Route::get('buku-online/{id}/edit', [BukuOnlineController::class, 'edit'])->name('bukuonline.edit');
         Route::post('buku-online/{id}', [BukuOnlineController::class, 'update'])->name('bukuonline.update');
-        Route::get('buku-online/{id}', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
+        Route::get('buku-online/{id}/delete', [BukuOnlineController::class, 'destroy'])->name('bukuonline.hapus');
         Route::get('buku-online/{id}/show', [BukuOnlineController::class, 'show'])->name('bukuonline.show');
 
 

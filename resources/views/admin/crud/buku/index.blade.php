@@ -83,7 +83,7 @@
                             })
                             .then((willDelete) => {
                                 if (willDelete) {
-                                    window.location = '/admin/buku-offline/' + bukuId + '/delete'
+                                    window.location = '/admin/buku-online/' + bukuId + '/delete'
                                     swal("Poof! Your imaginary file has been deleted!", {
                                         icon: "success",
                                     });
