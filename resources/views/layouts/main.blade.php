@@ -47,6 +47,7 @@
 
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="//cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
     <script src="{{ asset('assets/js/detect.js') }}"></script>

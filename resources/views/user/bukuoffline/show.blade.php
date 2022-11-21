@@ -79,7 +79,7 @@
                         <h3 class="panel-title text-center" style="color: white" >Deskripsi Buku</h3>
                     </div> --}}
 
-                    <h5 >{{ $bukuoffline->deskripsi }}</h5>
+                    <h5 >{!! $bukuoffline->deskripsi !!}</h5>
                 </div>
                 </div>
             </div>

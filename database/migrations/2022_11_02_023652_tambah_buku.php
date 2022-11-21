@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('genre');
             $table->string('pengarang');
             $table->string('penerbit');
-            $table->date('tahun_terbit');
+            $table->string('tahun_terbit');
             $table->string('cover_buku');
             $table->integer('jumlah_halaman');
             $table->text('deskripsi');

@@ -40,6 +40,7 @@
         <div class="clearfix"></div>
     </div>
 
+    <script src="//cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
     <script type="text/javascript" src="{{asset('script/jquery.js')}}"></script>
     <script type="text/javascript" src="{{asset('script/jquery-ui.js')}}"></script>
     <script type="text/javascript" src="{{asset('script/bootstrap.min.js')}}"></script>
