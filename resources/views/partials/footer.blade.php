@@ -34,16 +34,25 @@
     </div>
     </div>
 
-    <div class="ereaders-copyright">
+    <<<<<<< HEAD <div class="ereaders-copyright">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <p>
                         <i class="fa fa-copyright"></i> 2022, All Right Reserved - by Alvin Raymond
                     </p>
+                    =======
+                    <div class="ereaders-copyright">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="">
+                                        <i class="fa fa-copyright"></i> 2022, All Right Reserved - by Alvin Raymond
+                                    </p>
+                                    >>>>>>> 385be545b318a0e59087e89b8923c7494530cb97
 
-                </div>
-            </div>
-        </div>
-    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 </footer>

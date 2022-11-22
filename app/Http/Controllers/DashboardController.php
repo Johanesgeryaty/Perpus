@@ -42,8 +42,8 @@ class DashboardController extends Controller
 
         public function transaksi()
         {
-            $transaksis = Transaksi::all();
-            return view('admin.crud.transaksi.index',['title' => 'transaksi', 'active' => 'title'],compact('transaksis'));
+            $users = User::where('role','user')->get();
+            return view('admin.crud.transaksi.index',['title' => 'transaksi', 'active' => 'title'],compact('users'));
 
         }
 

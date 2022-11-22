@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\BacaBukuController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\BukuOnlineController;
@@ -106,6 +107,7 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');
         route::get('saran', [DashboardUserController::class, 'saran'])->name('saran');
         route::put('saran/store', [KotakSaranController::class, 'store'])->name('saran.store');
+        route::get('bacaonline/bacabuku/{id}',[BacaBukuController::class, 'index'])->name('bacaonline.baca');
 
         //editprofil
         Route::get('editprofil/{id}', [EditProfilController::class, 'editprofil'])->name('editprofil');
