@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <title>Tampilan Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content="Admin Dashboard" name="description" />
@@ -9,8 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <link href="{{ asset('assets/plugins/datatables/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/datatables/responsive.bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/datatables/responsive.bootstrap.min.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap.min.css') }}" rel="stylesheet"
+        type="text/css" />
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
@@ -29,7 +32,10 @@
         ga('send', 'pageview');
     </script>
     <!-- icon bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+        integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="container">
@@ -52,45 +58,89 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-1 col-sm-8 col-md-2  ">
-                    <div class="gambar">
-                        <img class="img-" src="/images/{{ $bukuoffline->cover_buku }}" alt="">
-                        {{-- <a href="" class="btn btn-primary col-md-8 text-center"> Pinjam Buku</a> --}}
-                    </div>
-                </div>
+                                <div class="gambar">
+                                    <img class="img-" src="/images/{{ $bukuoffline->cover_buku }}" alt="">
+                                    {{-- <a href="" class="btn btn-primary col-md-8 text-center"> Pinjam Buku</a> --}}
+                                </div>
+                            </div>
 
-                    <div class="col-11 col-sm-8 col-md-10">
-                    <div class="text">
-                        <div class="judul-buku">{{ $bukuoffline->judul_buku }}</div>
-                        <li>
-                            Genre:{{ $bukuoffline->genre->name }}
-                        </li>
-                        <li>
-                            Pengarang:{{ $bukuoffline->pengarang }}
-                        </li>
-                        <li>
-                            Penerbit:{{ $bukuoffline->penerbit }}
-                        </li>
-                        <li>
-                            Tahun terbit:{{ $bukuoffline->tahun_terbit }}
-                        </li>
-                    </div>
-                    <br>
-                    {{-- <div class="panel-heading">
+                            <div class="col-11 col-sm-8 col-md-10">
+                                <div class="text">
+                                    <div class="judul-buku">{{ $bukuoffline->judul_buku }}</div>
+                                    <li>
+                                        Genre:{{ $bukuoffline->genre->name }}
+                                    </li>
+                                    <li>
+                                        Pengarang:{{ $bukuoffline->pengarang }}
+                                    </li>
+                                    <li>
+                                        Penerbit:{{ $bukuoffline->penerbit }}
+                                    </li>
+                                    <li>
+                                        Tahun terbit:{{ $bukuoffline->tahun_terbit }}
+                                    </li>
+                                </div>
+                                <br>
+                                {{-- <div class="panel-heading">
                         <h3 class="panel-title text-center" style="color: white" >Deskripsi Buku</h3>
                     </div> --}}
 
-                    <h5 >{!! $bukuoffline->deskripsi !!}</h5>
+                                <h5>{!! $bukuoffline->deskripsi !!}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{ route('user.bukuoffline') }}" class="btn btn-primary" style="margin: 5px;"><i
+                            class="bi bi-box-arrow-left"></i> Kembali</a>
+                    @if (!$transaksi)
+                        <button type="button" class="btn btn-success" data-toggle="modal"
+                            data-target="#myModal{{ $bukuoffline->id }}">
+                            Pinjam Buku
+                        </button>
+                    @else
+                        <button class="btn btn-danger" disabled>Sedang Proses</button>
+                    @endif
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal{{ $bukuoffline->id }}" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Form Peminjaman Buku</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="{{ route('user.proses.transaksi') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="buku_id" value="{{ $bukuoffline->id }}">
+                                        <div class="form-group mb-3">
+                                            <label for="nama" class="form-label">Nama Peminjam</label>
+                                            <input type="text" class="form-control" name="nama"
+                                                value="{{ Auth::user()->name }}" disabled>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="judul_buku" class="form-label">Judul Buku</label>
+                                            <input type="text" class="form-control" name="judul_buku"
+                                                value="{{ $bukuoffline->judul_buku }}" disabled>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="tanggal_pinjam" class="form-label">Tanggal Pinjam</label>
+                                            <input type="date" name="tanggal_pinjam" id="tanggal_pinjam"
+                                                class="form-control">
+                                        </div>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
+
             </div>
-            <a href="{{ route('user.bukuoffline') }}" class="btn btn-primary" style="margin: 5px;"><i class="bi bi-box-arrow-left"></i> Kembali</a>
-            <a href="" class="btn btn-success" style="margin: 5px;"> Pinjam Buku</a>
+
         </div>
-
-    </div>
-
-    </div>
-    <!-- <footer class="footer"> 2016 - 2020 © Xadmino. </footer> -->
+        <!-- <footer class="footer"> 2016 - 2020 © Xadmino. </footer> -->
 
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>

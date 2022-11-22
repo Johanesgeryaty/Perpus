@@ -1,60 +1,61 @@
 @extends('layouts.user')
 
 @section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Judul Buku</th>
+                                        <th>genre</th>
+                                        <th>Pengarang</th>
+                                        <th>Penerbit</th>
+                                        <th>Tahun Terbit</th>
+                                        <th>Tanggal Pinjam</th>
+                                        <th>Tanggal Kembali</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($transaksis as $transaksi)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $transaksi->buku->judul_buku }}</td>
+                                            <td>{{ $transaksi->buku->genre->name }}</td>
+                                            <td>{{ $transaksi->buku->pengarang }}</td>
+                                            <td>{{ $transaksi->buku->penerbit }}</td>
+                                            <td>{{ $transaksi->buku->tahun_terbit }}</td>
+                                            <td>{{ $transaksi->tgl_pinjam }}</td>
+                                            <td>{{ $transaksi->tgl_kembali }}</td>
+                                            <td>
+                                                @if (!$transaksi->status)
+                                                    <span class="text-warning">Menunggu dikonfirmasi</span>
+                                                @elseif($transaksi->status == '1')
+                                                    <span style="color: rgb(0, 190, 28)">Sudah dikonfirmasi</span>
+                                                @else
+                                                    <span style="color: red">Peminjaman Ditolak</span>
+                                                @endif
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-        <div class="panel panel-primary">
-            <div class="panel-body">
-                <div class="table-responsive">
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Judul Buku</th>
-                            <th>genre</th>
-                            <th>Pengarang</th>
-                            <th>Penerbit</th>
-                            <th>Tahun Terbit</th>
-                            <th>Tanggal Pinjam </th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Dilan 1990</td>
-                        <td>Romance</td>
-                        <td>Pidi Baiq</td>
-                        <td>Erlangga Jaya</td>
-                        <td>2018</td>
-                        <td>1 November 2022</td>
-                        <td> <span style="color: rgb(0, 190, 28)">Selesai</span> </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Dilan 1991</td>
-                        <td>Romance</td>
-                        <td>Pidi Baiq</td>
-                        <td>Erlangga Jaya</td>
-                        <td>2018</td>
-                        <td>9 November 2022</td>
-                        <td> <span style="color: rgb(255, 4, 4)">Belum Dikembalikan</span> </td>
-                      </tr>
-                        </tbody>
-
-                    </table>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-  </div>
-  </div>
-  </div>
-</div>
+    </div>
+    </div>
 
-{{-- <li class="col-md-3" style="list-style: none; text-align:center;" >
+    {{-- <li class="col-md-3" style="list-style: none; text-align:center;" >
   <div class="container" >
     <div class="">
         <figure>
@@ -85,7 +86,4 @@
         <button href="#" class="btn btn-primary ">Detail Buku</button>
   </div>
 </li> --}}
-
-
-
 @endsection

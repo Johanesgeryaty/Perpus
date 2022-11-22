@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaksi;
 use App\Models\bukuoffline;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BukuOfflineUserController extends Controller
 {
@@ -42,7 +44,7 @@ class BukuOfflineUserController extends Controller
     {
 
     }
-    
+
     /**
      * Display the specified resource.
      *
@@ -52,7 +54,10 @@ class BukuOfflineUserController extends Controller
     public function show($id)
     {
         $bukuoffline= BukuOffline::find($id);
-        return view('user.bukuoffline.show',['title' => 'bukuoffline'],compact('bukuoffline'));
+        if(Auth::check()) {
+            $transaksi = Transaksi::where(['buku_id' => $bukuoffline->id, 'user_id' => Auth::user()->id])->count();
+        }
+        return view('user.bukuoffline.show',['title' => 'bukuoffline'],compact('bukuoffline', 'transaksi'));
     }
 
     /**
