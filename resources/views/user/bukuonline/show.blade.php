@@ -89,10 +89,11 @@
                     </div>
                     <a href="{{ route('user.bukuonline') }}" class="btn btn-primary" style="margin: 5px;"><i
                             class="bi bi-box-arrow-left"></i> Kembali</a>
-                    <a href="" class="btn btn-success" style="margin: 5px;"> Pinjam Buku</a>
+                    <a href="{{ route('user.bacaonline.baca', $bukuonline->id) }}" class="btn btn-success" style="margin: 5px;">Baca</a>
                 </div>
             </div>
         </div>
+
         <!-- <footer class="footer"> 2016 - 2020 © Xadmino. </footer> -->
 
     </div>

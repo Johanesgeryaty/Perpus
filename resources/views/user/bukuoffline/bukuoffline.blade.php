@@ -10,7 +10,7 @@
             <img src="/images/{{ $buku->cover_buku }}" alt="">
             <div class="card-body">
                 <h3>{{ $buku->judul_buku }}</h3>
-                <a href="" class="btn btn-primary">Detail</a>
+                <a href="{{ route('user.bukuoffline.show', $buku->id) }}" class="btn btn-primary">Detail</a>
             </div>
         </div>
     </div>

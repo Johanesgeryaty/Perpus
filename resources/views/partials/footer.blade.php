@@ -1,5 +1,5 @@
 
-        <footer id="ereaders-footer" class="ereaders-footer-one">
+        <footer id="ereaders-footer" class="ereaders-footer-one" style="margin-top:5px">
             <div class="ereaders-footer-widget">
           <div class="container">
             <div class="row">
@@ -40,7 +40,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p>
+                            <p class="">
                                 <i class="fa fa-copyright"></i> 2022, All Right Reserved - by Alvin Raymond
                             </p>
 

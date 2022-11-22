@@ -86,6 +86,6 @@
   </div>
 </li> --}}
 
-
+@include('partials.footer')
 
 @endsection
