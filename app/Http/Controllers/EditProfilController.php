@@ -10,7 +10,7 @@ class EditProfilController extends Controller
     public function editprofil($id)
     {
         $user= User::find($id);
-        return view('user.editprofil', compact('user'));
+        return view('user.dashboard.editprofil', ['title' => 'Edit Profil'], compact('user'));
     }
 
     public function updateprofil(Request $request , $id)
@@ -19,7 +19,7 @@ class EditProfilController extends Controller
         $request->validate([
             'email'=>'required',
             'no_hp'=>'required',
-            'alamat'=>'required', 
+            'alamat'=>'required',
             'tanggal_lahir'=>'required',
         ]);
 
