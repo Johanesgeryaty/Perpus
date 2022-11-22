@@ -94,8 +94,9 @@ class BukuOfflineController extends Controller
     public function edit($id)
     {
         $bukuoffline = BukuOffline::findOrFail($id);
+        $genres = Genre::all();
         return view ('admin.crud.bukuoffline.edit',
-        compact('bukuoffline'),['title' => 'bukuoffline']);
+        compact('bukuoffline', 'genres'),['title' => 'bukuoffline']);
     }
 
     /**
@@ -111,7 +112,7 @@ class BukuOfflineController extends Controller
 
         $request->validate([
             'judul_buku'=> 'required|min:3 ',
-            'genre'=> 'required|min:3',
+            'genre'=> 'required',
             'pengarang' => 'required|min:3',
             'penerbit' => 'required|min:3',
             'tahun_terbit'=> 'required|min:4',
@@ -137,7 +138,7 @@ class BukuOfflineController extends Controller
         }
 
         $bukuoffline->judul_buku = $request->judul_buku;
-        $bukuoffline->genre = $request->genre;
+        $bukuoffline->genre_id = $request->genre;
         $bukuoffline->pengarang = $request->pengarang;
         $bukuoffline->penerbit = $request->penerbit;
         $bukuoffline->tahun_terbit = $request->tahun_terbit;

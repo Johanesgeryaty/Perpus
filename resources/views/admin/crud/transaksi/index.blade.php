@@ -16,12 +16,6 @@
         <div class="mx-auto col-md-6" style="width: 200px;">
             <a class="btn btn-success" href="{{ route('admin.anggota.tambah') }}" role="button">Tambah Anggota</a>
         </div>
-        <div class="container">
-            <div class="mb-3 " style="text-align: end">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#importData">Import Data</button>
-                <a href="{{ route('admin.anggota.export') }}" class="btn btn-success">Export Data</a>
-            </div>
-        </div>
 
         <p></p>
 
@@ -74,15 +68,89 @@
                                             <td>
                                                 @if (!$transaksi->status)
                                                     <a href="{{ route('admin.transaksi.konfirmasi', $transaksi->id) }}"
-                                                        class="btn btn-success">✔️</a>
+                                                        class="btn btn-success bi bi-check"></a>
                                                     <a href="{{ route('admin.transaksi.tolak', $transaksi->id) }}"
-                                                        class="btn btn-secondary">❌</a>
+                                                        class="btn btn-danger"><i class="bi bi-x" ></i></a>
                                                 @elseif($transaksi->status == '1')
                                                     <a href="{{ route('admin.transaksi.kembali', $transaksi->id) }}"
                                                         class="btn btn-success">Sudah dikembalikan</a>
                                                 @endif
-                                                <a href="" class="btn btn-primary">Detail</a>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary bi bi-eye" data-toggle="modal"
+                                                    data-target="#myModal{{ $transaksi->id }}">
+
+                                                </button>
+
+                                                <!-- Modal -->
+
                                             </td>
+                                            <div class="modal fade" id="myModal{{ $transaksi->id }}" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close"><span
+                                                                    aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel">Detail Transaksi
+                                                            </h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div>
+                                                                <div class="form-group mb-3">
+                                                                    <label for="nama" class="form-label">Nama
+                                                                        Peminjam</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="{{ $transaksi->user->name }}" disabled>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label for="kelas" class="form-label">Kelas &
+                                                                        Jurusan</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="{{ $transaksi->user->kelas }} {{ $transaksi->user->jurusan }}"
+                                                                        disabled>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label for="no_hp" class="form-label"> No Wa
+                                                                    </label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="{{ $transaksi->user->no_hp }}" disabled>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label for="judul" class="form-label"> Judul Buku
+                                                                    </label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="{{ $transaksi->buku->judul_buku }}"
+                                                                        disabled>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label for="genre" class="form-label"> Genre
+                                                                    </label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="{{ $transaksi->buku->genre->name }}" disabled>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label for="pengarang" class="form-label"> Pengarang
+                                                                    </label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="{{ $transaksi->buku->pengarang }}" disabled>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label for="tahun_terbit" class="form-label">Tahun Terbit
+                                                                    </label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="{{ $transaksi->buku->tahun_terbit }}" disabled>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </tr>
                                     @endforeach
                                 </tbody>
