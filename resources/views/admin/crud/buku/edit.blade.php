@@ -14,11 +14,18 @@
                   <input type="text" class="form-control" id="judulbuku" name="judul_buku" 
                   value="{{ $buku_online->judul_buku }}">
                 </div>
-                <div class="mb-3">
+                <div class="form-group mb-3">
                   <label for="genre" class="form-label">Genre</label>
-                  <input type="text" class="form-control" id="genre" name="genre"
-                   value="{{ $buku_online->genre }}">
-                </div>
+                  <select name="genre" id="genre" class="form-control">
+                      @foreach ($genres as $genre)
+                          @if (old('genre_id', $buku_online->genre_id) == $genre->id)
+                              <option value="{{ $genre->id }}" selected>{{ $genre->name }}</option>
+                          @else
+                              <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+                          @endif
+                      @endforeach
+                  </select>
+              </div>
                 <div class="mb-3">
                   <label for="pengarang" class="form-label">Pengarang</label>
                   <input type="text" class="form-control" id="pengarang"name="pengarang" 
@@ -31,7 +38,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="tahunterbit" class="form-label">Tahun Terbit</label>
-                  <input type="date" class="form-control" id="tahunterbit"name='tahun_terbit' 
+                  <input type="text" class="form-control" id="tahunterbit"name='tahun_terbit' 
                   value="{{ $buku_online->tahun_terbit }}">
                 </div>
                 <div class="mb-3">
