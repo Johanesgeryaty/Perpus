@@ -66,6 +66,9 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::get('daftar-anggota/{id}/delete', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
         route::get('daftar-anggota/{id}/show', [AnggotaController::class, 'show'])->name('anggota.show');
         route::get('transaksi/index', [DashboardController::class, 'transaksi'])->name('transaksi.index');
+        route::get('transaksi/{id}/konfirmasi', [DashboardController::class, 'konfirmasiTransaksi'])->name('transaksi.konfirmasi');
+        route::get('transaksi/{id}/tolakangin', [DashboardController::class, 'tolakTransaksi'])->name('transaksi.tolak');
+        route::get('transaksi/{id}/kembali', [DashboardController::class, 'kembalikanBuku'])->name('transaksi.kembali');
 
         // route::GET('daftar-anggota/search', [AnggotaController::class, 'search']);
 
@@ -98,6 +101,7 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         route::get('bukuonline', [BukuOnlineUserController::class, 'index'])->name('bukuonline');
         route::get('bukuonline/{id}/show', [BukuOnlineUserController::class, 'show'])->name('bukuonline.show');
         route::get('bukuoffline/{id}/show', [BukuOfflineUserController::class, 'show'])->name('bukuoffline.show');
+        route::post('transaksi', [DashboardController::class, 'prosesTransaksi'])->name('proses.transaksi');
         route::get('bukuoffline', [BukuOfflineUserController::class, 'index'])->name('bukuoffline');
         route::get('historypinjam', [DashboardUserController::class, 'historypinjam'])->name('historypinjam');
         route::get('whislist', [DashboardUserController::class, 'whislist'])->name('whislist');

@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaksi;
+use App\Models\BukuOnline;
 use App\Models\KotakSaran;
+use App\Models\bukuoffline;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\bukuoffline;
-use App\Models\BukuOnline;
 
 
 class DashboardUserController extends Controller
@@ -21,7 +22,8 @@ class DashboardUserController extends Controller
 
     public function historypinjam()
     {
-        return view('user.transaksi.historypinjam',['title' => 'historypinjam', 'active' => 'title']);
+        $transaksis = Transaksi::where('user_id', Auth::user()->id)->get();
+        return view('user.transaksi.historypinjam',['title' => 'historypinjam', 'active' => 'title'], compact('transaksis'));
     }
     public function saran()
     {
