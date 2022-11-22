@@ -60,6 +60,10 @@
                   <label for="cover_buku">Cover Buku</label>
                   <input type="file" class="form-control" id="cover_buku" name="cover_buku"  accept="image/*"/>
                 </div>
+                <div class="mb-3">
+                  <label for="isi_buku">Isi Buku</label>
+                  <input type="file" class="form-control" id="isi_buku" name="isi_buku"  accept="pdf/*"/>
+                </div>
                 <br>
                 <button type="submit" class="btn btn-primary float-end">Simpan</button>
                 <a href="{{ route('admin.bukuonline.index') }}"class="btn btn-primary mb-3">Kembali</a>

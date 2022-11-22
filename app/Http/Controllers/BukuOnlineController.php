@@ -51,11 +51,14 @@ class BukuOnlineController extends Controller
             'tahun_terbit' => 'required|min:4',
             'jumlah_halaman' => 'required',
             'deskripsi' => 'required',
-            'cover_buku' => 'required|image|mimes:jpeg,png,jpg'
+            'cover_buku' => 'required|image|mimes:jpeg,png,jpg',
+            'isi_buku' => 'required|file|mimes:doc,docx,PDF,pdf'
         ]);
 
         $imageName = time().'.'.$request->cover_buku->extension();
         $request->cover_buku->move(public_path('images'), $imageName);
+        $filename = $request->isi_buku->getClientOriginalname();
+        $request->isi_buku->move(public_path('file_uploads'), $filename);
         $bukuonline = new BukuOnline;
         $bukuonline->judul_buku = $request->judul_buku;
         $bukuonline->genre_id= $request->genre;
@@ -65,6 +68,7 @@ class BukuOnlineController extends Controller
         $bukuonline->jumlah_halaman = $request->jumlah_halaman;
         $bukuonline->deskripsi = $request->deskripsi;
         $bukuonline->cover_buku = $imageName;
+        $bukuonline->isi_buku = $filename;
         $bukuonline->save();
 
         return redirect(route('admin.bukuonline.index'))->with('success', 'Data Berhasil Ditambah.');
