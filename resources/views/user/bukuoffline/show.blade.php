@@ -91,13 +91,15 @@
                     </div>
                     <a href="{{ route('user.bukuoffline') }}" class="btn btn-primary" style="margin: 5px;"><i
                             class="bi bi-box-arrow-left"></i> Kembali</a>
-                    @if (!$transaksi)
+                    @if (!$transaksi->count())
                         <button type="button" class="btn btn-success" data-toggle="modal"
                             data-target="#myModal{{ $bukuoffline->id }}">
                             Pinjam Buku
                         </button>
-                    @else
+                    @elseif($transaksi->status == '0')
                         <button class="btn btn-danger" disabled>Sedang Proses</button>
+                    @elseif($transaksi->status == '3')
+                        <button class="btn btn-success" disabled>Sudah Dipinjam</button>
                     @endif
 
                     <!-- Modal -->

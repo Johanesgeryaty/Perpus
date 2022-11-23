@@ -55,7 +55,7 @@ class BukuOfflineUserController extends Controller
     {
         $bukuoffline= BukuOffline::find($id);
         if(Auth::check()) {
-            $transaksi = Transaksi::where(['buku_id' => $bukuoffline->id, 'user_id' => Auth::user()->id])->count();
+            $transaksi = Transaksi::where(['buku_id' => $bukuoffline->id, 'user_id' => Auth::user()->id])->first();
         }
         return view('user.bukuoffline.show',['title' => 'bukuoffline'],compact('bukuoffline', 'transaksi'));
     }
