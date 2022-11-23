@@ -38,7 +38,7 @@
                                                 @elseif($transaksi->status == '1')
                                                     <span style="color: rgb(0, 190, 28)">Sudah dikonfirmasi</span>
                                                 @else
-                                                    <span style="color: red">Peminjaman Ditolak</span>
+                                                    <span style="color: blue;">Transaksi Selesai</span>
                                                 @endif
                                             </td>
                                         </tr>

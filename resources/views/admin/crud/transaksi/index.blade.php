@@ -13,10 +13,6 @@
                 </div>
             </div>
         </div>
-        <div class="mx-auto col-md-6" style="width: 200px;">
-            <a class="btn btn-success" href="{{ route('admin.anggota.tambah') }}" role="button">Tambah Anggota</a>
-        </div>
-
         <p></p>
 
         <!--  -->
@@ -191,3 +187,4 @@
         </div>
     </div>
 @endsection
+                                            

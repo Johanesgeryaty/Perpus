@@ -16,6 +16,7 @@ use App\Http\Controllers\BukuOnlineUserController;
 use App\Http\Controllers\GantiPasswordController;
 use App\Http\Controllers\EditProfilController;
 use App\Http\Controllers\KotakSaranController;
+use App\Http\Controllers\TataTertibController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,9 +66,21 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
         route::put('daftar-anggota/{id}', [AnggotaController::class, 'update'])->name('anggota.update');
         route::get('daftar-anggota/{id}/delete', [AnggotaController::class, 'destroy'])->name('anggota.hapus');
         route::get('daftar-anggota/{id}/show', [AnggotaController::class, 'show'])->name('anggota.show');
+
+        //crud tata-tertib
+        route::get('tata-tertib', [TataTertibController::class, 'index'])->name('tatatertib.index');
+        route::get('tata-tertib/create', [TataTertibController::class, 'create'])->name('tatatertib.create');
+        route::post('tata-tertib/create', [TataTertibController::class, 'store'])->name('tatatertib.store');
+        route::get('tata-tertib/{id}/delete', [TataTertibController::class, 'destroy'])->name('tatatertib.delete');
+        route::get('tata-tertib/{id}/edit', [TataTertibController::class, 'edit'])->name('tatatertib.edit');
+        route::put('tata-tertib/{id}/edit', [TataTertibController::class, 'update'])->name('tatatertib.update');
+
+
+
+        //transaksi
         route::get('transaksi/index', [DashboardController::class, 'transaksi'])->name('transaksi.index');
         route::get('transaksi/{id}/konfirmasi', [DashboardController::class, 'konfirmasiTransaksi'])->name('transaksi.konfirmasi');
-        route::get('transaksi/{id}/tolakangin', [DashboardController::class, 'tolakTransaksi'])->name('transaksi.tolak');
+        route::get('transaksi/{id}/tolakpinjaman', [DashboardController::class, 'tolakTransaksi'])->name('transaksi.tolak');
         route::get('transaksi/{id}/kembali', [DashboardController::class, 'kembalikanBuku'])->name('transaksi.kembali');
 
         // route::GET('daftar-anggota/search', [AnggotaController::class, 'search']);

@@ -54,6 +54,10 @@
                             class="{{ $title === 'kotak-saran' ? 'active' : '' }}" class="waves-effect"><i
                                 class="bi bi-envelope"></i>
                             Kotak Saran</a></li>
+                           <li> <a href="{{ Route('admin.tatatertib.index') }}"
+                            class="{{ $title === 'tata-tertib' ? 'active' : '' }}" class="waves-effect"><i
+                                class="bi bi-envelope"></i>
+                            Tata Tertib</a></li>
                     <li> <a href="{{ Route('logout.perform') }}"
                             class="{{ $title === 'data-buku-offline     ' ? 'active' : '' }}" class="waves-effect"><i
                                 class="bi bi-envelope"></i>
