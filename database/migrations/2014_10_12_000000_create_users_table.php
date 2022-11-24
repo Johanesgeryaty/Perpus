@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('kelas')->nullable();
             $table->string('jurusan')->nullable();
-            $table->integer('no_hp')->nullable();
+            $table->text('no_hp')->nullable();
             $table->string('alamat')->nullable();
             $table->date('tanggal_lahir')->nullable();
             $table->string('password');
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->rememberToken()->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable()->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
-            
+
         });
     }
 

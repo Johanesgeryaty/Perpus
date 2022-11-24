@@ -10,10 +10,10 @@ use App\Models\User;
 class GantiPasswordController extends Controller
 {
     public function gantipassword() {
-        return view('ganti_password',[
+        return view('user.dashboard.ganti_password',[
             'title' => 'gantipassword',
         ]);
-    }    
+    }
 
     public function updatepassword(Request $request)
 {

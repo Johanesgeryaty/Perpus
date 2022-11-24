@@ -25,7 +25,13 @@ class TataTertibController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.tatatertib.create',['title'=>'tata-tertib']);
+        $tatatertib = TataTertib::all();
+        if($tatatertib->count(1)) {
+            return back()->with(['pesan' => 'Tata Tertib Sudah Dibuat']);
+        } else {
+            return view('admin.crud.tatatertib.create',['title'=>'tata-tertib']);
+        }
+
     }
 
     /**

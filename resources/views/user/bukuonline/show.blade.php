@@ -78,6 +78,9 @@
                                     <li>
                                         Tahun terbit:{{ $bukuonline->tahun_terbit }}
                                     </li>
+                                    <li>
+                                        @include('partials.rating_buku')
+                                    </li>
                                     <div class="container">
                                         <h5>{!! $bukuonline->deskripsi !!}</h5>
                                     </div>

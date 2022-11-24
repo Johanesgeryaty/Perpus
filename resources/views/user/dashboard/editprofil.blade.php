@@ -11,7 +11,7 @@
             </div>
             <div class="mb-3">
                 <label for="kelas" class="form-label">No. Whatsapp</label>
-                <input type="text" class="form-control" id="kelas" name="no_hp" value="{{ $user->no_hp }}">
+                <input type="number" class="form-control" id="kelas" name="no_hp" value="{{ $user->no_hp }}">
             </div>
             <div class="mb-3">
                 <label for="User" class="form-label" placeholder="Masukkan No Hp (=62)">Alamat</label>

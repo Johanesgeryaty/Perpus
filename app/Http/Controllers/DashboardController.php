@@ -34,8 +34,6 @@ class DashboardController extends Controller
 
         public function kotaksaran()
         {
-
-
             $kotak_saran= KotakSaran::all();
             return view('admin.kotak-saran',['title' => 'kotak-saran', 'active' => 'title'],compact('kotak_saran'));
         }

@@ -17,6 +17,7 @@ use App\Http\Controllers\GantiPasswordController;
 use App\Http\Controllers\EditProfilController;
 use App\Http\Controllers\KotakSaranController;
 use App\Http\Controllers\TataTertibController;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,16 +31,13 @@ use App\Http\Controllers\TataTertibController;
 */
 
 
-Route::get('/', function () {
-    return view('index');
-});
-
 Route::fallback(function () {
       return('error bang');
 });
 
 Auth::routes();
 
+route::get('/', [LandingController::class, 'index'])->name('index');
 route::get('/Waca', [HomeController::class, 'index  '])->name('index');
 route::get('/login', [LoginController::class, 'index'])->name('login.index');
 route::post('/login', [LoginController::class, 'proces'])->name('login.post');
@@ -112,6 +110,7 @@ Route::prefix('admin')->name('admin.')->middleware('role:admin')->group( functio
 Route::prefix('user')->name('user.')->middleware('role:user')->group( function() {
         route::get('dashboard', [DashboardUserController::class, 'index'])->name('dashboard');
         route::get('bukuonline', [BukuOnlineUserController::class, 'index'])->name('bukuonline');
+        route::post('bukuonline/{id}/rating', [BukuOnlineUserController::class, 'rating'])->name('bukuonline.rating');
         route::get('bukuonline/{id}/show', [BukuOnlineUserController::class, 'show'])->name('bukuonline.show');
         route::get('bukuoffline/{id}/show', [BukuOfflineUserController::class, 'show'])->name('bukuoffline.show');
         route::post('transaksi', [DashboardController::class, 'prosesTransaksi'])->name('proses.transaksi');
@@ -130,5 +129,4 @@ Route::prefix('user')->name('user.')->middleware('role:user')->group( function()
         //ganti password
         route::get('gantipassword', [GantiPasswordController::class, 'gantipassword'])->name('gantipassword.action');
         Route::post('updatepassword', [GantiPasswordController::class, 'updatepassword'])->name('updatepassword');
-
 });

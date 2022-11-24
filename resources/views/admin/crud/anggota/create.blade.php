@@ -4,15 +4,12 @@
     <form action="{{ route('admin.anggota.buat') }}" method="POST">
         @csrf
         <div class="container">
-            <div class="center">
-                <div class="col-sm-6">
-                    <div class="page-header-title">
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <!--  -->
+            
+            @if(session()->has('pesan'))
+                        <div class="alert alert-info">
+                                  {{ session('pesan') }}
+                        </div>
+            @endif
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-primary">
@@ -71,5 +68,5 @@
                             <button type="submit" class="btn btn-primary btn-sm">Kirim</button>
                             <a href="{{ route('admin.anggota.index') }}" class="btn btn-primary btn-sm">Kembali</a>
     </form>
-  
+
     @endsection

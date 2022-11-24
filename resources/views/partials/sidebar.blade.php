@@ -18,8 +18,8 @@
     <div class="left side-menu">
         <div class="sidebar-inner slimscrollleft">
             <div class="user-details">
-                <div class="text-center"> <img src="/assets/images/users/avatar-1.jpg" alt=""
-                        class="img-circle">
+                <div class="text-center">
+                    <i class="bi bi-person-fill fa-5x" style="color: white""></i>
                 </div>
                 <div class="user-info">
                     <div class="dropdown"> <a href="profile.html" class="dropdown-toggle" data-toggle="dropdown"

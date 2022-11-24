@@ -15,7 +15,11 @@
         </div>
     </div>
 
-
+    @if(session()->has('pesan'))
+    <div class="alert alert-info">
+              {{ session('pesan') }}
+    </div>
+@endif
 
     <!--  -->
     <div class="row">

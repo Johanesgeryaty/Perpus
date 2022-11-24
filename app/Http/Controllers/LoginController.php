@@ -16,18 +16,14 @@ class LoginController extends Controller
     {
         if(Auth::attempt(['nisn' => $request->nisn, 'password' => $request->password])) {
             if(Auth::user()->role == 'user') {
-                if ('') {
-                    return view('gantipassword');
-                } else {
-                    return redirect(route('user.dashboard'));
-                }
-                
+                //apabila role nya adakah user
+                return redirect(route('user.dashboard'));
                 //apabila role nya adalah admin
             } else {
                 return redirect(route('admin.dashboard'));
             }
         }
 
-        return back();
+        return back()->with(['pesan' => 'Nisn Atau Password yang anda masukan Salah']);
     }
 }

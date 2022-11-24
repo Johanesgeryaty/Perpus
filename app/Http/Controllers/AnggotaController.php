@@ -11,6 +11,8 @@ use App\Imports\UserImport;
 use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Facades\Excel;
 use id;
+use Illuminate\Support\Facades\Input;
+
 
 class AnggotaController extends Controller
 {
@@ -60,9 +62,16 @@ class AnggotaController extends Controller
             'password' => bcrypt($request->password),
             'role' => 'user'
         ]);
-        $user->save();
+        if (User::where('nisn', $request->nisn )->exists()) {
+            return back()->with(['pesan' => 'Nisn Yang anda masukkan sudah ada yang punya']);
+        } else{
+            $user->save();
+            return redirect(route('admin.anggota.index'))->with(['pesan' => 'Data Anggota Berhasil Ditambahkan']);
+        }
 
-        return redirect(route('admin.anggota.index'));
+
+
+
     }
 
     /**
@@ -119,6 +128,10 @@ class AnggotaController extends Controller
     public function destroy($id)
     {
         $user = User::find($id);
+
+                if ($user ) {
+                # code...
+            }
         $user->delete($id);
 
         return redirect(route('admin.anggota.index'));

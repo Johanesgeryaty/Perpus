@@ -13,4 +13,9 @@ class BukuOnline extends Model
     public function genre(){
         return $this->belongsTo(Genre::class);
     }
+
+    public function buku_populer()
+    {
+        return $this->hasMany(BukuPopuler::class);
+    }
 }

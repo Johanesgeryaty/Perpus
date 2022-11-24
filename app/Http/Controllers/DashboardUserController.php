@@ -28,6 +28,7 @@ class DashboardUserController extends Controller
     public function saran()
     {
         return view('user.dashboard.saran',['title' => 'kotak-saran', 'active' => 'title']);
+        
     }
     public function whislist()
     {

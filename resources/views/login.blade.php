@@ -15,6 +15,12 @@
                 <div class="col-md-4">
                     <div class="card shadow-lg">
                         <div class="card-body p-5">
+                                @if(session()->has('pesan'))
+                            <div class="alert alert-info">
+                              {{ session('pesan') }}
+                            </div>
+                                 @endif
+
                             <h4 class="mt-3 text-center">Login</h4>
                             @if(session('Error'))
                             <div class="alert alert-danger">

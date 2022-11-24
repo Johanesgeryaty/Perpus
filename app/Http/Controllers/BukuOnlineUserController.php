@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\BukuOnline;
+use App\Models\BukuPopuler;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BukuOnlineUserController extends Controller
 {
@@ -51,6 +53,11 @@ class BukuOnlineUserController extends Controller
      */
     public function show($id)
     {
+
+        if(!Auth::check()) {
+            return back();
+        }
+        
         $bukuonline=BukuOnline::Find($id);
         return view('user.bukuonline.show',['title'=>'bukuonline'],compact('bukuonline'));
     }
@@ -87,5 +94,36 @@ class BukuOnlineUserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function rating($id)
+    {
+        if(!Auth::check()) {
+            return redirect(route('login.index'));
+            die;
+        }
+
+        $check = BukuPopuler::where(['buku_online_id' => $id, 'user_id' => Auth::user()->id])->first();
+        $bukuOnline = BukuOnline::where('id', $id)->first();
+        if(!$check) {
+
+            BukuPopuler::create([
+                'buku_online_id' => $id,
+                'user_id' => Auth::user()->id
+            ]);
+
+            $bukuOnline->buku_count += 1;
+            $bukuOnline->update();
+            return back();
+        } else {
+
+            $check->delete();
+            $bukuOnline->buku_count -= 1;
+            $bukuOnline->update();
+            return back();
+
+        }
+
+        return back();
     }
 }

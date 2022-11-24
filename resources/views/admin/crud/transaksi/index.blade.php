@@ -20,12 +20,7 @@
             <div class="col-md-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <form action="{{ route('admin.anggota.index') }}" method="GET">
-                            <div class="inputGroup">
-                                <input type="search" required="" autocomplete="off" name="search">
-                                <label for="name">Name</label>
-                            </div>
-                        </form>
+                        <h4 style="color: white">transaksi</h4>
                     </div>
 
                     <div class="panel-body">
@@ -187,4 +182,3 @@
         </div>
     </div>
 @endsection
-                                            

@@ -5,7 +5,7 @@
 
 <div class="row">
   @foreach ($bukuonline as $buku)
-  <div class="col-sm-6 col-md-3" style="margin-bottom: 20px;">
+  <div class="col-sm-6 col-md-3" style="margin-bottom: 10px;">
       <div class="card">
           <img src="/images/{{ $buku->cover_buku }}" alt="">
           <div class="card-body">

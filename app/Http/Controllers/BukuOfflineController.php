@@ -29,10 +29,8 @@ class BukuOfflineController extends Controller
      */
     public function create()
     {
-        $genre= Genre::all();
-        return view ('admin.crud.bukuoffline.create',[
-            'title' => 'BUkuOfline'
-        ],compact('genre'));
+        $genre=Genre::all();
+        return view('admin.crud.bukuoffline.create',['title'=>'genre'],compact('genre'));
     }
 
     /**

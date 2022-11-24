@@ -22,6 +22,10 @@
                                         <a href="{{ Route('user.historypinjam') }}" class="{{ $title === 'transaksi' ? 'active':'' }} waves-effect">Histori Pinjam</a>
                                     </li>
 
+                                    <li>
+                                        <a href="{{ Route('user.saran') }}" class="{{ $title === 'saran' ? 'active':'' }} waves-effect">Kotak Saran</a>
+                                    </li>
+
                                         <a href="{{ Route('logout.perform') }}" class="btn btn-danger btn-sm" style="float:right; border-radius: 5px;">Logout</a>
 
 
